@@ -1,0 +1,9 @@
+.tabella{
+  border-style: solid;
+  border-color: aqua;  
+}
+
+#img{
+  border-radius: 50%;
+  height: 300px;
+}
