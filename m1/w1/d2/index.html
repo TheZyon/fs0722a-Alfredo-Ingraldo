@@ -1,12 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+    <style>
+      table td,
+      table th {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
     <h1>The new stuff</h1>
+
+    <table>
+      <caption>
+        Descrivo id cosa tratta la tabella
+      </caption>
+      <thead>
+        <th>nome</th>
+        <th>cognome</th>
+        <th>eta</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="2">giovanni</td>
+          <td>Carlino</td>
+        </tr>
+        <tr>
+          <td>Taddeo</td>
+          <td>Carlini</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>Numero utenti</td>
+          <td colspan="2">2</td> <!-- indica l'estensione della colonna in numero di colonne, si può fare lo stesso con le righe-->
+        </tr>
+      </tfoot>
+    </table>
+
+
+
 </body>
 </html>
