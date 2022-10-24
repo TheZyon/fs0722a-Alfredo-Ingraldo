@@ -37,12 +37,37 @@
       <tfoot>
         <tr>
           <td>Numero utenti</td>
-          <td colspan="2">2</td> <!-- indica l'estensione della colonna in numero di colonne, si può fare lo stesso con le righe-->
+          <td colspan="2">2</td>
+          <!-- indica l'estensione della colonna in numero di colonne, si può fare lo stesso con le righe-->
         </tr>
       </tfoot>
     </table>
+    <!-- forms: tre tags possibili-->
 
+    <form method="post" action="uberto.uberti.viareggio@gmail.com">
+      <input type="text" placeholder="inserisci testo" />
+      <!-- placeholder mostra a cosa serve la casella di input-->
+      <input type="password" placeholder="inserisci password" name="password" id="password" />
+      <input type="number" name="numero" id="" placeholder="inserisci numero" />
+      
+      
+      <!--ora facciamo l'esercizio-->
+      
+      
+      <label for="consenso">Do il consenso</label>
+      <input type="checkbox" name="checkbox" id="consenso" />
+      <select name="select" id="">
+        <option value="roma">Roma</option>
+        <!--la select serve a selezionare e ha dei tag "option"-->
+        <option value="milano">Milano</option>
+        <option value="venezia">Venezia</option>
 
+        <!--il value serve per trasmettere i dati-->
+      </select>
 
-</body>
+      <textarea name="" id="" cols="30" rows="10"></textarea>
+      <!--cols e rows servono a definire le dimensioni della text area-->
+    <button>inserisci</button>
+    </form>
+  </body>
 </html>
