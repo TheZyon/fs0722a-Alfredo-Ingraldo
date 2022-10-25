@@ -1,0 +1,24 @@
+.grass{
+font-weight: bold;
+}
+.italics{
+    font-style:italic;
+}
+
+.novita{
+margin-bottom: 20px;
+}
+
+.post_form{
+margin: 20px;
+padding: 5px;
+border-style: solid;
+border-color: darkgray;
+margin-left: 2px;
+}
+
+.articolo{
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: small;
+}
