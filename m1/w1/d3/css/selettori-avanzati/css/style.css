@@ -1,0 +1,27 @@
+input:checked{
+
+    width: 100px;
+} /** sceglie gli input con status checked */
+
+
+input:checked + h1{
+    color: yellow;
+} /** il primo elemento p che compare dopo l'input checked */
+
+
+h1:hover{
+    font-size:100px;
+}
+/** applicato sugli h1 con lo status hover cioè il mouse è sull'h1  */
+
+table tr:nth-of-type(odd){
+    color: red;
+}
+
+table td:after{ /* modifichiamo nella parte successiva al contenuto*/ 
+content: ">>>>>>";
+}
+
+
+
+https://github.com/captain-mike/fs0722a-Michele-Tedesco

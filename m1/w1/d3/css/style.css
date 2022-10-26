@@ -1,0 +1,102 @@
+/* un'istruzione di css è fatta da un selettore e delle proprietà */
+
+/* queste istruzioni valgono per tutti gli elementi che hanno il tag div */
+div{
+ color: red;   
+ background-color: aqua; 
+}
+/* si utilizzano gli attributi id e class. Non si mettono spazi tra le virgilette 
+perché vengono interpretati come altri class e id.
+L'id è unico. 
+*/
+
+.parola1{
+font-weight: bold;
+}
+
+.parola2{
+font-size: large;
+}
+
+/* se ci sono conflitti in un'istruzione CSS, vince la cosa scritta più in basso 
+ESEMPIO:*/
+
+.esempio{
+    color: aquamarine;
+    color: pink;
+}
+
+/*vince pink */
+
+/* vince pink anche nel caso */
+
+.esempio1{
+    color: aliceblue;
+}
+
+.esempio2{
+    color: pink;
+}
+
+/**
+ * in caso di conflitto, un'altra cosa che determina il vincitore, oltre all'ordine
+ * di scrittura, è la specificità.
+ * id ha specificità 100
+ * class ha specificità 10
+ * l'attributo style ha specificità 1000
+ */
+
+
+/**selezione multipla e gerarchica */
+
+div div{ /**vale per i div con dentro div */
+background-color: brown;
+} /**peso div+div=2 */
+div span {
+    background-color: crimson; /**div+span=2 */
+}
+
+ul li {
+    background-color: red;
+}
+
+
+/** ul li riguarda tutti i li che si trovano in un ul
+ * ul>li riguarda solo i figli diretti
+ */
+
+/**
+ * il seguente comando riguarda: nella cosa che ha id "menù"---> ul figli diretti di li 
+ * ---> tutti i li
+ * dove la freccia indica che si va più nello specifico a cercare
+ **/
+
+ #menù li> ul li{
+    color: pink;
+ }
+
+
+ ul#menù{} /** tag ul--->id menù */
+
+ ul#menù.parola1.parola2{}
+
+ .classe.classe2{}
+
+
+
+ /**
+  * la virgola serve a selezionare più selettori contemporaneamente
+  */
+
+  /**
+   * i sistemi di colore che interessano sono rgb e rgba
+   */
+
+
+   body{
+    font-family:Arial, Helvetica, sans-serif;
+    text-shadow: 3px 3px 5px red, 10px 15px 3px rgb(0,255,0) ;
+   }
+
+
+

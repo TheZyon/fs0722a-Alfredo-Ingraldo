@@ -1,0 +1,83 @@
+.centro {
+        display:block;
+        margin:0px auto;
+        text-align:center;
+        }
+#motto{
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color:rgb(250, 190, 90); 
+    background-color:rgb(250, 250,240);
+    padding: 1rem;
+    font-weight: 400;
+}
+
+#motto span{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#logo{
+    width:15rem;
+}
+#focaccia{
+    border-radius: 3%;
+    width: 60%;
+}
+figure {
+    text-align: center;
+    font-size: smaller;
+    text-indent: 0;
+    margin: 1em;
+    color: rgb(145, 143, 143);
+  }
+  figure figcaption{
+    margin: 1rem;
+  }
+
+  h1{
+font-size: 200%;
+}
+ 
+#div-h1{
+    margin: 3rem;
+}
+
+main div p{
+    font-size: 80%;
+}
+
+
+
+hr{
+    border-top: 1px solid lightblue;
+}
+
+#featured{
+    border-left: rgb(250, 190, 90); 
+    padding-left: 1rem;
+    border-left-style: solid;
+    margin-bottom: 3rem;
+    margin-left: 11rem ;
+}
+#featured p{
+    text-transform: uppercase;
+    color: chocolate;
+}
+a{
+    color: lightblue;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+#ingredients{
+    font-style: bold;
+    font-size: 150%;
+}
+
+.margin-left-align{
+    margin-left:11rem;
+}

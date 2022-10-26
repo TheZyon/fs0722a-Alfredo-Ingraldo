@@ -1,0 +1,45 @@
+/**
+ * i pixel per il dimensionamento sono una dimensione "assoluta"
+ */
+/**
+ * i rem sono una misura relativa: 1rem=16px di default, come stabilito nel root del documento
+ */
+ 
+
+ 
+ #primo_paragrafo{
+font-size: 20px;
+ }
+ #secondo_paragrafo{
+font-size: 2rem;
+ }
+
+ /**
+  * possiamo modificare il root, cioè le regole generali
+  */
+
+
+ :root {
+    font-size: 20px;
+}
+/**adesso 1rem=20px */
+
+/*
+ *gli em sono una misura relativa al parente: 1em=1*(font size del parente)
+ Esempio: 
+ */
+
+#quarto_paragrafo{
+    font-size:15px;
+}
+ #quarto_paragrafo span{
+    font-size: 2em;
+ }
+
+/*
+ in questo modo gli pan che stanno ne quarto paragrafo hanno misura 30px */
+
+/*
+*bisogna evitare i px per i font size, si usano gli em e i rem */
+
+
