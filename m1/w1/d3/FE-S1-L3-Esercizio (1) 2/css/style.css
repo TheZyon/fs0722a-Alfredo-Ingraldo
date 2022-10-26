@@ -59,7 +59,7 @@ hr{
     padding-left: 1rem;
     border-left-style: solid;
     margin-bottom: 3rem;
-    margin-left: 11rem ;
+    margin-left: 14rem;
 }
 #featured p{
     text-transform: uppercase;
@@ -79,5 +79,8 @@ a{
 }
 
 .margin-left-align{
-    margin-left:11rem;
+    margin-left:14rem;
+}
+.margin-right{
+    margin-right:14rem;
 }

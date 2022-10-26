@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "d3",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "d3"
+	}
+}
