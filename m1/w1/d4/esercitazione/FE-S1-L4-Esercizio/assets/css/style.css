@@ -4,6 +4,7 @@
     background-image: url("/assets/img/sfondo.png"); 
     
 }
+
 a:hover{
     color: violet;
 }
@@ -66,8 +67,10 @@ box-shadow: -7px 0px 4px -2px #1A6ED9;
     
 /* MAIN */
 
-main div h1{
+#h1{
     font-size: 1.5rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
 }
 main>div{
     background-color: white;
@@ -78,11 +81,32 @@ main>div div {
 .transparent{
     color: rgba(34, 12, 64, 0.6);;
 }
+#lista{
+    padding-left: 1rem;
+}
+
+
 
 /* ELEMENTI NEL MAIN - ARTICLE */
 
 /* TABELLE */
+table caption{
+    font-weight:600;
+}
+table thead th {
+    background-color: #1A6ED9;
+    padding: 3px;
+    border: solid;
+    border-color: white;
+}
 
+table tbody tr:nth-of-type(even){
+    background-color: lightgrey;
+}
+table{
+    border-bottom:solid;
+    border-bottom-color: rgba(0, 119, 255, 0.619);
+}
 /* FORM */
 
 /* ELEMENTI NELL' ASIDE */
