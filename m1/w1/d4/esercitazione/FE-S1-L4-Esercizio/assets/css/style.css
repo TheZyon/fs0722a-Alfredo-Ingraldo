@@ -1,6 +1,8 @@
 /* IMPOSTAZIONI GENERALI */
 :root{
-    font-family:'Roboto', sans-serif; ;
+    font-family:'Roboto', sans-serif;
+    background-image: url("/assets/img/sfondo.png"); 
+    
 }
 a:hover{
     color: violet;
@@ -31,13 +33,7 @@ box-shadow: 7px 0px 4px -2px #8E8E8E;
     margin: 1rem 1rem 1rem 1rem;
 }
 
-/* HEADER */
-
-#div-principale{
-    background-image: url("../assets/img/sfondo.png"); 
-    /* background image non compare
-     */
-    }
+/* HEADER */    
     
     .div-contenuti{
     background-image: linear-gradient(to top , rgb(17, 17, 202), rgb(81, 81, 255));
@@ -72,6 +68,9 @@ box-shadow: -7px 0px 4px -2px #1A6ED9;
 
 main div h1{
     font-size: 1.5rem;
+}
+main>div{
+    background-color: white;
 }
 main>div div {
     margin: 1rem 1rem ;
