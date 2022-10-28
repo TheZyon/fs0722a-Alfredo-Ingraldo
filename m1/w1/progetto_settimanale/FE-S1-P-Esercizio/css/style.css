@@ -1,5 +1,6 @@
 :root{
     text-align: center;
+    
 }
 body{
     margin: 0%;
@@ -21,6 +22,7 @@ h2{
     margin-bottom:0;
     margin-top:0;
 }
+
 body div{
     margin-bottom: 0;
     margin-top: 0;
@@ -31,31 +33,47 @@ img{
     width:100%;
 
 }
-
-
+hr {
+    margin: 2rem 8rem;
+    background-color: white;
+    border-top: none;
+}
 /*HEADER */
 header div{
     background-color: black;
-    padding:2.5rem;
+    padding: 2.5em;
+}
+
+#titolo{
+font-size: 2rem;
 }
 
 
 /*MAIN*/
 /* primo blocco */
+
+@keyframes image-change{
+    0%{ background-image: url("../images/theOneRing1.jpeg");}
+    50%{background-image: url("../images/banner.jpg");}
+    100%{background-image: url("../images/theOneRing1.jpeg");}
+}
 #corso{
     background-image: url("../images/banner.jpg");
     background-position:center;
-background-size:cover;
+    background-size:cover;
+    animation-name: image-change;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
 }
 h1{
     margin-top: 0;
-    padding-top: 4rem;
-    
+    padding-top: 4rem;  
 }
 
 #div-partiamo-button{
     padding: 3rem;
 }
+
 #div-partiamo-button a{
     background-color: #f04c2f;
     font-family: 'Montserrat', sans-serif;
@@ -66,6 +84,19 @@ h1{
     text-transform:uppercase;
     text-decoration: none;    
 }
+
+@keyframes rotateAnimation {
+	0% {transform: rotateY(0deg);}
+	50% {transform: rotateY(225deg);}
+    100%{transform:rotateY(45deg);}
+    
+}
+
+#div-partiamo-button:hover{
+    
+	animation: rotateAnimation 3s;
+}
+
 /* secondo blocco */
 
 #secondo-blocco{
@@ -76,13 +107,17 @@ h1{
     padding-right:4.5rem;
     padding-left:4.5rem;
 }
+
+
 #notebook-div img{
     border-radius: 50%;
-    margin-top: 3rem;
-
-    
+    margin-top: 3rem;    
 }
 
+
+#notebook-div img:hover{
+animation: rotateAnimation 3s;
+}
 /*terzo blocco */
 #terzo-blocco{
     background-color: #f04c2f;
@@ -91,11 +126,13 @@ h1{
 #terzo-blocco h2{
 color:white;
 padding-top: 4rem;
+font-size: 3rem;
 }
 
 #quotation{
     font-style: italic;
-    padding-bottom: 2rem;  
+    padding-bottom: 2rem;
+    font-size: 1.5rem;  
 }
 
 #mario{
@@ -130,7 +167,25 @@ object-fit: cover;
     margin-bottom: 3rem;
 }
 
-/*quinto blocco */
+@keyframes ingrandimento{
+    from{ margin-top: 3rem;
+          margin-right: 2rem;
+          margin-left: 2rem;
+        }
+    to{
+        margin-top:2rem;
+        margin-right:1rem;
+        margin-left:1rem;
+        
+       }
+}
+#quarto-blocco>div  div:hover{
+    animation-name: ingrandimento;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+}
+
+/*FOOTER*/
 #quinto-blocco{
     background-color: #25a2c3;
     color: white;
@@ -138,16 +193,14 @@ object-fit: cover;
 #quinto-blocco h2{
 color:white;
 padding-top: 4rem;
+font-size: 3rem;
 }
 
 #quinto-blocco a, #quinto-blocco p{
     color:white;
-}
-#contatti{
-    opacity: 0.8;
+    opacity: 0.7;
 }
 
-/*FOOTER*/
-footer div{
-    background-color: #25a2c3;
+#footer{
+    padding-bottom: 5rem;
 }
