@@ -21,10 +21,16 @@ btn.addEventListener("click", function () {
         giorgia[i] = new Audio("../audio/giorgia.mp3");
         document.querySelector("body").appendChild(document.createElement("div"));
         document.querySelectorAll("div")[i + 1].innerHTML=`<button type="button" class="btn"> Giorgia n. ${i+1} </button>`;  
-    }
-    giorgia[0].play();
+        setTimeout(function () {
+            giorgia[0].play();
+        
+            setTimeout(function(){
+                giorgia[0].pause();
+                giorgia[0].currentTime = 1000;
+            }, 1200);
+        }, 1000);      
     
-
+    }
 
     //insertAdiacentElement
     //document.querySelector("body").insertAdjacentHTML("beforeend", document.createElement("div"));

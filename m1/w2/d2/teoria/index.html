@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <input type="number" id="numero" placeholder="inserisci numero" />
+    <button onclick="mostraRisultato()" id="btn">controlla se pari</button>
+
+    <script>
+      function isEven(n) {
+        return n % 2 == 0 ? true : false;
+      }
+
+      function mostraRisultato() {
+        let numero = document.getElementById("numero");
+        console.dir(numero); //molto importante: mostra tutte le coppie nome-valore dell'oggetto del DOM
+        isEven(numero.value) ? console.log("è pari") : console.log("è dispari");
+      }
+      //modificare CSS usando js
+      function colora() {
+        document.getElementById("btn").style.backgroundColor = "red";
+      }
+      colora();
+    </script>
+    <script src="variabili2.js"></script>
+  </body>
 </html>
