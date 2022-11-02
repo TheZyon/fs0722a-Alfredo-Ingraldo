@@ -75,10 +75,18 @@ function ammontareTotaleBlackFriday(totalShoppingCart) {
 let x = 1;
 let y = 11;
 let z = 111;
-function ordinamento(a, b, c) { 
+function ordinamento(a) { //questa funzione prende un array di tre numeri e mostra in console i numeri in ordine decrescente
   //uso la funzione "maggiore" che ho definito nelle righe 7-11
-  console.log(maggiore(maggiore(a, b), c));
   
+  let max=maggiore(maggiore(a[0],a[1]),a[2]);
+  console.log(max); //mostro il massimo
+  let i = a.indexOf(max);
+  a.splice(i, 1); //tolgo da a l'elemento che corrisponde al max
+  max = maggiore(a[0], a[1]);
+  console.log(max);
+  i=a.indexOf(max);
+  a.splice(i, 1); //tolgo il max tra i due che restavano
+  console.log(a[0]);
 }
 
 /* ESERCIZIO 8
