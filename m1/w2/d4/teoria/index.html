@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<select onchange="mostraPrezzo()" id="frutti">
+<option value="">--</option>
+<option value="banana">Banana</option>
+<option value="mela">Mela</option>
+<option value="ananas">Ananas</option>
+<option value="ciliegie">Ciliegie</option>
+</select>
+
+<script>
+
+    function mostraPrezzo(){
+        let frutta= document.getElementById("frutti").value;
+        switch(frutta){
+            case "banana": alert("banana");
+            break;
+            case "mela": alert("mela"); break;
+            default: alert("800A");
+        }
+    }
+</script>
+
+
+<script>
+
+    //#######CICLARE ARRAY#####
+    //vediamo un metodo per ciclare sugli array in modo veloce
+    let animali=['gatto','cane', 'anatra', 'orso'];
+    animali.forEach(function(elemento){
+        document.write(elemento+' suca\n');
+    }); //per ogni elemento dell'array applica la funzione 
+    //FOREACH è il modo migliore per ciclare sugli array,
+
+
+//una CALLBACKFUNCTION è una funzione che viene passata come argomento ad un'altra funzione, e di solito è anonima
+//########CICLARE OGGETTI########
+
+let utente={
+    nome: "alberto",
+    cognome: "carlini",
+    eta: 30
+}
+document.write('<ul');
+for(let prop in utente){ //per ogni prop in utente
+document.write(`<li>${prop}: ${utente[prop]}</li>`); //attenzione che utente[prop] "corrisponderebbe" a utente.prop
+//anche in generale si potrebbe scrivere utente['nome'] per tirare fuori "alberto"
+//se mettevo utente.prop usciva undefined, perchè PROP E' UNA STRINGA!!
+
+}
+document.write('</ul>');
+
+
+
+
+//########CICLARE STRINGHE####
+
+let stringa='testo da ciclare';
+for(let lettera of stringa){
+    document.write(lettera+'<br>');
+}
+
+
+//#####TECNICA INTERESSANTE PER OTTENERE UN NUOVO ARRAY CICLANDO UN ARRAY DATO ######
+let numeri=[1,2,3,4,5,6];
+let numeriX2=numeri.map(function(n){
+    return n*2;
+}); //numeriX2 verrà con i numeri raddoppiati
+
+let animaliB=animali.map(function(a){
+    return a.toLocaleUpperCase();
+});//il nuovo array di animali ha le stringhe scritte in maiuscolo
+
+
+
+//fare una ricerca di elementi in un array con FILTER
+let utenti =[
+{id:1,
+nome: 'Mario',
+cognome: 'Rossi',
+anni:30},
+{id:2,
+nome: 'Mario',
+cognome: 'Bossi',
+anni:25},
+{id:3,
+nome: 'Simona',
+cognome: 'Tudisco',
+anni:24},
+{id:4,
+nome: 'Raffaele',
+cognome: 'Caravetta',
+anni:28}
+];
+
+let ricerca = utenti.filter(function(u){
+    return u.anni>24;
+});
+
+let result = utenti.find(function(u){
+    return u.anni>24;
+}); //find riporta un unico elemento, in questo caso il primo che soddisfa la condizione della callbackfunction
+
+//FILTER FIND MAP FOREACH FOROF sono i metodi da conoscere
+//vedere REDUCE
+</script>
+
+    <script src="index.js"></script>
+</body>
+</html>
