@@ -418,3 +418,27 @@ t.addEventListener("mousedown", function () {
 document.getElementById("cancelLast").addEventListener("mousedown", function () { 
   location.href = "https://www.youtube.com/watch?v=Uw8Z_2pQfwI";
 })
+
+document.getElementById("e").addEventListener("mousedown", function () {
+  if (storia.innerText == "0") { storia.innerText = Math.E; }
+  else { storia.innerText += Math.E;} 
+  
+  if (backComputationFunctions.length > 0) {
+    backComputationIntermedia[backComputationIntermedia.length - 1] += Math.E;
+  } else {
+    backComputations += Math.E;
+  }
+
+});
+document.getElementById("pi").addEventListener("mousedown", function () {
+  if (storia.innerText == "0") { storia.innerText = Math.PI; }
+  else { storia.innerText += Math.PI;} 
+  
+  if (backComputationFunctions.length > 0) {
+    backComputationIntermedia[backComputationIntermedia.length - 1] +=
+      Math.PI;
+  } else {
+    backComputations += Math.PI;
+  }
+
+});
