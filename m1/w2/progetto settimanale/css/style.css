@@ -1,0 +1,56 @@
+
+/*NOTA: i colori della calcolatrice e la disposizione dei tasti sono ispirati alla calcolatrice del
+ * mio ipad, di cui metto una foto nella cartella "immagini"
+ */
+
+
+/* general */
+:root{
+    text-align: center;
+    box-sizing: border-box;  
+}
+main{
+    margin:3rem;
+}
+p{
+    color: white;
+    text-align: right;
+}
+
+/*calculator style */
+
+#calculator{
+    width: 100%;
+    height: 100%;
+}
+table{
+    margin: 0;
+    width: 100%;
+    background-color: black;
+}
+table, tr, td{
+    border-style: solid;
+    border-color: black;
+}
+.btn{
+    background-color: #66757F;
+    color: white;
+}
+div p{
+    margin: 0.5rem;
+}
+#storia{
+    background-color: black;
+    margin-bottom: 0;
+    padding: 0.1rem;
+}
+#display{
+    background-color: black;
+    padding: 0.1rem;
+    border-top-style: solid;
+    border-top-color:#FBBC05;
+}
+
+#equal{
+    background-color: #FBBC05;
+}
