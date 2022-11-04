@@ -397,6 +397,24 @@ function lavoroPow(u) {
   }
 }
 
-document.getElementById("rad").addEventListener("mousedown", function () {
+document.getElementById("radiants").addEventListener("mousedown", function () {
   location.href = "https://www.youtube.com/watch?v=M8t-T6iA-nk";
 });
+
+
+let t = document.getElementById("resto");
+t.addEventListener("mousedown", function () { 
+    storia.innerText += t.innerText;
+  
+  if (backComputationFunctions.length > 0) {
+    backComputationIntermedia[backComputationIntermedia.length - 1] +=
+      t.innerText;
+  } else {
+    backComputations += t.innerText;
+  }
+  //se c'è un'operazione scientifica non binaria in corso, salviamo le cifre
+});
+
+document.getElementById("cancelLast").addEventListener("mousedown", function () { 
+  location.href = "https://www.youtube.com/watch?v=Uw8Z_2pQfwI";
+})
