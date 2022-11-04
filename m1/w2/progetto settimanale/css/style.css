@@ -8,6 +8,7 @@
 :root{
     text-align: center;
     box-sizing: border-box;  
+    
 }
 main{
     margin:3rem;
@@ -16,6 +17,7 @@ p{
     color: white;
     text-align: right;
 }
+
 
 /*calculator style */
 
@@ -35,14 +37,22 @@ table, tr, td{
 .btn{
     background-color: #66757F;
     color: white;
+    border-radius: 10%;
 }
 div p{
     margin: 0.5rem;
 }
-#storia{
+#accessorio p{
+    margin:0;
+}
+#storia, #calcoliPassati{
     background-color: black;
     margin-bottom: 0;
     padding: 0.1rem;
+}
+
+#calcoliPassati p{
+    filter: brightness(50%);
 }
 #display{
     background-color: black;
@@ -53,4 +63,30 @@ div p{
 
 #equal{
     background-color: #FBBC05;
+}
+
+/* Giorgia button */
+button{
+font-size:xx-large;
+font-family: cursive;
+border-radius: 50%;
+border-color: red;
+height: 10rem;
+width:10rem;
+background-image: url(../images/500.webp);
+background-size:cover;
+background-position: -80px;;
+}
+
+
+#istruzioni{
+    margin-top: 3rem;
+    background-color: coral;
+  
+    border-style: solid;
+}
+#istruzioni li{
+    margin-top: 1rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
 }

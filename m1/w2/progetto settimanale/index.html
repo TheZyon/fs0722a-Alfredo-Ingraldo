@@ -9,84 +9,108 @@
   </head>
   <body>
     <main>
+      <div>
+        <h1>Powered by <button>G.</button></h1>
+      </div>
       <div id="calculator">
-        
+        <div id="calcoliPassati"></div>
+        <div id="storia">
+          <p>0</p>
+        </div>
 
-          <div id="storia"> 
-            <p>carlino Paperino</p>
-          </div>
+        <div id="accessorio">
+          <p></p>
+        </div>
 
-          <div id="display">
-            <p>0</p>
-          </div>
+        <table>
+          <tbody>
+            <tr>
+              <td class="btn" id="powerOfTwo">2^</td>
+              <td class="btn" id="radiants">Berlu</td>
+              <td class="btn" id="cancelAll">C</td>
+              <td class="btn" id="sign">+/-</td>
+              <td class="btn" id="resto">%</td>
+              <td class="btn" id="cancelLast"><-</td>
+              <td class="btn" id="fac">!</td>
+              <td class="btn" id="random">Rand</td>
+            </tr>
+            <tr>
+              <td class="btn" id="sin">sin</td>
+              <td class="btn" id="sinh">sinh</td>
+              <td class="btn parL">(</td>
+              <td class="btn parR">)</td>
+              <td class="btn" id="divided">:</td>
+              <td class="btn" id="times">x</td>
+              <td class="btn" id="2-root">√</td>
+              <td class="btn" id="2-pow">^2</td>
+            </tr>
+            <tr>
+              <td class="btn" id="cos">cos</td>
+              <td class="btn" id="cosh">cosh</td>
+              <td class="btn" id="7">7</td>
+              <td class="btn" id="8">8</td>
+              <td class="btn" id="9">9</td>
+              <td class="btn" id="minus">-</td>
+              <td class="btn" id="3-root">∛</td>
+              <td class="btn" id="3-pow">^3</td>
+            </tr>
+            <tr>
+              <td class="btn" id="tan">tan</td>
+              <td class="btn" id="tanh">tanh</td>
+              <td class="btn" id="4">4</td>
+              <td class="btn" id="5">5</td>
+              <td class="btn" id="6">6</td>
+              <td class="btn" id="plus">+</td>
+              <td class="btn" id="y-root">Salv</td>
+              <td class="btn" id="pow">x^y</td>
+            </tr>
+            <tr>
+              <td class="btn" id="log_y">Giorg</td>
+              <td class="btn" id="log">ln</td>
+              <td class="btn" id="1">1</td>
+              <td class="btn" id="2">2</td>
+              <td class="btn" id="3">3</td>
+              <td class="btn" rowspan="2" id="equals">=</td>
+              <td class="btn" id="e">e</td>
+              <td class="btn parL">(</td>
+            </tr>
+            <tr>
+              <td class="btn" id="log_2">log_2</td>
+              <td class="btn" id="log_10">log_10</td>
+              <td class="btn" colspan="2" id="zero">0</td>
+              <td class="btn" id="dot">.</td>
+              <td class="btn" id="pi">π</td>
+              <td class="btn parR">)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-          <table>
-            <tbody>
-              <tr>
-                <td class="btn" id="powerOfTwo">2^</td>
-                <td class="btn" id="radiants">Rad</td>
-                <td class="btn" id="cancelAll">C</td>
-                <td class="btn" id="sign">+/-</td>
-                <td class="btn" id="resto">%</td>
-                <td class="btn" id="cancelLast"><-</td>
-                <td class="btn" id="fac">!</td>
-                <td class="btn" id="random">Rand</td>
-              </tr>
-              <tr>
-                <td class="btn" id="sin">sin</td>
-                <td class="btn" id="sinh">sinh</td>
-                <td class="btn" id="parL">(</td>
-                <td class="btn" id="parR">)</td>
-                <td class="btn" id="divided">:</td>
-                <td class="btn" id="times">x</td>
-                <td class="btn" id="2-root">√</td>
-                <td class="btn" id="2-pow">^2</td>
-              </tr>
-              <tr>
-                <td class="btn" id="cos">cos</td>
-                <td class="btn" id="cosh">cosh</td>
-                <td class="btn" id="7">7</td>
-                <td class="btn" id="8">8</td>
-                <td class="btn" id="9">9</td>
-                <td class="btn" id="minus">-</td>
-                <td class="btn" id="3-root">uu</td>
-                <td class="btn" id="3-pow">^3</td>
-              </tr>
-              <tr>
-                <td class="btn" id="tan">tan</td>
-                <td class="btn" id="tanh">tanh</td>
-                <td class="btn" id="4">4</td>
-                <td class="btn" id="5">5</td>
-                <td class="btn" id="6">6</td>
-                <td class="btn" id="plus">+</td>
-                <td class="btn" id="y-root">uu</td>
-                <td class="btn" id="pow">^</td>
-              </tr>
-              <tr>
-                <td class="btn" id="log_y">log_y</td>
-                <td class="btn" id="log">ln</td>
-                <td class="btn" id="1">1</td>
-                <td class="btn" id="2">2</td>
-                <td class="btn" id="3">3</td>
-                <td class="btn" rowspan="2" id="equals">=</td>
-                <td class="btn" id="e">e</td>
-                <td class="btn" id="leftPart">(</td>
-              </tr>
-              <tr>
-                <td class="btn" id="log_2">u</td>
-                <td class="btn" id="log_10">u</td>
-                <td class="btn" colspan="2" id="zero">0</td>
-                <td class="btn" id="dot">.</td>
-                <td class="btn" id="pi">π</td>
-                <td class="btn" id="par2">)</td>
-              </tr>
-            </tbody>
-          </table>
-        
+      <div id="istruzioni">
+        <h2>Istruzioni:</h2>
+        <ol>
+          <li>
+            Quando si clicca su un tasto, cambia il testo visualizzato sul
+            display.
+          </li>
+          <li>
+            Si possono calcolare funzioni composte come sin(log(2+tan(0.1)-3).
+          </li>
+          <li>
+            Ricordarsi di mettere sempre la parentesi destra per chiudere
+            l'argomento delle funzioni!
+          </li>
+          <li>
+            Tre tasti in particolare hanno un effetto che non riguarda la
+            calcolatrice in senso stretto, ma fanno vedere delle informazioni
+            importanti sul nostro paese...
+          </li>
+        </ol>
       </div>
     </main>
     <script src="stileVeloce.js"></script>
+    <!--inserito per dare lo stile di certi elementi in modo veloce-->
     <script src="index.js"></script>
-
+    <!--inserito per far funzionare la calcolatrice-->
   </body>
 </html>
