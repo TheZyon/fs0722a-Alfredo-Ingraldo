@@ -349,5 +349,5 @@ function somma(array) {
 */
 
 function searchByWord(word, array) { 
-  
+  return array.filter((film) => { return film.Title.includes(word); });
 }
