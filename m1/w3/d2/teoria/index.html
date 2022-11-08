@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="search" id="cerca" />
+
+    <div id="tendina">
+      <div>Gatto</div>
+      <div>Cane</div>
+      <div>Alpaca</div>
+      <div>Ghepardo</div>
+      <div>Leone</div>
+    </div>
+
+    <script>
+      let cerca = document.getElementById("cerca");
+
+      cerca.addEventListener("keyup", function () {
+        console.log(cerca.value); //stampa ciò che sta scritto nel campo di ricerca
+
+        let divAnimali = document.querySelectorAll("#tendina>div"); //lista di HTMLelements
+
+        for (let div of divAnimali) {
+          //cicliamo nella HTMLlist
+          let nomeAnimale = div.innerHTML.toLowerCase();
+          if (nomeAnimale.search(cerca.value.toLowerCase()) == -1) {
+            //utilizzo metodo SEARC
+            div.style.display = "none"; //lo fai sccomparire
+          } else {
+            div.style.display = "block";
+          }
+        }
+      });
+
+
+
+
+      
+    </script>
+  </body>
+</html>

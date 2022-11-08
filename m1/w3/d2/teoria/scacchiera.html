@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+
+:root{
+    text-align: center;
+}
+.casella{
+    margin:2rem;
+    padding:1rem;
+    border-style: solid;
+}
+
+
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <table>
+        <tbody>
+          <tr>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+          </tr>
+          <tr>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+          </tr>
+          <tr>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+          </tr>
+          <tr>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+          </tr>
+          <tr>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+          </tr>
+          <tr>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+          </tr>
+          <tr>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+          </tr>
+          <tr>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+            <td class="casella">8</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <script>
+        let caselleArray = document.getElementsByClassName("casella");
+        let scacchiera=[];
+for(i=0; i<64; i++){
+    let colonna=i%8;
+
+    scacchiera[colonna, Math.round((i-colonna)/8)]=caselleArray[i];
+}
+
+
+
+
+      </script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let str = "jjj,kkk,uuu,zzz, kKk,KKK";
+      console.log(str);
+      let Giovanni = str.replaceAll(/,/g, "@");
+      // "leg ex" /,/ con la lettera g sta a indicare che si cercano tutte
+      //le occorrenze della virgola (g sta per global)
+      //se si aggiunge una i alla g, la ricerca diventa case unsensitive
+      let Giovanna = str.replaceAll(/kk/gi, "ßå©");
+
+      //SPLIT
+      console.log(str.split(",")); //ogni volta che incontra una virgola spezza la stringa
+      //in questo modo si ottiene un array di stringhe
+
+
+
+      //JOIN
+let animali=["Adinolfi", "Berlusconi", "Salvini"];
+  console.log(animali.join("#")); 
+  //realizza una stringa partendo da un array, unendo gli elementi con un #
+  
+
+
+    </script>
+  </body>
+</html>
