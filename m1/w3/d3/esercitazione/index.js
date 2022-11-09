@@ -98,6 +98,6 @@ function compara() {
 
   document.getElementById("somiglianza").
     innerHTML = `Tu e Giorgia avete una routine simile al ${somiglianza}%`;
-
+  somiglianza = 0;
   
 }
