@@ -98,6 +98,18 @@ function compara() {
 
   document.getElementById("somiglianza").
     innerHTML = `Tu e Giorgia avete una routine simile al ${somiglianza}%`;
+  
+  document.getElementById("mostra_lista").appendChild(document.createElement("button"));
+  
+  let gButton = document.getElementById("mostra_lista").firstChild;
+  gButton.innerText = "Vedi la routine di G.";
+  gButton.addEventListener("mousedown", function () { 
+    for (let g of gList) {
+      document.getElementById("mostra_lista").appendChild(document.createElement("p"));
+      console.log(document.getElementById("mostra_lista"));
+      document.getElementById("mostra_lista").children[document.getElementById("mostra_lista").children.length - 1].innerText = `N.${gList.indexOf(g)} `+ g;
+    }
+  });
   somiglianza = 0;
   
 }
