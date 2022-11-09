@@ -9,6 +9,7 @@ btn.addEventListener("mousedown", function () {
   taskWork();
 });
 
+
 let i = 0;
 function createTask(name) {
   taskNames[taskNames.length] = name;
@@ -84,6 +85,24 @@ let gList = [
 let somiglianza = 0;
 
 document.getElementById("cmpbtn").addEventListener("mousedown", compara);
+document.getElementById("cmpbtn").addEventListener("mousedown", canta);
+
+
+function canta() { 
+  let g = new Audio("audio/giorgia.mp3");
+  setTimeout(function () {
+    g.play();
+    let giorgia = document.getElementById("cmpbtn");
+    giorgia.style.filter = "brightness(150%)";
+
+    setTimeout(function(){
+      g.pause();
+      giorgia.style.filter = "brightness(100%)";
+        g.currentTime = 1000;
+    }, 1200);
+}, 0);      
+
+}
 
 function compara() {
   //con un for ottengo la somiglianza
@@ -99,8 +118,7 @@ function compara() {
   document.getElementById("somiglianza").
     innerHTML = `Tu e Giorgia avete una routine simile al ${somiglianza}%`;
   
-  document.getElementById("mostra_lista").appendChild(document.createElement("button"));
-  
+  if (document.getElementById("mostra_lista").children.length==0) { document.getElementById("mostra_lista").appendChild(document.createElement("button"));}
   let gButton = document.getElementById("mostra_lista").firstChild;
   gButton.innerText = "Vedi la routine di G.";
   gButton.addEventListener("mousedown", function () { 
@@ -113,3 +131,7 @@ function compara() {
   somiglianza = 0;
   
 }
+
+
+
+
