@@ -1,12 +1,12 @@
+/**ho definito lo stile degli elementi "dinamici" della pagina nel js */
+
+
 :root{
     text-align: center;
     box-sizing: border-box;
     height: 100%;
     width: 100%;
 }
-
-
-
 
 h1{
     font-size:large;
@@ -41,8 +41,6 @@ button{
     height: 2.5rem;
 }
 
-
-
 #input{
     height: 2rem;
 }
@@ -50,3 +48,25 @@ button{
     height: 2rem;
 }
 
+#cmpbtn{
+    background-color: red;
+    border-style: solid;
+    border-color: lightgray;
+    font-style: bold;
+    color: red;
+    font-size: large;
+    font-family: cursive;
+    border-radius: 50%;
+    height: 10rem;
+    width: 10rem;
+    background-image: url(immagini/500.webp);
+    background-size: cover;
+    background-position: -80px;
+}
+
+#c{
+    margin-top: 2rem;
+}
+#c button:hover{
+    opacity: 0.5;
+}

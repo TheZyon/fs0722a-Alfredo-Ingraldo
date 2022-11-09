@@ -1,6 +1,7 @@
 let inp = document.getElementById("input");
 let btn = document.getElementById("btn");
 let tasksDiv = document.getElementById("tasks");
+let taskNames = []; //lista di stringhe con i nomi dei tasks
 
 btn.addEventListener("mousedown", function () {
   createTask(inp.value);
@@ -9,8 +10,8 @@ btn.addEventListener("mousedown", function () {
 });
 
 let i = 0;
-
 function createTask(name) {
+  taskNames[taskNames.length] = name;
   tasksDiv.appendChild(document.createElement("div"));
   tasksDiv.children[
     i
@@ -36,18 +37,67 @@ function taskWork() {
   let canc = document.getElementById(`canc${i - 1}`);
 
   //fai funzionare il checkbox
-    checkbox.addEventListener("click", function () {
-      
-
-
-        if (checkbox.checked == true) {taskText.style = "text-decoration: line-through"; }
-        else { taskText.style.textDecoration = null;}
-    
+  checkbox.addEventListener("click", function () {
+    if (checkbox.checked == true) {
+      taskText.style = "text-decoration: line-through";
+    } else {
+      taskText.style.textDecoration = null;
+    }
   });
   //fai funzionare il tasto canc
   canc.addEventListener("mousedown", function () {
     //let collTask=document.getElementById("tasks").children[i-1].children;
     let task = checkbox.parentElement;
     task.parentElement.removeChild(task);
+    //cancello il nome dalla taskNames
+    taskNames = taskNames.filter((e) => {
+      return e != taskText.innerText;
+    });
   });
+}
+
+//comparazione
+
+let gList = [
+  "ripeto ad alta voce e verifico se vero: sono Giorgia",
+  "ripeto ad alta voce e verifico se vero: sono Cristiana",
+  "ripeto ad alta voce e verifico se vero: sono una Donna",
+  "ripeto ad alta voce e verifico se vero: sono una Madre",
+  "ripeto ad alta voce senza verifica: non siamo fascisti",
+  "convincersi che le cose che dico hanno senso",
+  "aumentare il tetto del contante",
+  "fare corsetta per superare le devianze",
+  "fare il presepe",
+  "cercare di capire come si dice LGBTQRSTUVZ",
+  "assumere pervitin",
+  "lisciare capelli e pelle viso con bava di lumaca",
+  "assumere morfina",
+  "chiamare Silvio per prossime direttive",
+  "fare doccia",
+  "lucidare il busto di Benito nello studio",
+  "lavare i denti",
+  "instituire polizia segreta contro devianze",
+];
+
+
+//comparazione liste
+let somiglianza = 0;
+
+document.getElementById("cmpbtn").addEventListener("mousedown", compara);
+
+function compara() {
+  //con un for ottengo la somiglianza
+  for (g of gList) {
+    let contains = taskNames.find((e) => {
+      return e == g;
+    });
+    if (contains != undefined) {
+      somiglianza += 100 / 18;
+    }
+  }
+
+  document.getElementById("somiglianza").
+    innerHTML = `Tu e Giorgia avete una routine simile al ${somiglianza}%`;
+
+  
 }
