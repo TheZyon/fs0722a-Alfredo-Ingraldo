@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      #form {
+        margin: 3rem;
+      }
+      input {
+        margin: 1rem;
+      }
+    </style>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" id="form">
+      <div><input type="text" id="nome" required/></div>
+
+      <div><input type="text" id="cognome" required/></div>
+
+      <div><input type="email" id="email" required/></div>
+      <div><input type="password" id="password" required/></div>
+      <div><button id="mostra-nascondi">mostra/nascondi</button></div>
+      <div><input type="submit" value="invia" id="invia" /></div>
+    </form>
+    <script>
+      let mostraNascondi = document.getElementById("mostra-nascondi");
+      mostraNascondi.addEventListener("click", function () {
+        let password = document.getElementById("password");
+        if (password.type == "text") {
+          password.type = "password";
+        } else {
+          password.type = "text";
+        }
+      });
+
+      let form = document.getElementById("form");
+
+      form.addEventListener("submit", function (e) {
+        //e è un evento
+        e.preventDefault(); //blocco l'invio del form
+        console.log(e);
+      });
+
+      let formBtn = document.getElementById("invia");
+      formBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        let nome = document.getElementById("nome");
+        let cognome = document.getElementById("cognome");
+        let email = document.getElementById("email");
+        let password = document.getElementById("password");
+
+
+
+
+
+        console.log(nome.checkValidity(), nome.validity );
+        
+        //checkValidity() ritorna false se non è riempito da qualcosa
+      });
+
+
+
+    </script>
+  </body>
+</html>

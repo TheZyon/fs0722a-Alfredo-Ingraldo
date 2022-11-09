@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      #form {
+        margin: 3rem;
+      }
+      input {
+        margin: 1rem;
+      }
+    </style>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" id="form">
+      <div><input type="text" id="nome" data-notempty="no data" class="notEmpty"/></div>
+
+      <div><input type="text" id="cognome" data-notempty="no data" class="notEmpty" /></div>
+
+      <div><input type="email" id="email" data-notempty="no data" class="notEmpty"/></div>
+      <div><input type="password" id="password" data-notempty="no data" class="notEmpty"/></div>
+      <div><button id="mostra-nascondi">mostra/nascondi</button></div>
+      <div><input type="submit" value="invia" id="invia" /></div>
+    </form>
+    <script>
+      let mostraNascondi = document.getElementById("mostra-nascondi");
+      mostraNascondi.addEventListener("click", function () {
+        let password = document.getElementById("password");
+        if (password.type == "text") {
+          password.type = "password";
+        } else {
+          password.type = "text";
+        }
+      });
+
+      //####### lavoriamo sul formBtn #####
+
+      let formBtn = document.getElementById("invia");
+      formBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        let campi = document.querySelector("#form .notEmpty"); //tutte le cose con la classe "notEmpty", dentro alla cosa con id "form"
+
+
+
+        for (let campo in campi) {
+          validateNotEmpty(campo, campo.id);
+        }
+
+
+
+        function validateNotEmpty(field,message) {
+          if (!document.querySelector(`${field.id}-validation`)) {
+            //se non trova un elemento del genere
+
+            let span = document.createElement("span");
+            span.id = field.id + "-validation";
+            field.after(span); //lo inserisco dopo il campo
+          }
+
+          if (!field.value) {
+            //applicare ! prima di una stringa vuota torna true --->"la verifica se la stringa è vuota"
+            field.previousSibling.textContent = message;
+          } else {
+            field.previousSibling.textContent = "";
+          }
+        }
+
+
+
+
+
+        
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+        :target{
+            background-color: red;
+        }
+    </style>
+
+    <a href="#test1">test1</a>
+    <a href="#test2">test2</a>
+    <a href="#test3">test3</a>
+
+
+    
+    <div id="test1">target 1</div>
+    <div id="test2"> target 2</div>
+    <div id="test3"> target 3</div>
+
+    <script>
+      //vediamo tre oggetti che contengono info
+      console.log(navigator); //info sul browser
+      console.log(location); //info e metodi sulla pagina, location.reload() ad es ti ricarica la pagina
+      console.log(history);
+    </script>
+  </body>
+</html>

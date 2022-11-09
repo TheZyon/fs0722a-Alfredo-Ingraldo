@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      #form {
+        margin: 3rem;
+      }
+      input {
+        margin: 1rem;
+      }
+    </style>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" id="form">
+      <div><span></span><input type="text" id="nome" /></div>
+
+      <div><span></span><input type="text" id="cognome" /></div>
+
+      <div><span></span><input type="email" id="email" /></div>
+      <div><span></span><input type="password" id="password" /></div>
+      <div><button id="mostra-nascondi">mostra/nascondi</button></div>
+      <div><input type="submit" value="invia" id="invia" /></div>
+    </form>
+    <script>
+      let mostraNascondi = document.getElementById("mostra-nascondi");
+      mostraNascondi.addEventListener("click", function () {
+        let password = document.getElementById("password");
+        if (password.type == "text") {
+          password.type = "password";
+        } else {
+          password.type = "text";
+        }
+      });
+
+      let form = document.getElementById("form");
+
+      form.addEventListener("submit", function (e) {
+        //e è un evento
+        e.preventDefault(); //blocco l'invio del form
+        console.log(e);
+      });
+
+      let formBtn = document.getElementById("invia");
+      formBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        let nome = document.getElementById("nome");
+        let cognome = document.getElementById("cognome");
+        let email = document.getElementById("email");
+        let password = document.getElementById("password");
+
+        let valid = true;
+
+        function validateNotEmpty(field, message) {
+          if (!field.value) {
+            //applicare ! prima di una stringa vuota torna true --->"la verifica se la stringa è vuota"
+            field.previousSibling.textContent = message;
+          } else {
+            field.previousSibling.textContent = "";
+          }
+        }
+
+        
+
+
+      });
+    </script>
+  </body>
+</html>
