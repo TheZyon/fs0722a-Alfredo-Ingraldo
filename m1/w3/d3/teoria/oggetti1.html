@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Persona(nome, cognome) {
+        this.nome = nome;
+        this.cognome = cognome;
+        this.nazionalità = "italiana"; //questo valore non dipende dai parametri inseriti
+        this.dotato = (function () {
+          //uso una funzione che si chiama da sola per definire se è dotato o no
+          let rnd = Math.round(Math.random() * 1);
+          switch (rnd) {
+            case 0:
+              return "No";
+              break;
+            case 1:
+              return "Yes";
+              break;
+            default:
+              return "Non si sa";
+              break;
+          }
+        })();
+        this.propensioneAlRischio = this.dotato; //la propensione al rischio sarà uguale alla dotazione
+      }
+
+      //##### CLASSI ######
+      let i = 0;
+      class Utente {
+        constructor(n, c) {
+          //def: un metodo che viene lanciato in automatico quando si instanzia un oggetto
+          //quindi serve sì per configurare i parametri che si ricevono per instanziare
+
+          this.nome = n;
+          this.cognome = c;
+          //ma permette di fare anche altro
+
+          //esempio:
+          console.log(`creata buttana n.${i}`); //viene lanciato subito
+          i = i + 1;
+
+          this.presentazione(); //in fase di instanziamento lancio il metodo id presentazione
+        }
+        //si possono mettere delle funzioni nel blocco CLASS, ma non sono precedute dalla parola chiave
+        //function
+        presentazione() {
+          console.log(`Mi chiamo ${this.nome} ${this.cognome}`);
+        }
+        presentazione1() {
+          console.log("uuuuu");
+        }
+        //quindi si possono mettere vari metodi nel constructor, ed essi vengono
+        //lanciati ogni volta che si istanzia un nuovo oggetto
+      }
+
+      let mariella = new Utente("Mariella", "Camilla");
+
+      //##### EXTENDS #####
+
+      class Admin extends Utente {
+        //questa classe eredita il constructor e i metodi di Utenti
+        constructor(n, m, t) {
+          super(n, m); //attiva il constructor di Utente con i parametri n,m!!
+          this.titolo = t;
+        }
+      }
+      let amministratore = new Admin("Lady", "Pantera", "Mistress implacabile");
+
+      //Esempio
+
+      class Veicolo {
+        constructor(nruote = 2, cambio = "marcia") {
+          //se non inserisco parametri nel constructor, ho i valori di default 2 e "marcia"
+          this.nruote = nruote;
+          this.cambio = cambio;
+          this.vel = 0;
+          this.maxVel = 0;
+        }
+
+        //metodi della classe
+        accelera(n = 1) {
+          //########se non si mettono argomenti n==1 argomento di default !!########
+          this.vel += n;
+        }
+        stop() {
+          this.vel = 0;
+        }
+
+        //metodi statici: sono metodi che si applicano per la class e non per l'oggetto instanziato
+        //quindi non c'è bisogno di instanziare per poterli usare
+        //SI USA PER UN METODO CHE SI PUò LANCIARE SENZA PRIMA DOVER INSTANZIARE UN OGGETTO
+        //esempio da analizzare: document.getElementById è un metodo statico della class document
+        static getNRuote() { //posso chiamarlo scrivendo Veicolo.getNRuote();
+          return "ci sono 4 ruote";
+        }
+      }
+
+      class Bici extends Veicolo {
+        constructor(nRuote, marcia) {
+          super(nRuote, marcia);
+          this.maxVel = 100;
+        }
+        aumentaRuote() {
+          this.nruote += 2;
+        }
+      }
+    </script>
+  </body>
+</html>

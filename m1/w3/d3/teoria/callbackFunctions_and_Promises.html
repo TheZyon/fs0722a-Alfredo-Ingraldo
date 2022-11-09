@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="testo"></p>
+
+    <script>
+      function scrivi(testo, fn) {
+        //callback function che è usata come parametro
+        let areaTesto = document.querySelector(`#testo`);
+        areaTesto.innerHTML += fn(testo); //aggiungo all'innerHTML l'output della fn applicata su testo!
+      }
+
+
+      function bold(text) {
+        return `<b>${text}</b> <br>`;
+      }
+      function italic(text) {
+        return `<i>${text}</i> <br>`;
+      }
+
+
+//#####PROMISES######
+//le promises sono asincrone, e vengono eseguite in parallelo 
+let call =new Promise(function(success,error){
+
+
+let password="password";
+
+if(password=="password"){success("giusto");}
+else{error("sbagliato");}
+}
+);
+
+call.then((res)=>console.log(res), (err)=>console.log(err));
+//il codice asincrono viene eseguito dopo il codice sincrono
+
+
+
+
+//non è obbligatorio inserire anche la callback per l'errore
+let call2= new Promise(function(success){
+  success("ecco il risultato");
+});
+call2.then((e)=>console.log(e));
+
+
+
+
+
+    </script>
+  </body>
+</html>

@@ -106,9 +106,7 @@ function strToNumArray(array) {
 */
 
 const deleteEvenFromArray = function (arr) {
-  return arr.filter((e) => {
-    return (e + 1) % 2 == 0;
-  });
+  return arr.filter((e) => {return (e + 1) % 2 == 0;});
 };
 
 /* ESERCIZIO 10 (EXTRA)
@@ -119,7 +117,7 @@ const deleteEvenFromArray = function (arr) {
 //e ritorna true se le entrate sono tutte diverse, false altrimenti
 function verificaTuttiDiversi(arr) {
   //caso array non vuoto
-  if (arr.length > 0) {
+  
     for (let u of arr) {
       if (arr.indexOf(u) < arr.lastIndexOf(u)) {
         //se ci sono due copie di u in arr
@@ -127,18 +125,16 @@ function verificaTuttiDiversi(arr) {
       }
     }
     return true;
-  } 
-  }
+  
+}
 
 
 function tenRandomWithoutClones() {
   arr = [];
   i = 0;
-  while(i<10) {
+  while (i < 10) {
     rnd = Math.round(Math.random() * 10); //genero un numero casuale
-    let arr1 = arr.concat([rnd]); //arr1 è arr concatenato al nuovo rnd
-    
-    if (verificaTuttiDiversi(arr1)) { //se rnd è diverso da tutti gli elementi precedenti
+    if (verificaTuttiDiversi(arr.concat([rnd]))) {//se rnd è diverso da tutte le entrate di arr arr
       arr.push(rnd); //lo aggiungo ad arr
       i = i + 1;
     }
@@ -153,12 +149,11 @@ function tenRandomWithoutClones() {
 const invertiArray = function (array) {
   let arrayReversed = [];
   let l = array.length;
-  for (i = 0; i < l; i++) { 
-    arrayReversed[i] = array[l-1-i];
+  for (i = 0; i < l; i++) {
+    arrayReversed[i] = array[l - 1 - i];
   }
   return arrayReversed;
-}
-
+};
 
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
@@ -280,10 +275,10 @@ const movies = [
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
 
-function filmPiùVecchio(arr){ 
+function filmPiùVecchio(arr) {
   let indexOfFilmPiuVecchio = 0; //si aggiorna con la posizione del film più vecchio
   let annoPiuVecchio = 3000; //si aggiorna con l'anno più antico
-  for (let film of arr) { 
+  for (let film of arr) {
     if (eval(film.Year) < annoPiuVecchio) {
       annoPiuVecchio = eval(film.Year);
       console.log(annoPiuVecchio);
@@ -293,61 +288,62 @@ function filmPiùVecchio(arr){
   return arr[indexOfFilmPiuVecchio];
 }
 
-
 /* ESERCIZIO 13
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
 
-function l(array) { 
+function l(array) {
   return array.length;
 }
-
 
 /* ESERCIZIO 14
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
 */
 
-function titoli(arr) { 
+function titoli(arr) {
   let titoli = [];
-  for (let film of movies) { 
+  for (let film of movies) {
     titoli.push(film.Title);
   }
   return titoli;
 }
 
-
 /* ESERCIZIO 15
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
 */
 
-function film2000(arr) { 
-  return arr.filter((film) => { return film.Year >= 2000; });
+function film2000(arr) {
+  return arr.filter((film) => {
+    return film.Year >= 2000;
+  });
 }
-
 
 /* ESERCIZIO 16
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
 */
-function getFilmByID(imdbID, arr) { 
-  return arr.filter((film) => { return film.imdbID == imdbID; });
+function getFilmByID(imdbID, arr) {
+  return arr.filter((film) => {
+    return film.imdbID == imdbID;
+  });
 }
 /* ESERCIZIO 17
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
 
-function somma(array) { 
-  let s = 0; 
-  for (let film of movies) { 
+function somma(array) {
+  let s = 0;
+  for (let film of movies) {
     s += film.Year;
   }
   return s;
 }
 
-
 /* ESERCIZIO 18 (EXTRA)
   Scrivi una funzione per recuperare tutti i film dall'array fornito che contengono una parola fornita.
 */
 
-function searchByWord(word, array) { 
-  return array.filter((film) => { return film.Title.includes(word); });
+function searchByWord(word, array) {
+  return array.filter((film) => {
+    return film.Title.includes(word);
+  });
 }

@@ -1,0 +1,52 @@
+:root{
+    text-align: center;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+h1{
+    font-size:large;
+}
+body{
+    background-color: #9cd3d3;
+}
+
+#task-list-div{
+    background-color: white;
+    border-radius:12%;
+    padding:2rem;
+    margin-right: 8rem;
+    margin-left:8rem;
+    margin-top: 3rem;
+}
+#task-list-div input button {
+    border-style: solid;
+    border-radius: 15%;
+    border-color: lightgrey;
+    padding: 1rem;
+    height: 100%;
+    width: 100%;
+}
+
+
+button{
+    display:inline;
+    background-color: #2b4353;
+    border-radius: 15%;
+    color: white;
+    height: 2.5rem;
+}
+
+
+
+#input{
+    height: 2rem;
+}
+.cancBtn{ 
+    height: 2rem;
+}
+

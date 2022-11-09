@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //secondo modo per gestire l'asincrono
+      //funzione ASYNC
+
+      let f = fetch("https://jsonplaceholder.typicode.com/todos/");
+      //fetch restituisce una promise
+      f.then((res) => {
+        console.log(res); //res contiene un OGGETTO di tipo Response, che contiene info tipo se tutto è andato bene
+        return res.json(); //il metodo json() trasforma l'oggetto, in un array di oggetti che corrispondono ai vari elementi json
+      }).then((res) => console.log(res)); //stampo l'array di oggetti
+      //il dato restituito da un .then diventa il parametro passato dal .then successivo
+
+      //async functions: usate per gestire chiamate asincrone
+      //la parola "await" è presente solo in una funzione async
+      //e blocca finchè non è avvenuta la cosa a destra
+
+      console.log("");
+
+      async function call() {
+        let todos = await fetch("https://jsonplaceholder.typicode.com/todos");
+        let jsonTodos = await todos.json();
+
+        console.log(jsonTodos);
+
+        //ipotesi: await serve a realizzare il ruolo del .then
+        //nell'altra maniera
+      }
+      
+      //l'asincrono si usa principalmente per ottenere info dall'esterno
+    
+    //usare il try{}catch(){};
+    // throw lancia una cosa che vuiene mandata come argomento a catch
+
+
+
+let x=16;
+
+    try{
+        if(x>15){ throw "troppo grande"};
+        if(x<3) {throw "troppo piccolo"};
+    }catch(err){
+        console.log(err);
+    }
+    
+    
+    
+    
+    </script>
+  </body>
+</html>
