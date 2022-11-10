@@ -90,8 +90,21 @@
       const changeUrls = function () {
         let linksArray = document.querySelectorAll("a");
         for (let a of linksArray) {
-          a.setAttribute("href", "https://www.google.com");
-        }
+          a.setAttribute(
+            "href",
+            "https://www.instagram.com/stories/highlights/17975568904516012/"
+          );
+          a.innerHTML =
+            "Questo link introduce al prossimo personaggio fondamentale."+"<br>"+"Cliccare a vostro rischio.";
+          a.style = "font-size: 35; color:red;";
+          //adesso inserisco un div come parent element a
+          let div = document.createElement("div");
+          let parent = a.parentNode;
+          parent.replaceChild(div, a);
+          div.appendChild(a);
+          //metto lo stile al div
+          div.style="background-Color:black; height:7rem; margin:2rem; padding:2rem; text-align:center; border-Radius:6px;";  
+        } 
       };
 
       /* ESERCIZIO 5
@@ -184,7 +197,7 @@
 
       const inputField = document.getElementById("input-field");
 
-      inputField.addEventListener("keyup", function(){
+      inputField.addEventListener("keyup", function () {
         console.log(inputField.value);
       });
 
@@ -193,9 +206,9 @@
       */
 
       window.onload = function () {
-        window.addEventListener("load", function(){
+        window.addEventListener("load", function () {
           alert("benvenuto!");
-        })
+        });
       };
     </script>
   </body>
