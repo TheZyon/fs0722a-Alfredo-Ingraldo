@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Results</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Outfit:wght@300;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+
+    <!--HEADER, LOGO -->
+
+    <header class="logo">
+      <img
+        src="img/epicode_logo.png"
+        class="logo"
+        alt="epicodeLogo"
+      />
+    </header>
+
+    <!--CONTAINER PRINCIPAL E TITOLI-->
+
+    <main class="container">
+      
+      <div>
+        <h1 class="titolo">Results</h1>
+        <h2 class="sottotitolo">The summary of your answers:</h2>
+      </div>
+
+      <!--BLOCCHI PERCENTUALI (1,2,3)-->
+
+      <div id="block1">
+        <h3>Correct</h3>
+        <p id="percentageGiuste">66.7%</p>
+        <p id="questions">4/6 questions</p>
+      </div>
+
+      <div class="block2">
+        <!--CERCHIO CON SVG-->
+
+        <svg id="circle">
+          <circle
+            r="140"
+            cx="50%"
+            cy="50%"
+            stroke="#D20094"
+            fill="none"
+            stroke-width="50"
+            stroke-linecap="butt"
+            stroke-dasharray="880, 880"
+          ></circle>
+          <circle
+            id="success-value"
+            r="140"
+            cx="50%"
+            cy="50%"
+            stroke="#00FFFF"
+            fill="none"
+            stroke-width="50"
+            stroke-linecap="butt"
+            stroke-dasharray="500, 880"
+          ></circle>
+        </svg>
+        <div style="position: relative">
+          <div id="circle-text">
+            <p class="innerText textG">Congratulations!</p>
+            <p class="innerText textG" id="innerText2">You passed the exam.</p>
+            <p class="innerDescription textG">
+              We'll send you the certificate in few minutes.
+            </p>
+            <p class="innerDescription textG" id="innerDescription2">
+              Check your email (including promotions / spam folder)
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="block3">
+        <h3>Wrong</h3>
+        <p id="percentageWrong">33.3%</p>
+        <p id="questions2">2/6 questions</p>
+      </div>
+
+      <!--FINE BLOCCHI-->
+
+      <!--BOTTONE RATE-US-->
+
+      <div class="divRateus">
+        <a href="feedback.html"> <button class="button" type="button">RATE US</button> </a>
+      </div>
+    </main>
+    <script src="javascript/results.js"></script>
+  </body>
+</html>

@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
+
+body {
+    font-family: 'Outfit', sans-serif;
+    color: white;
+    background-image: url("/assets/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    
+}
+
+#epicodelogo {
+    width: 150px;
+    margin-top: 40px;
+    margin-left: 130px;
+}
+
+#title {
+    font-size: 60px;
+}
+
+#subtitle {
+    font-size: 3rem;
+    color: #d20094;
+}
+
+.text {
+    margin-left: 130px;
+    padding: 5px;
+    font-size: 1.5rem;
+}
+
+#box{
+    padding-bottom:2rem;
+}
+
+
+
+
+/*#paragraph {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem;
+    padding: 5px;
+    
+}
+
+#container, label {
+    position: relative;
+}
+#checkbox {
+    display: none;
+}
+
+#checkbox {
+    width: 30px;
+    height: 30px;
+    margin-top: 35px;
+    border: 0.15em solid white;
+    cursor: pointer;
+    
+}
+*/
+/* checkbox maledetta */
+#box {
+    margin-top: 100px;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 130px;
+}
+
+.checkbox {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.checkinput {
+    display: none;
+}
+
+.checkcontainer {
+    width: 1.45rem;
+    height: 1.45rem;
+    border: 3px solid white;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+
+
+.checkinput:checked + .checkcontainer {
+    background-color: white;
+}
+
+
+
+
+/* fine checkbox maledetta */
+/* footer */
+span {
+    font-size: 1.6rem;
+    padding: 10px;
+}
+
+
+#pulsante {
+    width: 220px;
+    height: 60px;
+    margin-left: 300px;
+    color: black;
+    background-color: #0ff;
+    font-size: 1.8rem;
+    font-weight: 700;
+    border: 1px solid black;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+#pulsante:hover {
+    transform: scale(1.1, 1.1);
+    box-shadow: 1px 1px 40px #0ff;
+}
+

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Outfit:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/exam_02_test.css" />
+    <link rel="stylesheet" href="css/temp.css" />
+    <title>Benchmark</title>
+  </head>
+
+  <body>
+    <main>
+      <!------------------HEADER-------------------------->
+      <div class="header">
+        <!------------------LOGO-------------------------->
+        <div class="logo">
+          <img src="/img/epicode_logo.png" alt="logo-Epicode" />
+        </div>
+
+        <!------------------TIMER-------------------------->
+
+        <div id="orologio">
+          <svg id="bg-trasp">
+            <circle id="giorgia" r="60" cx="70" cy="70"></circle>
+          </svg>
+          <svg id="blue">
+            <circle id="circleGiorgia" r="60" cx="70" cy="70"></circle>
+          </svg>
+       <div id="prova1">
+          <span class="timer-text">SECONDS</span>
+          <div id="countdown-number"></div>
+          <span class="timer-text">REMAINING</span>
+       </div>
+        </div>
+      </div>
+
+      <!------------------QUESTION TEX-------------------------->
+      <div id="questiontext">How can I create a checkbox in HTML?</div>
+
+      <!------------------QUESTION BOX-------------------------->
+      <div class="questionbox">
+        <!------------------BUTTON-------------------------->
+        <span class="answer">answer 1</span>
+        <span class="answer">answer 2</span>
+        <span class="answer">answer 3</span>
+        <span class="answer">answer 4</span>
+      </div>
+
+        
+  </main>
+   <!------------------FOOTER--------------------------> 
+  <footer>
+    <div>QUESTION &nbsp;<span id="questionNumber">1</span> <span id="dieci"> /10</span> </div>
+    </footer>
+    <script src="javascript/benchmark.js"></script>
+  </body>
+</html>
+
+<!--
+        QUIZ GAME!
+
+        REGOLE:
+        / L'utente dovrà indovinare un certo numero di domandeThe player must guess correctly a certain amount of questions
+        / Ogni risposta corretta gli darà 1 punto
+        / Le domande possono avere risposte multiple o singole (true/false)
+        / Al termine del quiz l'utente dovrà poter vedere il suo punteggio
+
+        DOMANDE:
+        / Le domande possono essere ottenute da questo URL ( http://bit.ly/strive_QUIZZ ) o puoi scriverne di tue
+        / Possono essere composte di boolean multipli (true / false)
+
+        TIPS:
+        / Usa una variabile globale per registrare il punteggio dell'utente
+        / Crea una variabile "questionNumber" per tenere traccia del numero (o posizione) della domanda presentata all'utente
+        / Quando "questionNumber" è maggiore delle domande disponibili, a quel punto l'applicazione dovrà mostrare il punteggio
+        / Comincia salvando le domande in una variabile (o reperiscile dall'URL fornito usando AJAX e fetch)
+        / Parti con l'implementazione semplice, poi passa agli extra e ad abbellire l'interfaccia 
+        / Fai test completi: controlla la console periodicamente per verificare che non ci siano errori e che il flusso di dati sia quello che ti aspetti
+
+        EXTRA:
+        / Dai un feedback sulla risposta al momento del click (corretta o sbagliata)
+        / Visualizza una domanda alla volta in sequenza piuttosto che tutte assieme in forma di lista
+        / Permetti all'utente di selezionare la difficoltà del quiz prima di iniziare e il numero di domande che desidera ricevere.
+        ( Se hai implementato l'applicazione usando l'URL fornito, puoi ottenere i dati che ti servono in modo semplice, 
+        usando query parameters in questo modo: https://opentdb.com/api.php?amount=10&category=18&difficulty=easy e modificarne il numero di domande e difficoltà )
+    
+        /* NON DIMENTICARE...
+          di fare commit & push del codice regolarmente sulla tua repository GitHub e di condividerla con i tuoi colleghi
+        */
+    -->

@@ -1,0 +1,239 @@
+
+
+body {  
+  background-image: url("../assets/bg.jpg");
+  padding: 0;
+  border: 0;
+  width:100vw;  
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-sizing: border-box;
+  margin: 0;
+}
+/*main {
+background-image: url("../assets/bg.jpg");
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+*/
+
+
+.header {
+display: inline-flex;
+width: 100%;
+height: 20%; 
+}
+
+.logo {
+width: 50%;
+}
+
+.logo img {
+    
+width: 200px;
+margin-left: 170px;
+margin-top: 50px;
+
+}
+
+#questiontext {
+
+  font-family: 'Outfit', sans-serif;
+  font-size: 60px;
+  color: white;
+  margin-left: 100px;
+  margin-right: 100px;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px; 
+  
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+            
+  }
+
+
+
+.questionbox {
+
+height: 5rem;
+margin-top: 2rem;;
+padding-top:2.5rem;
+margin-left: auto;
+margin-right:auto;
+text-align: center;
+align-items: center;
+justify-items: center;
+justify-content: center;
+display: grid;
+grid-template-columns: repeat(2, 190px);
+grid-template-rows: repeat(2, 80px);
+grid-column-gap: 131px;
+grid-row-gap: 0px;
+grid-area: 1 / 1 / 3 / 3;
+      
+}
+
+
+.answer {
+
+width: 100%;
+font-family: 'Inter', sans-serif;
+font-size: 16px;
+color: white;
+background: rgb(255, 255, 255, .1);  /*opacità con quarto valore su RGB)*/
+border-image-slice: 1;
+border-width: 3px;
+border-radius: 30px;
+border: solid 3px;
+border-style: outset;
+cursor:pointer;
+padding-top: 20px;
+padding-bottom: 20px;
+padding-right: 50px;
+padding-left: 50px;
+margin-left: 0;
+margin-right: 0;
+text-decoration:none;
+text-align: center;
+
+
+-webkit-user-select: none; /* Safari */
+-ms-user-select: none; /* IE 10 and IE 11 */
+user-select: none; /* Standard syntax */
+
+}
+
+.answer:hover {
+background:linear-gradient(to bottom, #d20094 5%, #8a007c 100%);
+background: color #d20094;
+transform: scale(1.1, 1.1);
+box-shadow: 1px 1px 10px #0ff;
+}
+
+.answer:active {
+position:relative;
+top:1px;
+}
+
+
+
+footer {
+font-family: 'Inter', sans-serif;
+margin-top: 5rem;
+font-size: 16px;
+color: white;
+width: 100%;
+height: 3rem;
+padding-bottom: 2rem;
+text-align: center;
+display: flex;
+align-items: center;
+justify-content: center;
+
+-webkit-user-select: none; /* Safari */
+-ms-user-select: none; /* IE 10 and IE 11 */
+user-select: none; /* Standard syntax */
+   
+}
+
+
+#dieci {
+
+  color:#d20094;
+       
+  }
+
+/**OROLOGIO */
+
+
+
+  #orologio {
+    position: relative;
+    margin-left: 0px;
+    margin-top: 15px;
+    height: 200px;
+    width: 50%;
+    text-align: center;
+    display: absolute;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  #countdown-number {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    color: white;
+    
+  }
+  
+  .timer-text {
+    font-family: 'Outfit', sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    color: white;
+  }
+  
+  svg {
+    position: absolute;
+    top: auto;
+    left: auto;
+    width: auto;
+    height: auto;
+    transform: rotateY(-180deg) rotateZ(-90deg);
+  }
+  
+  #circleGiorgia {
+    stroke-dasharray: 376.4px;
+    stroke-dashoffset: 0px;
+    stroke-width: 15px;
+    stroke: #00ffff;
+    fill: none;
+    position: absolute;
+    /*quando hai elementi che si sovrappongono con position absloute o relative puoi dire quello che sta sopra con z-index! con z-index maggiore sta sopra! se non è indicato è zero!*/
+    z-index: 10;
+    
+  }
+  
+  
+  
+  .animated{
+    animation: countdown 30s linear infinite forwards;
+  }
+  /* dopo i 30 sec togli animazione, mostri domanda succ, rimetti animazione */
+  
+  
+  #bg-trasp circle {
+    stroke-dasharray: 376.4px;
+    stroke-dashoffset: 0px;
+    stroke-width: 15px;
+    stroke: #fdfdfd;
+    opacity: 0.3;
+    position: absolute;
+    z-index: 5;
+    fill: none;
+  }
+  
+  @keyframes countdown {
+    from {
+      stroke-dashoffset: 0px;
+    }
+    to {
+      stroke-dashoffset: 376.4px;
+    }
+  }
+  
+  
+  #prova1{
+    margin-left: 311px;
+    margin-top: 110px;
+  }
