@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>scrset</title>
+  </head>
+  <body>
+    <picture> <!-- SEARCHSET-->
+      <!-- usato per marcare una parte di codice in cui viene mostrata una tra tante immagini-->
+      <!-- come un switch -->
+      <source
+        media="(min-width: 1024px)"
+        srcset="images/img_pink_flowers.jpeg"
+      />
+      <!-- attivata da 1024px in poi -->
+      <!-- se l'ampiezza è minore non viene attivata e si passa sotto-->
+      <source
+        media="(min-width: 800px)"
+        srcset="images/img_white_flower.jpeg"
+      />
+      <!-- attivata da 800px in su, altrimenti si guarda sotto-->
+      <img src="images/img_orange_flowers.jpeg" alt="#" />
+      <!-- attivata di default-->
+    </picture>
+  </body>
+</html>
