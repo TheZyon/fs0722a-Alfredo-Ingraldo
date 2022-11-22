@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+       :root{
+        position:relative;
+       }
+      .container {
+        position: relative;
+        width: 1024px;
+        height: 800px;
+        margin: 0 auto;
+        border: 2px solid black;
+      }
+      .container div {
+        position: absolute;
+        height: 150px;
+        width: 150px;
+      }
+      #rosso {
+        background-color: red;
+        top: 20px;
+        left: 20px;
+        z-index: 2;
+      }
+      #blu {
+        background-color: blue;
+        top: 40px;
+        left: 40px;
+        z-index: 3;
+      }
+      #verde {
+        background-color: green;
+        top: 60px;
+        left: 60px;
+        z-index: 1;
+      }
+      #yellow {
+        background-color: yellow;
+        top: 80px;
+        left: 80px;
+        z-index: 4;
+      }
+
+    img{     /*si usa anche per le immagini*/
+        position: absolute;
+        top:200px;
+        left:200px;
+        z-index:3; /*sta sopra tutto tranne l'elemento cojn z-index 4*/
+    }
+      /*Lo z-index è un parametro che dice quanto è sollevato un elemento rispetto agli altri sull'asse z
+    quindi permette di sovrapporre elementi ad altri
+    il minimo è -999
+    il massimo è 999*/
+    </style>
+  </head>
+  <body>
+    <h2>Z-index</h2>
+
+    <div class="container">
+      <div id="rosso"></div>
+      <div id="blu"></div>
+      <div id="verde"></div>
+      <div id="yellow"></div>
+    </div>
+    <img src="/m2/w1/d1/teoria/images/img_white_flower.jpeg" alt="">
+  </body>
+</html>

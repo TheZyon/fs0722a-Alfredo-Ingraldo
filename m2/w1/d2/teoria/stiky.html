@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #containerForStiky{
+            text-align: center;
+            
+        }
+        div.stiky{
+            position: sticky;
+            top:0; /*è obbligatorio specificare almeno una posizione*/
+
+
+            /*routine beauty*/
+            text-align: center;
+            border: 3px solid red;
+            border-radius: 2px;
+            padding: 1rem 1rem;
+        }
+        p.testo{
+            padding-bottom: 2000px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Position Stiky</h2>
+    <p>Prova a fare <b>scrooll</b> per capire come funziona stiky</p>
+   <div class="stiky">Questo div ha <code>position:stiky</code></div>
+    <p class="testo">quando scrollo sotto, l'elemento stiky resta incollata al top della pagina</p>
+     
+</body>
+</html>

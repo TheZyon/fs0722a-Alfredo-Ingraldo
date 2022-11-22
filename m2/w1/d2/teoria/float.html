@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Float</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      #container {
+        width: 1200px;
+        margin: 0 auto; /* il primo riguarda top & bottom, il secondo left e right;*/
+        border: 1px solid black; /* ampiezza, stile e colore in un'unica riga*/
+      }
+      header {
+        background-color: navy;
+        text-align: center;
+      }
+      header h1 {
+        color: white;
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        margin: 0;
+      }
+
+      /*sistemo nav*/
+
+      nav {
+        background-color: blueviolet;
+        height: 30px; /*per vedere il contenuto, dopo che si è dato float ai li, togliendo loro l'altezza*/
+      }
+      /*la lista eredita di default un margine e un padding, andiamoli a togliere!*/
+      nav ul {
+        margin: 0;
+        padding:0;
+        list-style-type: none;
+      }
+
+
+
+      /* ##### FLOAT #####*/
+      nav li {
+        /*display: inline;/*affianca i punti delle liste*/
+        float:left; /*i tag a cui assegnamo float non contribuiscono all'altezza del contenitore!!!!*/
+        border-right: 1px solid #fff;
+        padding: 0 95px;
+       
+      } 
+      nav li#ultimo{ /* ATTENZIONE: l'id #ultimo va attaccato a li altimenti non funziona*/
+        border-right:none; 
+      }
+      
+      nav a {
+        color: white;
+        text-decoration: none;/*toglie la sottolineatura di default delle anchor*/ 
+        display: block;
+        line-height: 30px; /*dando line height uguale all'altezza del contenitore gli elementi si allineano verticalmente aòl centro*/
+      }
+      nav a:hover{
+        background-color: #fff;
+        color:blueviolet;
+      }
+
+      aside{
+        float:left;
+        width: 300px;
+      }
+ 
+      
+
+      /*secondario*/
+#pinkF{
+  width: 70%;
+}
+footer{
+  background-color: blueviolet;
+  text-align: center;
+}
+footer p{
+  margin:0;
+}
+
+/* the CLEAR tecnique*/
+footer{
+clear:left; /* fa in modo che non ci sia nulla a sx o a dx dell'elemento*/
+}
+
+/*voglio mettere un'altra banda a dx, come quella a sx che contiene le immagini*/
+
+#right{
+float:right;
+width:300px;
+}
+
+
+/*esercizio*/
+
+.sx{
+  float:left;
+  width: 100px;
+
+}
+.dx{
+float:right;
+width:100px;
+}
+section{
+  padding:0 19rem;
+}
+main{
+  padding-left: 3rem;
+}
+  
+    </style>
+  </head>
+  <body>
+    <div id="container">
+        <!--intestazione-->
+      <header>
+        <h1>Epicode</h1>
+        <nav>
+          <ul>
+            <li><a href="#">Html</a></li>
+            <li><a href="#">Css</a></li>
+            <li><a href="#">Javascipt</a></li>
+            <li><a href="#">Typescript</a></li>
+            <li id="ultimo"><a href="#" >Angular</a></li>
+          </ul>
+        </nav>
+      </header>
+     <!--corpo centrale-->
+<main>
+
+  <aside>
+    <img id="pinkF" src="/m2/w1/d1/teoria/images/img_pink_flowers.jpeg" alt="uuu">
+ 
+</aside>
+
+<aside id="right">
+<!-- prima si mettono gli elementi che floattano e poi gli altri, che
+ occuperanno i lati lasciati liberi!!!-->
+ <img id="pinkF" src="/m2/w1/d1/teoria/images/img_pink_flowers.jpeg" alt="uuu">
+</aside> 
+
+  <section>
+    
+    
+    <img class="sx" src="/m2/w1/d1/teoria/images/img_orange_flowers.jpeg" alt="uuu" >
+   
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, ut? Voluptate maxime consectetur optio est nam? Consequuntur quibusdam ex minima animi hic ea iure, reprehenderit exercitationem eum ducimus cumque beatae.
+  Doloremque culpa voluptatibus expedita rem temporibus, delectus explicabo velit similique obcaecati cumque hic quidem ipsa amet vel earum. Fugit non tempore sint modi vel vitae quidem maiores placeat deleniti esse. Lorem ipsum dolor sit amet consectetur adipisicing elit. At, voluptatibus facere, quaerat porro nulla ea enim quisquam nobis sint harum dolor, eligendi aut. Perferendis corporis porro a voluptatibus aliquam consequuntur.</p>
+ 
+  
+    <img class="dx" src="/m2/w1/d1/teoria/images/img_orange_flowers.jpeg" alt="uuu" >
+   <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad nobis magni consequuntur obcaecati? Rerum necessitatibus doloremque numquam tempora esse exercitationem doloribus. Velit obcaecati, quidem iste voluptatum rerum recusandae optio quisquam!
+ Doloremque sint minus est dolor perspiciatis aperiam autem nulla? Nisi, voluptates veniam? Culpa iure esse, obcaecati autem, cum, quod omnis optio repudiandae eius blanditiis tempora voluptate suscipit perferendis aut. Id. Dignissimos architecto sequi quae sit, at iure, nemo numquam consequuntur consequatur aliquid earum eligendi veniam vel? Accusamus explicabo magnam omnis velit ea culpa alias! Animi, eius sint! Neque, vitae non?</p>
+ 
+ <img class="sx" src="/m2/w1/d1/teoria/images/img_orange_flowers.jpeg" alt="uuu" >
+    
+ <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam et repellat, minus aliquid autem maiores in illum adipisci doloribus a amet, delectus earum? Accusantium, adipisci? Iste, quis? Maiores, atque repellendus.
+ Labore, voluptas cupiditate. Debitis unde amet dicta praesentium delectus, laborum facere, perferendis iure tenetur ipsam minus quasi saepe consequuntur ex! Amet, quo possimus itaque voluptatibus dignissimos harum optio totam corrupti. Accusantium minima perspiciatis nesciunt voluptatem, voluptas at ab odit quam atque vitae, voluptate necessitatibus rerum unde error deleniti, praesentium libero iste. Dignissimos consequuntur dolore perspiciatis necessitatibus cupiditate sunt fugit harum.</p>
+
+ <img class="dx" src="/m2/w1/d1/teoria/images/img_orange_flowers.jpeg" alt="uuu" >
+ <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad nobis magni consequuntur obcaecati? Rerum necessitatibus doloremque numquam tempora esse exercitationem doloribus. Velit obcaecati, quidem iste voluptatum rerum recusandae optio quisquam!
+Doloremque sint minus est dolor perspiciatis aperiam autem nulla? Nisi, voluptates veniam? Culpa iure esse, obcaecati autem, cum, quod omnis optio repudiandae eius blanditiis tempora voluptate suscipit perferendis aut. Id. Dignissimos architecto sequi quae sit, at iure, nemo numquam consequuntur consequatur aliquid earum eligendi veniam vel? Accusamus explicabo magnam omnis velit ea culpa alias! Animi, eius sint! Neque, vitae non?</p>
+
+<img class="sx" src="/m2/w1/d1/teoria/images/img_orange_flowers.jpeg" alt="uuu" >
+    
+ <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam et repellat, minus aliquid autem maiores in illum adipisci doloribus a amet, delectus earum? Accusantium, adipisci? Iste, quis? Maiores, atque repellendus.
+ Labore, voluptas cupiditate. Debitis unde amet dicta praesentium delectus, laborum facere, perferendis iure tenetur ipsam minus quasi saepe consequuntur ex! Amet, quo possimus itaque voluptatibus dignissimos harum optio totam corrupti. Accusantium minima perspiciatis nesciunt voluptatem, voluptas at ab odit quam atque vitae, voluptate necessitatibus rerum unde error deleniti, praesentium libero iste. Dignissimos consequuntur dolore perspiciatis necessitatibus cupiditate sunt fugit harum.</p>
+
+</section>
+
+
+</main>
+<footer>
+  <p>FOOTER</p> 
+  <!-- footer si posiziona sotto la section perchè l'aside, essendo position:float, non
+  contribuisce all'altezza della pagina-->
+
+</footer>
+    </div>
+   
+  </body>
+</html>
