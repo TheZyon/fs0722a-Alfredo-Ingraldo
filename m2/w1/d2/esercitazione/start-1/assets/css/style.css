@@ -453,9 +453,17 @@ header {
   position: absolute;
   top: -20px;
   left: 20px;
-  z-index: 0;
+  
 }
+@media screen and (min-width:1200px){
+  article section{
+    height: 270px;
+  }
 
+  p{
+    margin-bottom: 2rem;
+  }
+}
 /*punti 5,6,7 */
 .iconDiv {
   position: fixed;
