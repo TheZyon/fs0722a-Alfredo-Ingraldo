@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex</title>
+    <style>
+      .main-nav {
+        display: flex;
+        /*gli elementi di nav si dispongono in modo flex
+        di default è nav row, gli elementi si dispongono in riga*/
+        background: orangered;
+        color: white;
+        border-radius: 3px;
+        padding: 1em;
+        font-family: sans-serif;
+      }
+      .main-nav > ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex; /*si scrive per il contenitore e si applica agli elementi contenuti*/
+        flex: 3; /*accetta tre valori: flex-grow flex-shrink flex-basis
+        questa istruzione si applica ad un elemento vedendolo come child:
+        ul è child di main-nav e gli stiamo dicendo di occupare "3-volte lo spazio" in main-nav*/
+      }
+      .main-nav li{
+        margin-right: 1em;
+      }
+      .main-nav form{
+       display: flex;
+       justify-content: flex-end;
+       flex:1;
+      }
+      .main-nav button{
+        background-color: white;
+        border:0;
+        border-radius: 1em;
+        color:orangered;
+        padding:0 1em;
+        margin-left: 0.5em;
+      }
+
+      /*Adesso la responsiveness*/
+      @media screen and (max-width:575px){
+        .main-nav{
+            flex-direction: column;
+        }
+    .main-nav ul{
+        flex-direction: column;
+        margin-bottom: 1em;
+    }  
+    }
+
+    </style>
+  </head>
+  <body>
+    <nav class="main-nav">
+      <ul>
+        <li>Logo</li>
+        <li>Home</li>
+        <li>Products</li>
+        <li>Service</li>
+      </ul>
+      <form action="">
+        <input type="search" placeholder="search" />
+        <button>Go</button>
+      </form>
+    </nav>
+  </body>
+</html>

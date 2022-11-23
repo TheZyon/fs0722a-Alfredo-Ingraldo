@@ -1,0 +1,51 @@
+.art-card {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 2em;
+    background-color: rgba(255, 191, 0, 0.482);
+    font-family: sans-serif;
+
+}
+
+.art-card img {
+    margin:1.5rem;
+    width: 70%;
+    margin-bottom: 1.5rem;
+    align-self: center;
+
+}
+
+.art-card .text {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 20px;
+    font-size: 0.8rem;
+}
+
+.art-card .text>p {
+    align-self: center;
+    padding-left: 1rem;
+    font-weight: 400;
+}
+
+.art-card h3 {
+    margin-left: 1rem;
+    margin-bottom: 0.3rem;
+    font-size: 20px;
+}
+
+
+@media screen and (min-width:1200px){
+.art-card{
+    flex-direction: row;
+}
+
+.art-card .text{
+    order:2;
+}
+.art-card img{
+    order:1;
+}
+}

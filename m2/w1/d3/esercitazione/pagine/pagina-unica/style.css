@@ -1,0 +1,185 @@
+/*nel seguito commento con "aggiunta"
+le parti di css che ho aggiunto in questo file
+al css costruito precedentemente*/
+
+
+
+/*NAVBAR */
+
+.main-nav {
+    display: flex;
+    background: rgba(255, 191, 0, 0.429);
+    color: black;
+    border-radius: 3px;
+    padding: 1em;
+    font-family: sans-serif;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-radius: 6em;
+}
+
+.main-nav .navD {
+    align-self: center;
+    padding: 0.5rem;
+    background: rgba(255, 191, 0, 0.666);
+    border-radius: 2em;
+}
+
+#logo {
+    display: flex;
+    background: rgba(255, 191, 0, 0.802);
+    padding: 1rem;
+    border-radius: 2em;
+}
+
+#logo>span {
+    align-self: center;
+    padding-left: 1rem;
+    font-size: 2rem;
+}
+
+#logo>img {
+    height: 38px;
+}
+
+h1{
+    margin-top: 3rem; 
+    margin-left:1.3rem;
+    font-family: sans-serif;
+    font-weight: 900;
+}
+
+/*CARDS*/
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    font-family: sans-serif;
+}
+
+
+.cards {
+    /*aggiunta*/
+    justify-content: space-around;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 200px;
+    margin: 25px 20px;
+    /*aggiunta*/
+    border: 1px solid #ccc;
+    border-radius: 20%;
+    background-color: rgba(255, 191, 0, 0.482);
+    overflow: hidden;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+    flex: 0 0 200px;
+    max-width: 100%;
+}
+
+.card .text {
+    padding: 5px 20px;
+    font-size: 0.8rem;
+}
+
+.text {
+    display: flex;
+    flex-direction: row;
+}
+
+.text>p {
+    align-self: center;
+    padding-left: 1rem;
+    font-weight: 800;
+}
+
+.card h3 {
+    margin-bottom: 0.3rem;
+    font-size: 0.8rem;
+}
+
+.description {
+    margin-top: 0.3rem;
+}
+
+button {
+    align-self: center;
+    background: rgba(255, 191, 0, 0.666);
+    border: 0;
+    color: black;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 13px;
+    border-radius: 1em;
+    max-width: 8rem;
+}
+
+/* ARTICLE */
+
+.art-card {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 2em;
+    background-color: rgba(255, 191, 0, 0.482);
+    font-family: sans-serif;
+
+}
+
+.art-card img {
+    margin:1.5rem;
+    width: 70%;
+    margin-bottom: 1.5rem;
+    align-self: center;
+
+}
+
+.art-card .text {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 20px;
+    font-size: 0.8rem;
+}
+
+.art-card .text>p {
+    align-self: center;
+    padding-left: 1rem;
+    font-weight: 400;
+}
+
+.art-card h3 {
+    margin-left: 1rem;
+    margin-bottom: 0.3rem;
+    font-size: 20px;
+}
+
+main>h2{
+margin-left: 1.3rem;
+font-family: sans-serif;
+font-weight: 800;
+font-size: 30px;
+}
+
+@media screen and (min-width:1200px){
+.art-card{
+    flex-direction: row;
+}
+
+.art-card .text{
+    order:2;
+}
+.art-card img{
+    order:1;
+}
+}
+
+
+/* Responsiveness */

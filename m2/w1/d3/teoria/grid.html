@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .contenitore {
+        border: 1px solid red;
+        margin-bottom: 2rem;
+        display: grid;
+        /*
+        grid-template-columns: 10% 15% auto 15% 10%;
+        grid-template-rows: 25% 10% auto;
+        */
+        grid-template-columns: [inizio-col] 10% [col-2] 15% [col-3] auto [col-4] 15% [col-5] 10%;
+        grid-template-rows: [inizio-linee mmm] 33% [riga-2] 33% [riga-3] auto [fine righe];
+      }
+      .contenitore div {
+        border: 1px solid blue;
+      }
+      .contenitore_2 {
+        border: 1px solid red;
+        display: grid;
+        grid-template-columns: 15% repeat(3, 25% [col-start]) 10%; /* repeat(nColonneDaCreare, ampiezzaInPercentuale)*/
+        grid-template-rows: [inizio-linee mmm] 33% [riga-2] 33% [riga-3] auto [fine righe];
+      }
+      .contenitore_2 div {
+        border: 1px solid blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contenitore">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+
+      <div>11</div>
+      <div>12</div>
+      <div>13</div>
+      <div>14</div>
+      <div>15</div>
+    </div>
+
+    <div class="contenitore_2">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+
+      <div>11</div>
+      <div>12</div>
+      <div>13</div>
+      <div>14</div>
+      <div>15</div>
+    </div>
+
+    <div
+      style="
+        display: grid;
+        grid-template-columns: repeat(4, 25%[peppino]);
+        grid-template-rows: auto;
+        grid-template-areas:
+          'header header header header'
+          '. main . sidebar'
+          '. footer footer .';
+        border: 2px solid red;
+      "
+    >
+      <!-- il punto . indica che quel elemento è vuoto-->
+
+      <!--adesso devo dichiarare i tags che dico nella grid-template-area:-->
+      <div style="grid-area: header">H</div>
+      <!--grid-area:[quello che è] dice dove il tale elemento va posizionato 
+       nelle aree-->
+      <div style="grid-area: main">M</div>
+      <div style="grid-area: sidebar">S</div>
+      <div style="grid-area: footer">F</div>
+
+      <!-- QUINDI: definisco gli elementi (tag html) che stanno nel contenitore
+       poi nello stile del contenitore definisco quante colonne, quanto ampie,
+       quante righe, quanto ampie (o auto), 
+       e metto come posizionare gli elementi nelle colonne e nelle righe -->
+    </div>
+    <br><br>
+    <div
+      style="
+        display: grid;
+        grid-template-columns: 25% auto 25%;
+        grid-template-rows: 20% 30% auto;
+        column-gap: 15px;
+        row-gap: 50px;
+      "
+    >
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+    </div>
+
+<br><br><br><br><br><br><br><br><br><br>
+    <div style='
+    display:grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    justify-items: stretch;
+
+    '> 
+    <!-- stretch riempie la width dell'elemento
+    altri valori: start|end|center. Per posizionare gli elementi nelle caselle
+
+    align-items -> Fa per l'asse y la cosa che justify-items fa per l'asse x stretch|start|center|end. 
+    justify-content -> posiziona rispetto ai margini verticali del contenitore stretch|start|end|center
+    align-content -> posiziona rispetto ai margini orizzontali -->
+        <div>1</div>
+        <div>2</div>
+        
+        <div>3</div>
+        <div>4</div>
+    </div>
+  </body>
+</html>

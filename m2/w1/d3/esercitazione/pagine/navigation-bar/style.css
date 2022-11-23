@@ -1,0 +1,35 @@
+.main-nav {
+    display: flex;
+    /*gli elementi di nav si dispongono in modo flex
+    di default è nav row, gli elementi si dispongono in riga*/
+    background: rgba(255, 191, 0, 0.429);
+    color: black;
+    border-radius: 3px;
+    padding: 1em;
+    font-family: sans-serif;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-radius: 6em;
+}
+.main-nav .navD{
+    align-self: center;
+    padding: 0.5rem;
+    background:rgba(255, 191, 0, 0.666);
+    border-radius: 2em;
+}
+#logo{
+    display: flex;
+    background: rgba(255, 191, 0, 0.802);
+    padding:1rem;
+    border-radius: 2em;
+}
+#logo>span{
+    align-self: center;
+    padding-left: 1rem;
+    font-size: 2rem;
+}
+#logo>img{
+    height:38px;
+}
