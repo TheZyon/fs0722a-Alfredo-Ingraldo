@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transizioni multiple</title>
+    <style>
+      #box {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        transition-duration: 3s;
+        transition-property: background-color, width, opacity;
+        transition-timing-function: ease-in-out;
+        /* transition delay:0s; è default */
+      }
+
+      #box:hover {
+        background-color: salmon;
+        width: 500px;
+        opacity: 0.5;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box"></div>
+  </body>
+</html>

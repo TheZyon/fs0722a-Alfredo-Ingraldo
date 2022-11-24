@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myDiv{
+            margin: auto;
+            border: 1px solid black;
+            width: 200px;
+            height: 100px;
+            background-color: salmon;
+            color: white;
+            animation: mymove 5s infinite;
+/* nome animazione, timing function,delay,iteration count, [direction],[fill mode]*/
+        }
+
+        @keyframes mymove {
+        /* from */
+        50%{transform: rotate(180deg);} /* posso anche solo dichiarare come deve trovarsi a metà del tempo */
+        /* to */            
+        }
+    </style>
+</head>
+<body>
+    <h2>animazioni di una trasformazione</h2>
+    <p>gradualmente ruoteremo un div di 180°, poi tornerà alla posizione di partenza</p>
+    <div id="myDiv">
+        <h1>myDiv</h1>
+    </div>
+</body>
+</html>

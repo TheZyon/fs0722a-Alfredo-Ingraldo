@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transizioni</title>
+    <style>
+      .a {
+        width: 100px;
+        height: 100px;
+        background: red;
+        transition: width 2s, height 5s; /* quale valore cambia, e il tempo che ci mette */
+        transition-delay: 2s;
+      }
+      div:hover {
+        width: 300px;
+        height: 200px;
+      }
+      .cavalli {
+        transform: scale(10, 10) rotate(360deg);
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Transizioni baby1</h2>
+    <p>allo stato hover il div cambia i valori di alcune proprietà</p>
+    <div class="a">carmelo</div>
+
+    <script>
+      let div = document.getElementsByClassName("a")[0];
+      div.addEventListener("mousedown", function () {
+        div.classList.add("cavalli");
+      });
+    </script>
+  </body>
+</html>

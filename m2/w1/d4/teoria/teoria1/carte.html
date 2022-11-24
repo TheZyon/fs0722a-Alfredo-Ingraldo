@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container {
+        width: 760px;
+        margin: 0 auto;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 12px;
+        padding-top: 50px;
+      }
+      #container > div {
+        background: grey;
+        margin: 0;
+        height: 450px;
+        width: 200px;
+        font-size: 11px;
+        float: left;
+        border: 1px solid black;
+        padding: 15px;
+        position: relative;
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px black;
+        text-shadow: 1px 1px 1px black;
+        transition: all 0.5s ease-in-out;
+      }
+
+      #carta-1 {
+        transform: rotate(-20deg);
+        z-index: 1;
+        left: 150px;
+        /* muovo la carta rispetto alla sua posizione di default 
+        perchè è in POSITION RELATIVE*/
+        overflow: hidden;
+      }
+      #carta-2 {
+        z-index: 2;
+        left: 70px;
+        top: 10px;
+        overflow: hidden;
+      }
+      #carta-3 {
+        transform: rotate(20deg);
+        z-index: 3;
+        top: 50px;
+        right: 10px;
+        overflow: hidden;
+      }
+
+      #container > div:hover {
+        z-index: 4;
+        background-color: salmon;
+        color: black;
+        text-shadow: 1px 1px 1px white;
+      }
+      #carta-1:hover {
+        transform: scale(1.1) rotate(-18deg);
+      }
+      #carta-2:hover {
+        transform: scale(1.1) rotate(-2deg);
+      }
+      #carta-3:hover {
+        transform: scale(1.1) rotate(19deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="card" id="carta-1">
+        <h2>carta 1</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias magni,
+          vero sapiente vitae labore suscipit natus perspiciatis quidem
+          perferendis. Aliquam assumenda voluptatibus, asperiores ratione nobis
+          porro delectus optio dolores quia! Nam sint, quam omnis modi maiores
+          tempora aliquid? Laborum autem voluptate illum fugiat, animi corporis
+          suscipit. Neque corporis ullam quisquam fugiat. Quod sunt adipisci
+          quae et nam magni, rem mollitia! Neque ipsum sapiente odit hic
+          consequatur blanditiis nihil, ullam deserunt, rerum unde corporis,
+          illo dolores accusantium modi earum perferendis eius consectetur
+          quisquam! Ex adipisci voluptas sit. Quasi reiciendis asperiores natus!
+          Saepe nostrum harum, aut nemo expedita aliquam doloremque sed iste
+          veritatis ullam perspiciatis. Quasi modi reprehenderit quis esse
+          asperiores aliquid accusamus laboriosam distinctio rerum corrupti,
+          atque doloribus. Pariatur, temporibus eum.
+        </p>
+      </div>
+      <div class="card" id="carta-2">
+        <h2>carta 2</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias magni,
+          vero sapiente vitae labore suscipit natus perspiciatis quidem
+          perferendis. Aliquam assumenda voluptatibus, asperiores ratione nobis
+          porro delectus optio dolores quia! Nam sint, quam omnis modi maiores
+          tempora aliquid? Laborum autem voluptate illum fugiat, animi corporis
+          suscipit. Neque corporis ullam quisquam fugiat. Quod sunt adipisci
+          quae et nam magni, rem mollitia! Neque ipsum sapiente odit hic
+          consequatur blanditiis nihil, ullam deserunt, rerum unde corporis,
+          illo dolores accusantium modi earum perferendis eius consectetur
+          quisquam! Ex adipisci voluptas sit. Quasi reiciendis asperiores natus!
+          Saepe nostrum harum, aut nemo expedita aliquam doloremque sed iste
+          veritatis ullam perspiciatis. Quasi modi reprehenderit quis esse
+          asperiores aliquid accusamus laboriosam distinctio rerum corrupti,
+          atque doloribus. Pariatur, temporibus eum.
+        </p>
+      </div>
+      <div class="card" id="carta-3">
+        <h2>carta 3</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias magni,
+          vero sapiente vitae labore suscipit natus perspiciatis quidem
+          perferendis. Aliquam assumenda voluptatibus, asperiores ratione nobis
+          porro delectus optio dolores quia! Nam sint, quam omnis modi maiores
+          tempora aliquid? Laborum autem voluptate illum fugiat, animi corporis
+          suscipit. Neque corporis ullam quisquam fugiat. Quod sunt adipisci
+          quae et nam magni, rem mollitia! Neque ipsum sapiente odit hic
+          consequatur blanditiis nihil, ullam deserunt, rerum unde corporis,
+          illo dolores accusantium modi earum perferendis eius consectetur
+          quisquam! Ex adipisci voluptas sit. Quasi reiciendis asperiores natus!
+          Saepe nostrum harum, aut nemo expedita aliquam doloremque sed iste
+          veritatis ullam perspiciatis. Quasi modi reprehenderit quis esse
+          asperiores aliquid accusamus laboriosam distinctio rerum corrupti,
+          atque doloribus. Pariatur, temporibus eum.
+        </p>
+      </div>
+    </div>
+
+    <script>
+        let carte=document.getElementsByClassName("card");
+        carte[0].addEventListener("mousehover", function(){carte[0].children[0].innerText="It's";});
+    </script>
+  </body>
+</html>

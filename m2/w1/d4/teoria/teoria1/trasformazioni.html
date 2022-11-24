@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: stretch;
+        align-items: center;
+      }
+      div.a {
+        width: 150px;
+        height: 80px;
+        margin: 3rem;
+        background-color: yellow;
+        transform: rotate(30deg);
+      }
+      div.b {
+        width: 150px;
+        height: 80px;
+        margin: 3rem;
+        background-color: blue;
+        transform: skew(20deg, 20deg);
+      }
+      div.c {
+        width: 150px;
+        height: 80px;
+        margin: 3rem;
+        background-color: tomato;
+        transform: scale(2, 0.5); /* 1 è il 100% e non modifica */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>la proprietà transform</h2>
+      <h2>transform rotate</h2>
+      <div class="a">rotate</div>
+      <h2>transform skew</h2>
+      <div class="b">skew</div>
+      <h2>transform scale</h2>
+      <div class="c">scale</div>
+    </div>
+  </body>
+</html>
