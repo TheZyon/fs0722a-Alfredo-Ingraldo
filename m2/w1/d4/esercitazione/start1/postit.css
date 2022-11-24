@@ -15,7 +15,12 @@
     margin: 1rem 2rem;
     box-shadow: 2px 2px 3px black;
     transition: 1s;
+    animation-name: appari;
+    animation-duration: 1s;
 }
+
+
+
 .postit>h2 {
     font-family: 'Indie Flower';
     font-size: 2rem;
@@ -30,7 +35,7 @@
     background: rgba(255, 255, 0, 0.51);
     transform: rotate(-5deg);
     transform-origin: left bottom;
-    animation: 1s infinite alternate appiccica;
+   
 }
 .verde {
     background-color: rgba(0, 128, 0, 0.397);
@@ -60,3 +65,9 @@
 }
 
 /* Keyframes per farli comparire in sequenza */
+
+
+@keyframes appari {
+    from{transform:scale(0,0);}
+    to {transform:scale(1,1);}
+}
