@@ -1,0 +1,6 @@
+---->si può individuare lo scroll con l'oggetto event usando il JS 
+     window.addEventListener("scroll", function(event){
+
+
+----> per fare apparire e scomparire le M: si fa una funzione che porta l'opacità a 0 se è 1 e viceversa
+      e si pone un set-interval

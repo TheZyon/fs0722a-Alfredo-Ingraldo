@@ -1,0 +1,286 @@
+/* HEADER */
+
+header {
+    background-color: #ffc017;
+    border: 1px solid #191919;
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    font-family: 'Roboto', sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    border-bottom: 1px solid #191919;
+    transition:1s;
+}
+
+header>div:nth-child(2)>:nth-child(2) {
+    background-color: #191919;
+    color: white;
+    padding: 1rem;
+    border-radius: 2em;
+    transition: 1s;
+}
+
+header>div:nth-child(1) {
+    margin: 1rem;
+    position: relative;
+    left: 3rem;
+}
+
+header>div:nth-child(2) {
+    display: flex;
+    position: relative;
+    align-self: center;
+    left: 30rem;
+
+}
+
+header>div:nth-child(2)>:nth-child(1) {
+    display: flex;
+    align-items: center;
+}
+
+/* margini */
+header>div:nth-child(2)>div:nth-child(1) div {
+    margin-right: 1rem;
+}
+
+
+
+
+/* MAIN */
+main{
+    font-family:'Roboto', sans-serif;
+}
+
+/* PRIMO MACRO DIV */
+
+main>div:nth-child(1) {
+    display: flex;
+    background-color: #ffc017;
+    border-bottom: 1px solid #191919;
+}
+
+main>div:nth-child(1)>div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 4rem;
+    top: 6rem;
+}
+
+h1 {
+    font-family: 'Spectral', serif;
+    font-size: 85px;
+    margin-bottom: 1rem;
+}
+
+main>div:nth-child(1)>div:nth-child(1)>:nth-child(2) {
+    position: relative;
+    top: 2rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    width: 400px;
+    line-height: 1.5rem;
+}
+
+
+main>div:nth-child(1)>div:nth-child(1)>:nth-child(3) {
+    background-color: #191919;
+    color: white;
+    padding: 1rem;
+    border-radius: 2em;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    width: 170px;
+    justify-content: center;
+    position: relative;
+    top: 5rem;
+}
+
+svg {
+    position: relative;
+    left: 8.5rem;
+}
+
+
+/* SECONDO MACRO DIV */
+
+main>div:nth-child(2) {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 3.5rem;
+    border-bottom: 1px solid #191919a6;
+}
+
+main>div:nth-child(2)>div:nth-child(2) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+main>div:nth-child(2)>div:nth-child(1) {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+
+
+/* card-1 */
+.card-1 {
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    margin-right: 5rem;
+    
+    margin-bottom: 2rem;
+}
+
+.card-1>div:nth-child(1) {
+    margin-right: 1em;
+    font-size: 30px;
+    opacity: 0.1;
+    font-weight: 900;
+}
+
+.card-1>div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-1>div:nth-child(2)>div:nth-child(1) {
+    display: flex;
+    font-weight: 500;
+    font-size: 9px;
+    align-items: center;
+}
+
+.card-1>div:nth-child(2)>* {
+    margin-bottom: 15px;
+}
+
+.card-1 img {
+    border-radius: 50%;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.card-1 h2 {
+    width: 200px;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.card-1>div:nth-child(2)>p {
+    font-weight: 500;
+    opacity: 0.5;
+}
+
+
+
+/* TERZO MACRO DIV */
+main>div:nth-child(3){
+    display: flex;
+    flex-direction: row;
+    padding-left: 3rem;
+    margin-top: 2rem;
+}
+
+main>div:nth-child(3)>div:nth-child(2){
+display: flex;
+flex-direction: column;
+position:relative; 
+top:3rem;
+left: 2.5rem;
+width:400px;
+
+}
+main>div:nth-child(3)>div:nth-child(2) h2{
+    font-weight: 500;
+}
+main>div:nth-child(3)>div:nth-child(2)>*{
+    margin-bottom: 3rem;
+}
+
+
+main>div:nth-child(3)>div:nth-child(2)>div{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.div-1, .div-2{
+opacity: 0.5;
+margin:5px; 
+}
+.div-1{
+    border:1px solid #191919;
+    padding:7px;
+}
+main>div:nth-child(3)>div:nth-child(2)>div:nth-child(2){
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #19191950;
+}
+/* card-2 */
+.card-2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+    width: 640px;  
+}
+.card-2>div:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    width:500px;
+}
+.card-2>div:nth-child(1)>*{
+    margin-bottom: 15px;
+}
+.card-2>div:nth-child(1)>div:nth-child(1){
+    display: flex;
+    font-weight: 500;
+    align-items: center;
+}
+
+.card-2 h2{
+    font-size:25px;
+    font-weight: 500;
+}
+.card-2>div:nth-child(1)>div:nth-child(1) img{
+    border-radius: 50%;
+    height: 25px;
+    margin-right: 10px; 
+}
+
+.card-2>div:nth-child(1)>p,
+.card-2>div:nth-child(1)>p:nth-child(4){
+    display: flex;
+    font-weight: 500;
+    opacity: 0.5;
+align-items: center;
+}
+.card-2>div:nth-child(1)>p:nth-child(4)>img:nth-child(3){
+    position: absolute;
+    left:26rem;
+}
+.card-2>div:nth-child(1)>p:nth-child(4)>span{
+    background-color: #19191934;
+    padding: 5px;
+    margin-left:5px;
+    margin-right: 5px;
+    border-radius: 2em;
+}
+.card-2>div:nth-child(2)>img{
+    height: 150px;
+    margin-left: 0.5rem;
+}
+/* il verde: */
+/* #1a8917  */
+
+/* font-family: 'Roboto', sans-serif;
+font-family: 'Spectral', serif; */
