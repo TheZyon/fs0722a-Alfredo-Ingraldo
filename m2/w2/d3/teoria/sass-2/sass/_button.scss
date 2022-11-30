@@ -1,0 +1,12 @@
+button{
+    padding:2em;
+    background-color: salmon;
+    color:white;
+    border-radius: 2em;
+    border: $border-1; /* uso una variabile tipo "lista di valori" */
+    
+    &:hover{
+        background-color: black;
+        color:red;
+    }
+}

@@ -1,0 +1,29 @@
+main{
+    margin-top:3rem;
+   padding: {
+    left:$padding-x;
+    right:$padding-x;
+   }
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+div:first-child{
+display:flex;
+flex-direction: column;
+h1{font-size: $k*20;}
+p{font-size: $k*15;}
+padding: {
+    left:$padding-x/2;
+    right:$padding-x/2;
+   }
+    }
+>div:last-child{ /* > restringe alla prima generazione */
+    border: 10px solid black;
+    background: {image: url("../images/giorgia.jpg");
+    size:cover;}
+    width: 700px;
+    height: 350px;
+}
+
+}

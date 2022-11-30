@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="scss/app.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>Primo</li>
+        <li>Secondo</li>
+        <li>Terzo</li>
+      </ul>
+    </nav>
+
+    <!-- selettori nidificati detto anche "nesting"-->
+    <div id="main">
+      <p>paragrafo di main</p>
+      <div><span>span di main</span></div>
+      <a href="#">link di main</a>
+    </div>
+
+    <!-- selettori nidificati 2 -->
+    <div id="main2">
+      <div>
+        testo
+        <p class="red">testo con <a href="#">link</a></p>
+      </div>
+    </div>
+
+    <div class="esempio">
+      <h1 class="testo">titolo</h1>
+      <p class="testo">tua zia</p>
+      <button class="bottone">Clicca per iniziare a guadagnare</button>
+    </div>
+
+    <!-- fine selettori nidificati -->
+
+    <!-- keyword & -->
+    <!-- & shortcut per il nome dell'elemento genitore -->
+    <a href="#" id="pippo">pippo</a>
+    
+    <div class="esempio2">
+        <h1>esempio &</h1>
+        <button class="bottone">prova</button>
+    </div>
+
+
+
+    <div id="main-3">
+        <p>testo main-3</p>
+        <div id="main-3-sidebar">
+            <p>testo contenuto in <code>main-3-sidebar</code></p>
+        </div> 
+    </div>
+
+
+
+    <!-- proprietà nidificate -->
+    <!-- proprietà css che hanno un prefisso comune -->
+    <div id="main-4">
+        <p>testo con proprietà nidificate</p>
+    </div>
+  </body>
+</html>

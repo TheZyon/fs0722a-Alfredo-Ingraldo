@@ -1,0 +1,28 @@
+main {
+  div:first-child > div:last-child {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    button {
+      transition: 1s;
+      padding: $button-padding;
+      border-radius: 2em;
+      font: {
+        size: $header-font-size;
+        weight: 600;
+      }
+      &:hover {
+        color: white;
+        padding: $button-padding * $scaling-factor;
+        font-size: $header-font-size * $scaling-factor;
+      }
+    }
+
+    button:first-child {
+      background-color: red;
+    }
+    button:last-child {
+      background-color: rgb(88, 62, 27);
+    }
+  }
+}

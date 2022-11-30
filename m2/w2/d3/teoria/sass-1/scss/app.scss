@@ -1,0 +1,92 @@
+nav {
+  display: block;
+  ul {
+    display: inline;
+    li {
+      background-color: salmon;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+/* selettori nidificati */
+
+#main {
+  p {
+    background-color: aqua;
+    font-size: 1.5em;
+  }
+  div {
+    span {
+      border: 3px solid salmon;
+      border-radius: 2em;
+    }
+    margin-bottom: 2rem;
+  }
+  a {
+    display: block;
+  }
+}
+
+/* selettori nidificati 2 */
+
+#main2 {
+  background-color: red;
+  div {
+    color: blue;
+    .red {
+      color: green;
+      a {
+        margin-left: 2rem;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.esempio {
+  .testo {
+    color: salmon;
+  }
+  h1 {
+    border: 2px solid black;
+  }
+}
+
+/* keyword & */
+
+#pippo {
+  color: red;
+  font-size: 1.5em;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.esempio2 .bottone {
+  background-color: salmon;
+  &:hover {
+    background-color: aqua;
+  }
+}
+
+#main-3 {
+  background-color: black;
+  color: white;
+  &-sidebar {
+    border: 5px solid salmon;
+    border-radius: 2em;
+  }
+}
+
+/* proprietà nidificate 
+   permette di non ripetere il nome della proprietà */
+
+#main-4 {
+  font: {
+    family: Georgia;
+    size: 2em;
+    weight: bold;
+  }
+}

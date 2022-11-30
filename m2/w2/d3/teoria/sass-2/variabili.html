@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="sass/style.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+1)  sass ammette delle variabii (a tipicizzazione dinamica), che possono essere di tipo:
+    ->numero: 1,2,3, 40px,2em
+    ->stringhe di testo: 'hello', "giorgia", carlino
+    ->colore: red, blue
+    ->boolean: false, true
+    ->null
+    ->lista di valori: 5px 5px 10px, Helvetica Arial sans-serif
+    ->mappa chiave-valore ->es. (nome:Giorgia, cognome:Meloni)
+                          ->$set-colori: (grigio:#ccc; blu:#00f)
+
+    tipicamente le variabili non vengono riassegnate, hanno una natura più vicina alle costanti
+
+    esempio:
+    $main-margin-top: 30px -> dichiarazione
+    button{margin-top: $main-margin-top}
+    .left{margin-top: $main-margin-top}
+
+
+
+2)  sass usa operatori logici, di confronto (anche == !=), operazioni matematiche
+    2px==2px
+
+3) mappe
+   sono coppie chiave-valore $map:(k1:v1,k2:v2). Le mappe sono immutabili, se una funziona
+   non modifica la vecchia ma ne crea una nuova
+
+////////////////
+////PARTIALS////
+////////////////
+
+files che si occupano di parti parziali di codice html. 
+permette un lavoro modulare; i partials possono poi essere ricombinati in un unico file.
+sintassi -> un file partial si distingue perchè prevede un _iniziale
+es:
+_header.css -> si occupa di formattare le propeietà child del tag <header>
+_footer.css -> si occupa di formattare le propeietà child del tag <footer>
+
+dentro i partials la sintassi è quella scss
+uso:
+style.scss ->file principale in cui importiamo i vari partials
+@import 'nome_del_partial_da_importare'
+
+il file principale può incorporare partials & sintassi scss
+
+
+
+-->
+
+    <main>
+      <p class="a">Mi chiamo Carletto l'ho fatta nel letto</p>
+      <p class="b">Mi chiamo Carletto l'ho fatta nel letto</p>
+      <p class="a">Mi chiamo Carletto l'ho fatta nel letto</p>
+      <p class="b">Mi chiamo Carletto l'ho fatta nel letto</p>
+      <p class="a">Mi chiamo Carletto l'ho fatta nel letto</p>
+      <p class="b">Mi chiamo Carletto l'ho fatta nel letto</p>
+
+      <header>
+        <h1>Tu Ma Tegame</h1>
+      </header>
+
+
+      <button>Sottometti</button>
+    </main>
+  </body>
+</html>

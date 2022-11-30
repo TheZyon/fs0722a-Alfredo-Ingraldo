@@ -13,4 +13,6 @@ buttons[i].addEventListener("mousedown", function () {
         buttons[i].parentElement.parentElement.children[1].setAttribute("class", "d-inline");
         state[i] = Math.abs(1 - state[i]);
     }
- });
+});
+ 
+

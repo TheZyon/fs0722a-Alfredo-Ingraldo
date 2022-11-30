@@ -1,0 +1,38 @@
+/* $header-font-size: 15px;
+$header-2: (color:white, font-size:$header-font-size); */
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: {
+    left: $padding-x;
+    right: $padding-x;
+    top: 1rem;
+    bottom: 1rem;
+  }
+
+  div#logo {
+    align-self: flex-start;
+    font: {
+      weight: 600;
+      family: sans-serif;
+      size: $logo-size;
+    }
+  }
+
+  div:nth-child(2) {
+    display: flex;
+    .nav-text {
+      color: $header-text-color;
+      transition: 1s;
+      margin-right: 2em;
+      font: {
+        size: $header-font-size;
+        family: sans-serif;
+      }
+      &:hover{color:black; font-size:$header-font-size*$scaling-factor;}
+    }
+  }
+}

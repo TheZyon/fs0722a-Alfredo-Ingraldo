@@ -1,0 +1,16 @@
+@import 'variables';
+@import 'header';
+@import 'main';
+@import 'buttons';
+@import 'acquario';
+
+body{background-color: violet;
+     font-family: $font;}
+
+     .pescino >img {
+        border:2px solid black;
+        height: 20px;
+        width:20px;
+     }
+
+

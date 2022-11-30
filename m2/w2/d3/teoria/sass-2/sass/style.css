@@ -1,0 +1,25 @@
+header {
+  background-color: red;
+  text-align: center;
+  font-style: Georgia;
+  font-size: 50px;
+}
+
+button {
+  padding: 2em;
+  background-color: salmon;
+  color: white;
+  border-radius: 2em;
+  border: 2px solid black; /* uso una variabile tipo "lista di valori" */
+}
+button:hover {
+  background-color: black;
+  color: red;
+}
+
+main .a {
+  font-size: 60px;
+}
+main .b {
+  font-size: 10px;
+}/*# sourceMappingURL=style.css.map */
