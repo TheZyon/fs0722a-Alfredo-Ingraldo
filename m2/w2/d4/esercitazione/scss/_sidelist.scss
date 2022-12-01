@@ -1,0 +1,21 @@
+ul {
+  li {
+    
+    padding: {
+      top: 2rem;
+      bottom: 2rem;
+    }
+    list-style: none;
+    transition: 1s;
+      &:hover{@include hover(red,20px);}
+    p {
+      @include text(black, 12px, normal, false);
+    }
+  }
+}
+
+@for $i from 0 to 3 {
+ul>li:nth-child(#{$i+1}){
+    @if $i<4 {border-bottom: 2px solid black;}
+}    
+}

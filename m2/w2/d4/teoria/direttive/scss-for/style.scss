@@ -1,0 +1,13 @@
+@for $var from 1 through 5 {
+    .p#{$var}{
+        padding-left: $var * 30px;
+        color:green;
+    }
+
+    @if $var==5 {
+        .p#{$var}{
+            color:red;
+            font-size: 20px;
+        }
+    }
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="scss/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- SASS consente di generare CSS tramite le funzioni 
+     Due tipi di funzioni:
+    1. funzioni customizzate
+    2. funzioni predefinite 
+    la direttiva per creare una funzione è @function    
+    Esempio funzione customizzata:
+    @function em($pixel, $content:16px){
+        @return ($pixel/$context)*1em;
+        }
+    h1{font-size: em(18px);}
+
+
+    funzioni speciali:
+    url()   -> gestire un percorso assoluto o relativo
+    calc()  -> permette di fare operazioni aritmetiche
+    clamp() -> restringe tra un valore minimo e un valore massimo (che vuor di?!)
+    min(), max()->danno il minimo o il massimo
+
+    sass ha anche dei moduli built-in
+    sass:math  -> operazioni matematiche    es:  math.ceil(5.7)
+    sass:color -> dispone di alcune proprietà per la gestione dei colori
+-->
+  </body>
+</html>

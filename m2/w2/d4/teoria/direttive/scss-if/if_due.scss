@@ -1,0 +1,42 @@
+$template: dark;
+
+//template colors
+$bg-dark:#000;
+$fg-dark: #999;
+
+$bg-bright:#eeee99;
+$fg-bright: #eeee99;
+
+$bg-carlino:black;
+$text-carlino:red;
+
+/* @if @else */
+
+body{
+    @if $template==dark {
+        background-color: $bg-dark;
+        color:$fg-bright;
+    }
+    @else{
+        background-color: $bg-carlino;
+        color: $text-carlino;
+    }
+}
+
+/* @if esterni */
+
+@if $template==dark{
+    div{
+        background-color: white;
+        color:$fg-bright;
+    }
+} @else if $template==bright{
+    div{
+        background-color: aqua;
+        color:$bg-bright;
+    }
+    
+}@else{
+    background-color: $bg-carlino;
+    color: $text-carlino;
+}

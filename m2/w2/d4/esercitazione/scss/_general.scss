@@ -1,0 +1,9 @@
+//styling elementi comuni delle pagine
+@import "navbar";
+@import "sidelist";
+    
+    main>div:first-child{
+    @include text(black, 15px, normal, false);
+}
+
+

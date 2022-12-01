@@ -85,12 +85,18 @@ main div:first-child > div:last-child button:last-child {
 }
 
 :root {
-  --o0: 10px;
-  --v0: 20px;
+  --o0: 0px;
+  --v0: 0px;
   --o1: 0px;
   --v1: 0px;
   --o2: 0px;
   --v2: 0px;
+  --o3: 0px;
+  --v3: 0px;
+  --v4: 0px;
+  --o4: 0px;
+  --v5: 0px;
+  --o5: 0px;
 }
 
 #container {

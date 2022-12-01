@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="scss/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!------------------------------- extend ------------------------->
+    <!-- usato nel caso un selettore eredita caratteristiche di un altro con l'aggiunta di alcune specifiche -->
+    <!-- @extend indica che una classe classe eredita tutte le proprietà di un'altra definita in precedenza-->
+    
+    <div class="box">box</div>
+    <!-- box definisce bordo e colore -->
+    <div class="mybox">mybox</div>
+    
+    <!-- my box aggiunge un font-size -->
+
+    <!-----------------  placeholder e direttiva ------------>
+    <!-- simbolo:% 
+    usato per definire una classe che ha il solo scopo di essere estesa, e non viene usata per dare stile direttamente -->
+<!-- oss: simili alle variabili -->
+<!-- usato quando: HO UNA COSA COMUNE E NE FACCIO DIVERSE VERSIONI -->
+    <div class="myfirstbox">myfirstbox</div>
+    <div class="mysecondbox">mysecondbox</div>
+  
+
+
+    
+<!-- Mixins -->
+<!-- a volte @extend non è sufficiente a rendere automatiche diverse modifiche insieme -->
+
+
+<!-- mixins crea gruppi di istruzioni che si possono ripetere nel foglio di stile
+e ci da la possibilità di applicare parametri arbitrari
+similmente a quando si passano i parametri ad una funzione -->
+
+<!-- esempio uso mixin -->
+
+
+<!-- creo una "funzione di comandi" che riceve dei parametri e produce un set di comandi 
+     vedi esempio-->
+<!-- usato quando si vogliono fare tante versioni di un set di comandi-->
+<button class="green">cta verde</button>
+<button class="red">cta red</button>
+<button class="salmon">cta salmon</button>
+
+<div class="john-yellow">this is john</div>
+<div class="john-black">this is john blacked</div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+main>div:first-child{
+   @for $j from 1 through 33 {
+    div.alberello_#{$j}{
+        display:inline-block;
+    }
+   }
+}
+

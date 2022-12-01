@@ -1,0 +1,127 @@
+/* @extends */
+.box{
+    border:2px solid salmon;
+    background-color: burlywood;
+}
+
+.mybox{
+   @extend .box;
+   font-size: 40px;
+}
+
+/* placeholder e direttive */
+
+%box2{ /* definisco il placeholder */
+    padding:3rem;
+    margin:1rem;
+    border: 2px solid black;
+    border-radius: 2em;
+    display: flex;
+    justify-content: center;
+    &:hover{
+        box-shadow: 4px -2px 6px 0px;
+    }
+    
+}
+
+.myfirstbox{
+    @extend %box2;
+    color:red;
+}
+.mysecondbox{
+    @extend %box2;
+    color:green;
+}
+
+/* mixins */
+
+.button{
+    padding: 2rem;
+    display:inline-block;
+    text-transform: uppercase;
+    background: green;
+    border: 1px solid white;
+    box-shadow: 0 0 10px green;
+    color:white;
+    &:hover{
+        color:green;
+        background:white;
+        box-shadow: none;
+    }
+}
+
+button{
+    @extend .button;
+}
+
+/* se voglio fare una versione di colore diverso devo riscrivere tutte le cose, perdendo tempo*/
+/*  button .red{
+    @extend .button;
+    background: red;
+    box-shadow: 0 0 10px red;
+    &:hover{
+        color:red;
+    }
+}*/
+
+
+/* esempio uso di mixin */
+/* basebutton($bgColor) da lo stile di una cta con
+colore variabile */
+
+@mixin baseButton($bgColor) {
+    padding:10px 20px;
+    display: inline-block;
+    text-transform: uppercase;
+    background: $bgColor;
+    box-shadow: 0 0 10px $bgColor;
+
+    color:white;
+    border:1px solid white;
+    &:hover{
+        color:$bgColor;
+        background: white;
+        box-shadow: none;
+    }
+}
+
+button.green{
+    @include baseButton(green);
+}
+
+button.red{
+    @include baseButton(red);
+}
+
+button.salmon{
+    @include baseButton(salmon);
+}
+
+/* another example */
+
+@mixin long($skin-color, $text-color) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:50px;
+    height:50px;
+    background-color: $skin-color;
+    color:$text-color;
+    padding:1rem;
+    box-shadow: 0 0 10px $skin-color;
+    margin:1rem;
+    &:hover{
+     width: 500px;
+     color:green;
+    }
+    transition: 2s ease-in;
+}
+
+
+div.john-yellow{
+    @include long(yellow, white);
+}
+div.john-black{
+    @include long(black, white);
+}
+

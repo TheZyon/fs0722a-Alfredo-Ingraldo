@@ -1,0 +1,28 @@
+//produces text style
+@mixin text($color,$size,$style,$bold) {
+    //bold is a boolean
+    
+    color: $color;
+    text-decoration: none;
+    font: {
+        size:$size;
+        style: $style;
+        family:'Roboto', sans-serif;
+    }
+
+    @if $bold==true{ font-weight: 700;}
+    @else{font-weight: 400;}
+}
+
+
+
+//sets transition of 1s, color and size
+@mixin hover($color, $size) {
+    color:$color;
+    font-size: $size;
+}
+
+
+
+
+

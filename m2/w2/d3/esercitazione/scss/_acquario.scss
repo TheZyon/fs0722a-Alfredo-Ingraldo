@@ -1,52 +1,57 @@
 :root {
-    --o0: 10px;
-    --v0: 20px;
-    --o1: 0px;
-    --v1: 0px;
-    --o2: 0px;
-    --v2: 0px;
-  }
-  
-  #container {
-    display: flex;
-    justify-content: center;
-  }
-  #acquario {
-    order: 2;
-    display: flex;
-    flex-wrap: wrap;
-width:100%;
-    border: 3px solid salmon;
-    background-image: url("images/fondo.jpg");
-    background-size: cover;
-  }
-  #coralli {
-    display: flex;
-    flex-direction: row;
-    z-index: 999;
-  }
+  --o0: 0px;
+  --v0: 0px;
+  --o1: 0px;
+  --v1: 0px;
+  --o2: 0px;
+  --v2: 0px;
+  --o3: 0px;
+  --v3: 0px;
+  --v4: 0px;
+  --o4: 0px;
+  --v5: 0px;
+  --o5: 0px;
+}
 
-  #pescino-1 {
-    transform: translate(var(--o0), var(--v0));
-    transition: 2s;
-  }
-  #pescino-2 {
-    transform: translate(var(--o1), var(--v1));
-    transition: 2s;
-  }
-  #pescino-3 {
-    transform: translate(var(--o2), var(--v2));
-    transition: 2s;
-  }
-  #pescino-4 {
-    transform: translate(var(--o3), var(--v3));
-    transition: 2s;
-  }
-  #pescino-5 {
-    transform: translate(var(--o4), var(--v4));
-    transition: 2s;
-  }
-  #pescino-6 {
-    transform: translate(var(--o5), var(--v5));
-    transition: 2s;
-  }
+#container {
+  display: flex;
+  justify-content: center;
+}
+#acquario {
+  order: 2;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  border: 3px solid salmon;
+  background-image: url("images/fondo.jpg");
+  background-size: cover;
+}
+#coralli {
+  display: flex;
+  flex-direction: row;
+  z-index: 999;
+}
+#pescino-1 {
+  transform: translate(var(--o0), var(--v0));
+  transition: 2s;
+}
+#pescino-2 {
+  transform: translate(var(--o1), var(--v1));
+  transition: 2s;
+}
+#pescino-3 {
+  transform: translate(var(--o2), var(--v2));
+  transition: 2s;
+}
+#pescino-4 {
+  transform: translate(var(--o3), var(--v3));
+  transition: 2s;
+}
+#pescino-5 {
+  transform: translate(var(--o4), var(--v4));
+  transition: 2s;
+}
+#pescino-6 {
+  transform: translate(var(--o5), var(--v5));
+  transition: 2s;
+}

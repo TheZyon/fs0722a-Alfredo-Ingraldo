@@ -1,0 +1,140 @@
+/* @extends */
+.box, .mybox {
+  border: 2px solid salmon;
+  background-color: burlywood;
+}
+
+.mybox {
+  font-size: 40px;
+}
+
+/* placeholder e direttive */
+.mysecondbox, .myfirstbox { /* definisco il placeholder */
+  padding: 3rem;
+  margin: 1rem;
+  border: 2px solid black;
+  border-radius: 2em;
+  display: flex;
+  justify-content: center;
+}
+.mysecondbox:hover, .myfirstbox:hover {
+  box-shadow: 4px -2px 6px 0px;
+}
+
+.myfirstbox {
+  color: red;
+}
+
+.mysecondbox {
+  color: green;
+}
+
+/* mixins */
+.button, button {
+  padding: 2rem;
+  display: inline-block;
+  text-transform: uppercase;
+  background: green;
+  border: 1px solid white;
+  box-shadow: 0 0 10px green;
+  color: white;
+}
+.button:hover, button:hover {
+  color: green;
+  background: white;
+  box-shadow: none;
+}
+
+/* se voglio fare una versione di colore diverso devo riscrivere tutte le cose, perdendo tempo*/
+/*  button .red{
+    @extend .button;
+    background: red;
+    box-shadow: 0 0 10px red;
+    &:hover{
+        color:red;
+    }
+}*/
+/* esempio uso di mixin */
+/* basebutton($bgColor) da lo stile di una cta con
+colore variabile */
+button.green {
+  padding: 10px 20px;
+  display: inline-block;
+  text-transform: uppercase;
+  background: green;
+  box-shadow: 0 0 10px green;
+  color: white;
+  border: 1px solid white;
+}
+button.green:hover {
+  color: green;
+  background: white;
+  box-shadow: none;
+}
+
+button.red {
+  padding: 10px 20px;
+  display: inline-block;
+  text-transform: uppercase;
+  background: red;
+  box-shadow: 0 0 10px red;
+  color: white;
+  border: 1px solid white;
+}
+button.red:hover {
+  color: red;
+  background: white;
+  box-shadow: none;
+}
+
+button.salmon {
+  padding: 10px 20px;
+  display: inline-block;
+  text-transform: uppercase;
+  background: salmon;
+  box-shadow: 0 0 10px salmon;
+  color: white;
+  border: 1px solid white;
+}
+button.salmon:hover {
+  color: salmon;
+  background: white;
+  box-shadow: none;
+}
+
+/* another example */
+div.john-yellow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: yellow;
+  color: white;
+  padding: 1rem;
+  box-shadow: 0 0 10px yellow;
+  margin: 1rem;
+  transition: 2s ease-in;
+}
+div.john-yellow:hover {
+  width: 500px;
+  color: green;
+}
+
+div.john-black {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  box-shadow: 0 0 10px black;
+  margin: 1rem;
+  transition: 2s ease-in;
+}
+div.john-black:hover {
+  width: 500px;
+  color: green;
+}/*# sourceMappingURL=style.css.map */

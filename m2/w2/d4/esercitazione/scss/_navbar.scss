@@ -1,0 +1,16 @@
+nav{
+    display: flex;
+    background-color: rgb(32, 32, 156);
+    padding-left: 1rem;
+    div{
+        margin-right: 1rem;
+        a{
+            text-decoration: none;
+            @include text(white, 20px, italics, true);
+            &:hover{
+                color: black;
+            }  
+        }
+    }
+
+}

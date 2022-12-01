@@ -1,0 +1,11 @@
+//per ogni $color nella lista, prendi elementi di classe (che dipende dalla variabie)
+//e ne modifichi il background-color 
+@each $color in lightgray, burlywood, sienna, plum {
+    .colr_#{$color}{
+        background-color: $color;
+    }
+}
+
+
+
+

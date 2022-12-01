@@ -1,0 +1,33 @@
+//il breakpoint delle mediaqueries può essere una variabile
+//utilizzo di @content
+
+@mixin device($breakpoint) {
+  @if $breakpoint==tablet {
+    @media screen and (max-width: 680px) {
+      @content;
+    }
+  }
+  @if $breakpoint==mobile{
+    @media screen and (max-width: 481px){
+        @content;
+    }
+  }
+}
+
+//gestisco il responsive
+
+.responsive{
+    background-color: yellow;
+    @include device(tablet){
+        background: lightblue;
+        //codice per tablet
+    
+    }
+
+    @include device(mobile){
+        background: blue;
+        //codice per mobile
+    }
+}
+
+

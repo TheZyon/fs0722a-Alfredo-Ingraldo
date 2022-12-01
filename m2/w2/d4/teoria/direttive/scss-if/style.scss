@@ -1,0 +1,45 @@
+//set template
+//possible values: dark, bright
+
+
+$template: carlinoTemplate;
+
+//template colors
+$bg-dark:#000;
+$fg-dark: #999;
+
+$bg-bright:#eeee99;
+$fg-bright: #eeee99;
+
+$bg-carlino:black;
+$text-carlino:red;
+
+/* mixin con if annidato che viene usato per formattare il body */
+
+
+
+@mixin colors{
+    
+    
+    @if $template==dark {
+        background-color: $bg-dark;
+        color: $fg-bright;
+    }
+
+    @if $template==bright {
+        background-color: $bg-bright;
+        color:$fg-dark;
+    }
+    @if $template==carlinoTemplate{
+        background-color: $bg-carlino;
+        color: $text-carlino;
+    }
+}
+
+
+body{
+    @include colors;
+}
+
+
+

@@ -1,0 +1,18 @@
+@import 'variables';
+@import 'general'; 
+@import 'home';
+@import 'chi_sono';
+@import 'portfolio';
+@import 'contatti';
+
+
+main{
+    color:blue;
+    display: flex;
+    padding: 3rem;
+    justify-content: space-between;
+    >div:last-child{
+    margin-left:1rem;
+    }
+}
+
