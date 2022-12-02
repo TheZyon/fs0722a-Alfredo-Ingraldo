@@ -1,0 +1,34 @@
+
+
+@function set-color-txt($position){
+    //setta il colore del testo in base alla variabile $luminosità e al parametro $position
+    //$position è una stringa che contiene il nome del tag (header/main/footer)
+    //in cui stiamo lavorando
+
+     @if $l==true{
+        @if $position==header{@return white;}
+        @if $position==main{@return black;}
+        @if $position==footer{@return white;}
+    }
+    @else{ 
+        @if $position==header{@return red;}
+        @if $position==main{@return white;}
+        @if $position==footer{@return red;}
+    }
+
+}
+
+
+
+@function set-background-color($position){
+    @if $l==true{
+        @if $position==header{@return $viola;}
+        @if $position==main {@return white;}
+        @if $position==footer{@return $viola;}
+    }
+    @else{ 
+        @if $position==header{@return black;}
+        @if $position==main{@return rgb(56, 56, 201);}
+        @if $position==footer{@return black;}
+    }
+}

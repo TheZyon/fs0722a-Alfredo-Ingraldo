@@ -1,0 +1,22 @@
+
+//mixin per gestire formattazione testi
+//definisce text-size, font-weight,font-family 
+//colore---->in base a %$position e $luminosità (vedi la function set-color-text)
+//$position è una stringa che contiene il nome del tag (header/main/footer)
+
+@mixin txt ($weight,$position,$size,$size-c) {
+      //$size-c boolean to see if size modifications are to be applied
+    font: { family: $font;
+            weight: $weight;
+            }
+    color: set-color-txt($position) !important;
+    @if $size-c==true{font-size: $size !important;}
+    
+}
+
+
+@mixin bg-color($position){
+    //background-color in funzione della position, e della $luminosita
+  background-color: set-background-color($position);
+}
+

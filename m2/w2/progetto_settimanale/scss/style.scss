@@ -1,0 +1,89 @@
+@import 'variables';
+@import 'strutture';
+@import 'funzione_luminosita'; 
+//nome: set-color-txt($color) 
+//riceve boolean, se true ritorna black, altrimenti ritorna white
+
+
+
+//mettiamo insieme i pezzi
+
+
+//navbar
+nav{
+    @include bg-color(header);
+    div{
+        a{@include txt(600, header, 33px , false);
+            }
+
+        div>div>ul{
+            li>a{
+                @include txt(600,header, 33px, false);
+            }
+        }    
+    }
+}
+//main
+//primo div
+
+main>div:first-child{
+    margin-top: 0 !important;
+    background-image: url(../img/citta.jpg);
+    background-size: cover;
+    height: 500px;
+
+    div{
+        p{
+            @include txt(300, main, 15px, true);
+        }
+        button{
+        
+        @include bg-color(header);
+        @include txt(500, header, 2022px, false);
+    }
+}
+}
+/* secondo div */
+#svg{
+    position:relative;
+    top:500px;
+    }
+    main>div:nth-child(2){
+        background-color: rgb(245, 245, 245);
+        .card{
+            background-color: rgb(245, 245, 245);
+        }
+        svg{
+            z-index:2;
+        }
+      i{
+        height: 2rem;
+        font-size: 2rem;
+      }
+
+    }
+    
+/* terzo div */
+
+main>div:last-child{
+    
+    p{
+        @include txt(300, main, 12, true);
+    }
+    h5{
+        @include txt(300, main, 16, true);
+    }
+}
+
+    /* footer */
+    footer{
+        @include bg-color(header);
+        div{div:first-child{
+            @include txt(500,header, 15px , false);
+                }
+                div:last-child{
+                   @include txt(500, header, 10px, true); 
+                }
+    } 
+}
+

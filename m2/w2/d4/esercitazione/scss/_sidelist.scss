@@ -8,9 +8,9 @@ ul {
     list-style: none;
     transition: 1s;
       &:hover{@include hover(red,20px);}
-    p {
+    
       @include text(black, 12px, normal, false);
-    }
+    
   }
 }
 

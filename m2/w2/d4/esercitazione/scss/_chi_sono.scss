@@ -2,7 +2,7 @@ main>div:first-child{
    
    @for $j from 1 through 33 {
     .alberelloNatale_#{$j}{
-        margin-right: 2rem;
+        margin-right: 1rem;
         display:inline-block;
         @if $j%2==0 {
             color: red

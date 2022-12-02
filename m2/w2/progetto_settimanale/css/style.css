@@ -1,0 +1,82 @@
+nav {
+  background-color: rgb(117, 51, 249);
+}
+nav div a {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  color: white !important;
+}
+nav div div > div > ul li > a {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  color: white !important;
+}
+
+main > div:first-child {
+  margin-top: 0 !important;
+  background-image: url(../img/citta.jpg);
+  background-size: cover;
+  height: 500px;
+}
+main > div:first-child div p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: black !important;
+  font-size: 15px !important;
+}
+main > div:first-child div button {
+  background-color: rgb(117, 51, 249);
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: white !important;
+}
+
+/* secondo div */
+#svg {
+  position: relative;
+  top: 500px;
+}
+
+main > div:nth-child(2) {
+  background-color: rgb(245, 245, 245);
+}
+main > div:nth-child(2) .card {
+  background-color: rgb(245, 245, 245);
+}
+main > div:nth-child(2) svg {
+  z-index: 2;
+}
+main > div:nth-child(2) i {
+  height: 2rem;
+  font-size: 2rem;
+}
+
+/* terzo div */
+main > div:last-child p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: black !important;
+  font-size: 12 !important;
+}
+main > div:last-child h5 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: black !important;
+  font-size: 16 !important;
+}
+
+/* footer */
+footer {
+  background-color: rgb(117, 51, 249);
+}
+footer div div:first-child {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: white !important;
+}
+footer div div:last-child {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: white !important;
+  font-size: 10px !important;
+}/*# sourceMappingURL=style.css.map */
