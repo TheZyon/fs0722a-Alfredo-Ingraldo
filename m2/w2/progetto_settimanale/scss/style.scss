@@ -78,10 +78,10 @@ main>div:last-child{
     /* footer */
     footer{
         @include bg-color(header);
-        div{div:first-child{
+        >div{div:first-child{
             @include txt(500,header, 15px , false);
                 }
-                div:last-child{
+                >div:last-child{
                    @include txt(500, header, 10px, true); 
                 }
     } 
