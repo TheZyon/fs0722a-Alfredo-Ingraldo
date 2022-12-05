@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* quando assegno un oggetto ad una variabile, la variabile conterrà un RIFERIMENTO all'oggetto */
+    
+    /* esempio */
+
+    var x=10;
+    let y=x;
+    y+=1 //incrementa y di uno ma non modifica x
+
+    //con gli oggetti 
+    let persona ={nome:"Ubaldo",cognome:"Cammeli"}
+    let altraPersona=persona;
+    altraPersona.nome="Giuseppe";
+
+    //IMPORTANTE
+    //adesspo anche persona.nome è "Giuseppe"!!!!!!!
+    /*perché sia persona che altrPersona contengono un riferimento
+    allo stesso oggetto, quindi moficando uno modifichiamo anche l'altro!!!  */
+/* altro esempio */
+        persona.eat=function(){return "gnam gnam";}
+
+        console.log(altraPersona.eat());
+
+//toString() e valueOf() sono metodi condivisi da tutti gli oggetti
+//toString() trasforma un oggetto in stringa
+var x =new Object(32);
+x.toString(); //restituisce 32
+persona.toString(); //nulla, restituisce Object
+
+//valueOf() restituisce il valore di un oggetto
+
+x.valueOf(); //restituisce 32
+
+
+
+
+
+    </script>
+</body>
+</html>

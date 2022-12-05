@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- in js si hanno:
+        tipi di dato primitivo (numeri, stringhe,)
+        ciò che non è primitivo è un oggetto: contenitore di dati eterogenei che formano una struttura unica
+        oggetti-> dati detti proprietà: coppie nome/valore
+               -> funzionalità dette metodi -> rappresentate da funzioni 
+            -->
+
+    <script>
+      var oggettoVuoto = {};
+      var persona = { nome: "mario", cognome: "rossi" };
+      var animale = { nome: "R", cognome: "cavalli" };
+      var persona = {
+        nome: "mario",
+        cognome: "rossi",
+        indirizzo: { via: "via delle rose", citta: "Poggibonsi" },
+      };
+
+      console.log(persona.nome);
+      console.log(persona["nome"]); //producono lo stesso risultato
+
+      //creiamo una nuova proprietà settando nome e valore
+      persona.eta = 66;
+      //gli oggetti possono modificarsi durante l'esecuzione di uno script->"definizione incrementale"
+
+      //metodi
+      //attività che un oggetto può compiere
+      function visualizzaNomeCognome() {
+        return "Figlio Del Tegame";
+      }
+      persona.nomeCognome = visualizzaNomeCognome; //abbiamo dato una nuova proprietà che ha come valore una funzione---> un metodo
+      let veritàSuPersona = persona.nomeCognome(); //otteniamo l'output del metodo
+    
+      //metodo svelto per aggiungere un metodo
+      persona.lunghezzaPene= function(){return "troppo piccolo";} 
+    
+      //parola chiave this 
+      persona.nomeCognome=function(){return [this.nome, this.cognome];} //this si riferisce all'oggetto di partenza
+    
+      
+
+
+
+    </script>
+  </body>
+</html>

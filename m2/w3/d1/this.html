@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var teacher = {
+        name: "Federico",
+        surname: "De Ambrosis",
+        sayHello: function () {
+          alert(
+            "Hello master,I am " +
+              this.name +
+              " I have been a good girl yesterday <3"
+          );
+        },
+      };
+      teacher.sayHello();
+
+      //this può essere usata anche all'interno di funzioni
+
+      function sayHi() {
+        alert(this.name);
+      }
+      sayHi(); //restituisce undefined
+      //le arrow functions non usano this
+    </script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- vogliamo più oggetti che condividono la stessa struttura -->
+
+    <script>
+      
+      
+      
+      
+      var persona = {
+        nome: "mario",
+        cognome: "rossi",
+        indirizzo: "via delle zoccolette,33",
+        email: "mario.rossi.collarizzato@epicode.it",
+        mostraNomeCompleto: function () {},
+        calcolaCodiceFiscale: function () {
+          return "immigrato clandestino";
+        },
+      };
+
+      /* COSTRUTTORE */
+function persona (){ //definisce le proprietà dell'oggetto assegnandole a se stessa
+
+this.nome='';
+this.cognome='';
+this.indirizzo='';
+this.email='';
+this.email='';
+this.mostraNomeCompleto=function(){};
+this.calcolaCodiceFiscale=function(){};
+}
+//per creare un oggetti di tipo persona invoco la function
+
+var marioRossi= new persona(); //attenzione alla keyword NEW
+//imposto le proprietà
+marioRossi.nome='Mario'; 
+
+
+//si può fare anche con i parametri
+function persona (nome, cognome){ 
+
+this.nome=nome;
+this.cognome=cognome;
+this.indirizzo='';
+this.email='';
+this.email='';
+this.mostraNomeCompleto=function(){};
+this.calcolaCodiceFiscale=function(){};
+}
+
+var marioRossi= new persona("Mario", "Rossi");
+
+
+    </script>
+  </body>
+</html>

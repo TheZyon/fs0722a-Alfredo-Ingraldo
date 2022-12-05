@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+
+/* ricordiamo la definizione incrementale: gli oggetti possono essere modificati dopo essere stati definiti */
+/* var marioRossi= new Persona("Mario", "Rossi");
+var giuseppeVerdi= new Persona("Giuseppe", "Verdi");
+marioRossi.telefono="12345678"; */
+//ho aggiunti una proprietà a mario Rossi, sono partito da una struttura comune e poi ho personalizzato una sua instanziazione
+//prototype-> persona.prototype.telefono="6969696969"
+//ora tutti gli oggetti instanziati da Persona hanno la proprietà telefono
+//quindi prototype si usa per aggiungere proprietà comuni a tutte le istanze
+
+
+
+/* eredità prototipale */
+function Student(name, age){
+    this.name=name;
+    this.age=age;
+}
+var studente1=new Student("mario", 33);
+var studente2=new Student("Cammelo", 55);
+console.log(studente1, studente2); //stampo gli oggetti
+
+Student.prototype.skills=[]; //tutte le istanze hanno la proprietà skills ora
+
+studente1.skills=["html", "css", "bocchini"];
+
+console.log(studente1, studente2);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="tuMaTegame" method="post">
+        <input type="text">
+        <input type="password">
+        <button type="button">Entra</button>
+        <div id="target-1"></div>
+        <div id="target-2"></div>
+    </form>
+
+
+
+    <script>
+
+let eventHandler={
+    CLICK: "click",
+    MOUSE_OVER: 'mouseover',
+    MOUSE_OUT: 'mouseout'
+}
+
+
+
+function User(){
+    this.name='';
+    this.accessID=-1;
+}
+User.prototype.userType={}||null //estendo l'oggetto con prototype
+
+function Admin(){
+
+    this.id='ADMIN';
+    this.access="unlimited";
+}
+
+/* User ha adesso tre proprietà: name, accessId, userType */
+
+let name = document.querySelector("input");
+let pass= document.querySelectorAll("input")[1];
+let button=document.querySelector("button");
+let target_1= document.getElementById("target-1");
+let target_2=document.getElementById("target-2");
+
+let user =new User();
+
+document.querySelector("button").addEventListener("mousedown", LogIn);  
+ 
+
+
+
+
+
+function onMouseOver(e){
+    e.target.title="inserisci il valore corretto";
+}
+function LogIn(){
+
+    //in base ai valori inseriti negli input, diamo i valori delle proprietà di user
+
+
+    if(name.value=="user"&&pass.value=="123"){
+        user.accessID=0;
+        user.userType=null;
+    }
+    else if (name.value=='admin'&&pass.value=='123'){
+        user.accessID=1;
+        user.userType= new Admin(); //metto come user tipe un istanza di admin!!!!
+    }
+    else{//se username  è diverso da user o admin
+        user.userType=null;
+    }
+      user.name=name.value; //diamo anche il valore di name
+      console.log(user);
+
+
+
+      if(user.accessID>-1){//almeno user
+      
+      target_1.innerHTML="sei un user";
+      if(user.accessID>=1){ //caso Admin
+        target_2.innerHTML="<h2>Complimenti sei Admin, figlio di buttana!</h2>";
+      }  
+    }
+    else{ target_1.innerHTML="veggogna password or username are wrong!" }
+      
+   } 
+    
+    </script>
+</body>
+</html>
