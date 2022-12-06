@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="module">
+      import { User } from "./modules/User.js"; // slash, punto slash, punto punto slash
+      import { Teacher } from "./modules/Teacher.js";
+      import { Student } from "./modules/Student.js";
+
+      var utente = new User("Mario", "Rossi", 30);
+      let studente = new Student("Carlino", "Giova", 22);
+      let professore = new Teacher("George", "Watermelons", 40);
+
+      studente.courses = ["html", "css", "anal"];
+      professore.skills = ["fare pause ben assestate"];
+      console.log(utente, studente, professore);
+    </script>
+  </body>
+</html>

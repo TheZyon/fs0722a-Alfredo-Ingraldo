@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Design pattern:
+        schemi che offrono delle solizioni a problemi comuni di progettazione del software
+        schemi logici che sono indipendenti dai linguaggi di programmazione
+        in particolare:
+        "modelli di riferimento per realizzare componenti di software di facile manutenzione"
+        
+
+
+
+        tipi:
+        pattern creazionali -> singleton pattern-> prevede al più un'istanza di oggetto per ogni classe
+        pattern creazionali-> factory pattern
+        pattern comportamentali-> observer pattern
+        pattern strutturali-> module pattern
+        pattern strutturali ->adapter pattern
+        pattern strutturali -> façade pattern
+        pattern strutturali ->MVC/MVVM pattern
+
+
+
+        Module pattern (da ECMA 5)
+        si basano su dei meccanismi id importazione ed esportazione
+        moduli che saranno accessibili ed esportabili
+        ->architettura più facilmente decifrabile, robusta e gestibile
+     -->
+<script>
+    let modulo = (function(){ //IIF immediately invoked function
+        
+        function metodoPrivato(){
+            //
+        }
+
+        return{ //restituisce un oggetto ha un metodo pubblico
+            metodoPubblico: function (){
+                metodoPrivato()
+            }
+        }
+    });
+    
+</script>
+
+</body>
+</html>

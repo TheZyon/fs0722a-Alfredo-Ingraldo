@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+    <!-- JSON = Javascript Object Notation -->
+
+
+
+
+<!-- • E' un formato (molto popolare) per lo scambio di dati 
+     • Si basa sulla notazione letterale degli oggetti
+     • JSON è stato riscoperto/utilizzato per lo scambio di dati specialmente da quando esiste ajax
+    
+    -->
+<script>
+
+let JSON={
+    proprieta_1: 'valore',
+    proprieta_2:'valore',
+    proprieta_3:'valore'
+}
+//1) coppie chiave:valore separate dalla virgola, ad eccezione dell'ultima
+
+//2) l'intero oggetto viene racchiuso tra parentes graffe
+
+//3) !!!! a differenza della notazione JS, le chiavi di un JSON possono avere solo valori semplici (no funzioni!!)
+//      vanno bene: stringhe,numeri, array, oggetti, booleani, null
+
+//esempio
+
+let prova= {
+    "home": "Epicode.it", //coppia chiave:valore
+    "link": "https://www.epicode.it", //coppia chiave:valore
+    "argomento": "standard del web", 
+    "aree":[ //il valore qui è un array di JSON, scritti nella forma "proprietà":"valore"
+        {
+            "area":"CSS",
+            "url": "https//css.epicode.it"
+        },
+        {
+            "area": "javascript",
+            "url": "https://javascript.epicode.it"
+        }
+    ]
+
+}
+
+console.log(prova.home, prova.aree[0].area);
+
+let prova_2={
+}
+
+/* per accedere ai valori json si usa la .dot notation
+esempio:     prova.link restituisce "https://www.epicode.it" */
+
+//vedere chiamate ajax
+$.ajax({
+    url:'json.html',
+    type:'GET'
+})
+
+</script>
+
+</body>
+</html>

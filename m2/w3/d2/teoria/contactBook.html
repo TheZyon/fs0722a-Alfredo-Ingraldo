@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" name="" id="nuovoUtente" />
+    <button id="aggiungi">aggiungi!</button>
+    <ul id="listaUtenti"></ul>
+
+    <script>
+      let lista = document.getElementById("listaUtenti");
+      let inputUser = document.getElementById("nuovoUtente");
+      let aggiungi_btn = document.querySelector("#aggiungi");
+
+      let users = [];
+
+      /* usiamo CLASS */
+      class User {
+        constructor(name) {
+          this.name = name;
+        }
+        logUser() {
+          return `<b>${this.name}</b>`;
+        }
+      }
+
+      aggiungi_btn.addEventListener("mousedown", () => {
+        let usr = new User(inputUser.value);
+        users.push(usr);
+        writeList();
+        lista.appendChild(document.createElement("hr"));
+      });
+
+      function writeList() {
+        users.forEach((el, index) => {
+          //forEach ha tre parametri: el, index, array: el è l'elemento, index è l'indice, array è l'array di partenza
+          lista.innerHTML += `<li>${el.logUser()}</li>`;
+        });
+      }
+
+      /* Keyword STATIC */
+
+      class Animali {
+        constructor(specie) {
+          this.specie = specie;
+        }
+
+        static mostra() {
+          return this.specie;
+        }
+      }
+
+    let gatto = Animali("specie_di_gatto");
+    gatto.mostra(); //non funziona. I metodi static funzionano solo dentro le classi
+    
+    
+    
+    
+    </script>
+  </body>
+</html>

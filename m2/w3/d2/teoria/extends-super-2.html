@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Animal{
+            constructor(name,weight){
+                this.name=name;
+                this.weight=weight;
+            }
+            mangia(){
+                return `${this.name} sta mangiando`;
+            }
+            dorme(){
+                return `${this.name} sta dormendo`;
+            }
+            siSveglia(){
+                return `${this.name} si sveglia`;
+            }
+        }
+class Gorilla extends Animal {
+    
+    
+    sale_sugli_alberi(){
+        return `${this.name} sta salendo sugli alberi`;
+    }
+
+vigoroso(){return super.mangia() + super.dorme() + super.siSveglia() + this.sale_sugli_alberi();
+//per richiamare i metodi della superclasse si usa "super", per richiamare i metodi della classe attuale
+//si usa "this"
+
+}
+}
+let g= new Gorilla("Georgette", 188);
+console.log(g.vigoroso());
+
+
+
+    </script>
+</body>
+</html>

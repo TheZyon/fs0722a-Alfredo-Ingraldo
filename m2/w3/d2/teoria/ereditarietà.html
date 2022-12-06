@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+class User{
+    name='';
+    surname='';
+    age=-1;
+    constructor(name, surname, age){
+        this.name=name;
+        this.surname=surname;
+        this.age=age;
+    }
+}
+
+class Student extends User{
+    courses=[]; 
+    /* il costruttore della superclasse è  automaticamente il costruttore della sottoclasse
+    si usa SUPER quando vogliamo customizzare il costruttore della sottoclasse aggiungendo altre cose
+
+    */
+
+}
+
+class Teacher extends User{
+    skills=[];
+}
+
+let utente=new User("Mariello", "bello", 77);
+let studente= new Student("Aldino","Bellino",22);
+let professore= new Teacher("Camel", "Toe", 40);
+
+
+studente.courses=["web design", "OOP", "camel toe licking"];
+professore.skills=["html","css", "camel toe finding"];
+
+console.log(utente, studente,professore);
+
+
+
+    </script>
+</body>
+</html>

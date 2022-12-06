@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        <mark>usare la keyword "extends" per ereditare tutti i metodi di un'altra classe</mark>
+    </p>
+    <p>
+        <mark>usare il metodo super per chiamare il constructor della superclasse</mark>
+    </p>
+    <p>
+        <mark>stampare in un paragrafo con il metodo .innerHTML</mark>
+    </p>
+<p id="demo"></p>
+<script>
+
+    class Computer{
+        constructor(brand){
+            this.computername=brand;
+        }
+        present(){
+            return 'ho un computer '+ this.computername;
+        }
+    }
+
+    class Model extends Computer{
+        constructor(brand, model){
+            super(brand);
+            this.model=model;
+        }
+        show(){
+            return this.present()+' ed è un '+ this.model;
+        }
+
+    }
+
+    myComputer = new Model("Apple", "MacBook");
+
+    document.getElementById("demo").innerHTML=myComputer.show();
+
+</script>
+</body>
+</html>

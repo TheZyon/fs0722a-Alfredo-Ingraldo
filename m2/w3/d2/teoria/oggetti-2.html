@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- JS è un linguaggio di programmazione ad oggetti basato sul concetto di prototipo 
+    il che lo differenzia da altri linguaggi OO che sono basati sul concetto di classe (es. Java)-->
+    <!-- da ECMA 6 sono state introdotte le classi per rendere la programmazione più agevole
+a chi veniva da linguaggi come Java -->
+
+    <script>
+      class Persona {
+        constructor(nome, cognome) {
+          //costruttore
+          this.nome = nome;
+          this.cognome = cognome;
+          this.email = "";
+          this.indirizzo = "";
+        }
+        mostraNomeCompleto() {
+          return this.nome + " " + this.cognome;
+        }
+      }
+//creiamo ora un oggetto a partire dalla classe
+
+let mariello = new Persona("Mariello", "Carlini");
+console.log(mariello.mostraNomeCompleto());
+
+/* sottoclassi ed ereditarietà */
+class Programmatore extends Persona{
+    constructor(nome,cognome){
+        super(nome,cognome);//super invoca il costruttore della superclasse Persona
+        this.linguaggiConosciuti=[];
+    } 
+}
+
+
+    </script>
+  </body>
+</html>
