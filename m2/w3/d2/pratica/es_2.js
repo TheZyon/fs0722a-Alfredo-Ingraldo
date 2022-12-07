@@ -1,18 +1,25 @@
 
 let tbody = document.querySelector("tbody");
 
-let ctaArray = document.getElementsByTagName("a"); //array delle call to action
+let ctaArray = document.getElementsByTagName("a");//array delle call to action
 //id della prima riga che compare
 //i dati della paginazione: items e pageSize
 let items = [
-    { id: 1, nome: 'Luca', cognome: 'Rossi', classe: 'A' },
-    { id: 2, nome: 'Luigi', cognome: 'Verdi', classe: 'A' },
-    { id: 3, nome: 'Mario', cognome: 'Bianchi', classe: 'A' },
-    { id: 4, nome: 'Piero', cognome: 'Neri', classe: 'A' },
-    { id: 5, nome: 'Paolo', cognome: 'Rossi', classe: 'A' },
-    { id: 6, nome: 'Sergio', cognome: 'Verdi', classe: 'A' },
-    { id: 7, nome: 'Gianno', cognome: 'Bianchi', classe: 'A' },
-    { id: 8, nome: 'Davide', cognome: 'Neri', classe: 'A' },
+    
+    { id: 1, nome: 'Giustino', cognome: 'Cavalli', classe: 'A' },
+    { id: 2, nome: 'Ilona', cognome: 'Puppesku', classe: 'A' },
+    { id: 3, nome: 'Batuffolo', cognome: 'Da Grembo', classe: 'A' },
+    { id: 4, nome: 'Fuffi', cognome: 'Collarizzato', classe: 'A' },
+    { id: 5, nome: 'Elettra', cognome: 'Bochiny', classe: 'A' },
+    { id: 6, nome: 'Maria', cognome: 'Di Dio', classe: 'A' },
+    { id: 7, nome: 'Bene', cognome: 'Venuto', classe: 'A' },
+    { id: 8, nome: 'Uccelletto', cognome: 'Da Gabbietta', classe: 'A' },
+    { id: 9, nome: "Cammielo", cognome: "Russu", classe: 'A' },
+    { id: 10, nome: "Mariello", cognome: "Troietti", classe: 'A' },
+    { id: 11, nome: "Nicole", cognome: "Minnetti", classe: 'A' },
+    { id: 12, nome: "Maria 2°", cognome: "Di Dio", classe: 'A' },
+  
+    
 ];
 
 pageSize = 2;
@@ -24,7 +31,7 @@ class Paginazione {
         
     }
   
-    clear() { //pulisce tabella
+    clear() { //pulisce il tbody
         tbody.innerHTML = "";
     }
 

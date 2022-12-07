@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+
+<script>
+
+//funzione che aggiorna il dato conservato nel sessionStorage
+setInterval(function aggiungi_un_secondo(){
+if(sessionStorage.tempo){
+    sessionStorage.tempo=Number(sessionStorage.tempo)+1;
+    scriviSecondi();
+
+}else{
+    sessionStorage.tempo=1;
+    scriviSecondi();
+}
+},1000);
+
+function scriviSecondi(){
+    document.querySelector("h1").innerHTML=`Sono passati ${sessionStorage.tempo} secondi.`+"<br>Attenzione che sono quasi le 18:00";
+}
+
+
+</script>
+</body>
+</html>

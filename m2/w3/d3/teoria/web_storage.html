@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- novità html
+    
+    ->web storage ->nasce per risolvere un paio di problemi:
+    1. cookie (4k)
+    2. impossibile storare cookie tra due diverse sessioni di navigazione
+
+
+    si introduce webStorage
+
+    1. sessionStorage-> persistenza dei dati finché c'è una finestra di navigazione aperta, quindi anche al refresh della pagina
+    2. localStorage -> persistenza dei dati finché vengono cancellati, quindi anche chiudendo e riaprendo il browser
+    
+    possono conservare fino a 5mb
+    c'è un'unica interfaccia Storage, quindi localStorage e sessionStorage hanno gli stessi metodi
+
+
+    -->
+    <script>
+        localStorage.nome="Federico"; //salvo i dati come in un normale array associativo
+        localStorage.cognome= "Cianciulli";
+
+        localStorage.setItem("nome", "Carlino"); //salvo i dati con i metodi dedicati
+
+        //quindi localStorage collezione di coppie chiave-valore
+
+        localStorage.getItem("nome"); //restituisce "Carlino"
+
+
+        //come posso inserire oggetti diversi da stringhe??
+
+        localStorage.ordini=Array("1","2","3"); 
+        localStorage.ordini;//restituisce una stringa "1,2,3"--> Non comodo
+        //metodo più comodo: se ho dati diversi da stringhe, devo ricorrere alla serializzazione su JSON
+        localStorage.ordini=JSON.stringify(Array("1","2","3")); //rende l'array una stringa in json
+        console.log(JSON.parse(localStorage.ordini)); //json.parse riporta la stringa JSON nell'oggetto corrispondente!!!
+        
+
+         // localStorage.clear();per pulire il local Storage
+
+
+    </script>
+</body>
+</html>

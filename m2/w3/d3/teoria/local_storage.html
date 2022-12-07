@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <hgroup>
+        <h1>Text Area</h1>
+        <h2>Memorizza i dati e li recupera</h2>
+    </hgroup>
+
+    <form action="">
+        <button type="button" onclick="salvaDato(document.querySelector('textarea').value)">Memorizza quanto scritto</button>
+        <button type="button" onclick="">Recupera l'ultimo testo memorizzato</button>
+        <label for="">cosa hai in mente?</label>
+        <textarea name="testo_da_ricordare" required autofocus placeholder="il testo da ricordare" cols="30" rows="10"></textarea>
+    </form>
+
+<script src="application.js"></script>
+</body>
+</html>

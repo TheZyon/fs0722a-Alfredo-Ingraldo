@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="title"></div>
+    <input type="text" name="" id="usr">
+<button id="log_btn" onclick="save()">log</button>
+<button id="delete_btn" onclick="deleteData()">Delete data</button>
+
+<script>
+    function save(){
+        let usr= document.getElementById("usr").value;
+        localStorage.setItem("usr", usr);
+    }
+    function deleteData(){
+        localStorage.removeItem("usr");
+    }
+let txt;
+    function check(){ 
+//controlla se local storage contiene una coppia con chiave "usr", in caso positivo mette valore nel titolo
+//altrimenti mette nel titolo "no data"
+        if(localStorage.getItem("usr")){//getItem ritorna true se esiste quella coppia chiave-valore!
+            txt= "ciao, "+localStorage.getItem("usr");
+        }
+        else{
+            txt="no data";
+        }
+        document.querySelector(".title").innerHTML=txt;
+    }
+   window.addEventListener("load", check());
+
+
+</script>
+
+</body>
+</html>

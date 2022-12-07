@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p><button type="button" onclick="clickCounter()">Click me!</button></p>
+    <div id="result"></div>
+    <p>clicca sul bottone per vedere il counter aumentare--->salviamo i dati nel session_storage!</p>
+    <p>chiudi il browser per resettare il counter</p>
+
+    <script>
+        function clickCounter(){
+            if(typeof(Storage)!=undefined){//se il browser riconosce l'interfaccia Storage (browser minori potrebbero non riconoscerla ancora)
+            if(sessionStorage.clickCount){ //true se c'è qualcosa
+            sessionStorage.clickCount= Number(sessionStorage.clickCount)+1; //fatto perché le cose sono conservate come stringhe
+            document.getElementById("result").innerHTML=sessionStorage.clickCount;
+        }
+            else{ sessionStorage.clickCount=1; document.getElementById("result").innerHTML=sessionStorage.clickCount;}
+            }
+            else{document.getElementById("result").innerHTML="session storage non è supportato dal browser";}
+        }
+
+    </script>
+
+</body>
+</html>

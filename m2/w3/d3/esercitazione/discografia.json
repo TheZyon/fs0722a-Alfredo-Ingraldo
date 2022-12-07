@@ -1,0 +1,34 @@
+{
+  "album": [
+    {
+      "autore": "Immanuel Casto",
+      "nome": "Adult Music",
+      "anno": 2011,
+      "brani": [
+        "Escort 25",
+        "Gioco di Mano",
+        "Just Cavalli",
+        "il sesso vende sempre",
+        "50 bocca 100 amore"
+      ]
+    },
+
+    {
+      "autore": "Fabrizio De André",
+      "nome": "Canzoni",
+      "anno": 1974,
+      "brani": [
+        "Canzone dell'amore perduto",
+        "Bocca di rosa",
+        "Il testamento",
+        "La città vecchia"
+      ]
+    },
+    {
+      "autore": "Giuni Russo",
+      "nome": "Alghero",
+      "anno": 2007,
+      "brani": ["Alghero", "Inverno a Sarajevo", "Mango,Papaia"]
+    }
+  ]
+}

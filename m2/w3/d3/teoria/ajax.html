@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- eseguire delle richieste http in javascript
+        oggetto XMLHttpRequest è risultato scomodo perché prolisso
+        jquery $.ajax(); successo di questo metodo perché più rapido 
+        API fetch ha una sintassi più semplice e meglio integrata con il modello 
+        a oggetti su cui si basa JS -->
+
+<!-- API fetch prevede la gestione delle chiamate asincrone con un meccanismo di promise -->
+
+<script>
+
+
+fetch("https://www.epicode.it") //ho specificato una url su cui fare una richiesta http (parametro della funzione fetch)
+.then(response=>{console.log(response)}) //gestisco il risultato con una promise-> in caso di risposta del server sono entrato nel ramo .then
+                                         //entro nel ramo .then-> ci viene fornita la risposta nell'oggetto response 
+                                        
+.catch(error =>{console.log(error)}); 
+
+</script>  
+<!-- proprietà dell'oggetto response:
+• status->valore che indica il codice di stato http (es. 200 -> successo) 
+• statusText -> stringa associata allo status (es. "OK" stringa associata al caso status==200)
+• ok -> valore booleano (status tra 200/299 risposta true, altrimenti false)
+-->
+
+<!-- OSS: quando si ha la risposta del server si entra nel ramo .then, ma non è detto che la risposta sia response.ok==true 
+-->
+
+<script>
+    fetch("http://epicode.it").then(response=>{
+        if(response.ok){console.log("contenuto ricevuto!");}
+        if(response.status>=100 && response.status<200){console.log("info per il client");}
+        if(response.status>=300 && response.status<399){console.log("redirezione");}
+        if(response.status>=400 && response.status<499){console.log("richiesta errata");}
+        if(response.status>=500 && response.status<599){console.log("errori sul server");}
+
+    }).catch(error=>{console.log("si è verificato un errore: il server non risponde o non è connesso")});
+    /* anche la condizione di errore sul server 500<=response.status<599 entra nel ramo .then
+        CATCH -----> ci entro solo quando il server non risponde del tutto o non è connesso */
+</script>
+
+<!-- leggere il contenuto della response -->
+<!-- metodi di response per leggere il contenuto: -->
+<!-- 
+    text() -> restituisce il contenuto in forma testuale
+    json() -> parsa il contenuto e lo restituisce sotto forma di oggetto 
+    blob() -> restituisce un contenuto sotto forma di dati non strutturati
+    arrayBuffer() -> restituisce un contenuto strutturato in arrayBuffer
+ -->
+
+ <script>
+    fetch("http://www.epicode.it/api/articoli/123").then(response=>{
+        if(response.ok){return response.json();}
+    }) //ritorniamo la response sotto forma di oggetto (dopo averla parsata con response.json())
+    .then(articolo => //output del then di prima lo riceviamo nel then di dopo
+console.log(articolo.titolo)).catch(errore=>console.log("errore nel contatatre il server, o server non risponde"));
+ 
+ //di solito non ho solo un url nella richiesta fetch ma devo specificare altri parametri
+ /* fetch("https://www.epicode.it/api/articoli/1234",
+{
+    method:"post",
+    headers: new Headers({
+        "content-type":"application/json"
+    }),
+    body:JSON.stringify({
+        titolo:"Titolo Articolo",
+        autore:"Mario Rossi"
+    })
+}).then(...).catch(...) */
+//un altro metodo
+
+let richiesta = new Request("https://www.epicode.it/api/articoli/1234");
+
+
+ </script>
+<!-- funzioni asincrone async/await
+eseguire operazioni asincrone in JS -->
+
+ <script>
+/* PROMISE
+tre stati possibili
+1. resolved -> il valore è disponibile -> attività asincrona restituisce un valore
+2. rejected -> non viene restituito nessun valore
+3. pending -> né resolved né rejected -> l'attività asincrona è partita ma non ha ancora dato risultati
+ */
+//creo promise
+
+let promessaMatrimonio= new Promise(handler); //il parametro della promise ci permette di gestire il risultato
+let promise_1= new Promise(function(resolve,reject){
+    if(condizione){
+        resolve(valore);
+    }else{
+        reject(motivo);
+    }
+});
+
+// promise e then
+let myPromise = httpGet("/utente/123");
+myPromise.then(
+    function(utente){console.log("il server ha risposto con l'utente: "+ utente.nome)},
+    function(error){console.log("si è verificato un errore: "+error.message)}
+)
+
+ </script>
+</body>
+</html>
