@@ -10,9 +10,14 @@
     <script>
 
 //istanzio la promise e dico cosa contengono i due possibili oggetti associati alla promise: resolve, reject
+let mario ={
+    nome: "mario",
+    eta: 66
+}
+
 let p= new Promise((resolve,reject)=>{
 let a =2;
-if(a>2){resolve("resolved!");}else{reject("promessa non risolta");}
+if(a==2){resolve(mario);}else{reject("promessa non risolta");}
 });
 
 //richiamo la promise
