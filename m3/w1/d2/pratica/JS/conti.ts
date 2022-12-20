@@ -1,7 +1,3 @@
-
-
-
-
 export class SonAccount {
     protected balanceInit: number; //private di modo che vi si possa accedere dall'interno della classe
     constructor() {
@@ -49,3 +45,6 @@ export class MotherAccount extends SonAccount {
 
 }
 
+let mariello = new MotherAccount("mariello", "uuuuu", 5);
+
+console.log(mariello.deposit(500), mariello.withdraw(200), mariello.stampaSaldoAttuale(), mariello.calcolaInteressi());
