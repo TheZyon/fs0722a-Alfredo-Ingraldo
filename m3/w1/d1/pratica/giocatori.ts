@@ -11,6 +11,7 @@ function tombolinaCheapDiMariello(): void {
     console.log("Signore e signori, io sono mr. Ken Di Barbie, benvenuti alla tombolina cheap di Mariello. I numeri sono, per Giocatore 1 e Giocatore 2, rispettivamente: ", giocatore1, giocatore2);
     
     atteseInutili();
+    
     setTimeout(function () {
         console.log("vedremo chi vincerà 'hihihih'(cit)");
         atteseInutili();
