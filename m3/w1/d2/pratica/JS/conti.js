@@ -1,7 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.MotherAccount = exports.SonAccount = void 0;
-class SonAccount {
+export class SonAccount {
+    balanceInit; //private di modo che vi si possa accedere dall'interno della classe
     constructor() {
         this.balanceInit = 0; //balanceInit inizializzato a 0
     }
@@ -25,8 +23,10 @@ class SonAccount {
         return "";
     }
 }
-exports.SonAccount = SonAccount;
-class MotherAccount extends SonAccount {
+export class MotherAccount extends SonAccount {
+    nome;
+    pass;
+    interessi; //all'apertura del conto, si fissa un tasso di interesse. Ad es. 10 corrisponde al 10%
     constructor(nome, pass, interessi) {
         super();
         this.interessi = interessi * 0.01;
@@ -39,6 +39,3 @@ class MotherAccount extends SonAccount {
         return `Hai raccattato: ${soldiDaUscire}€. Pomplimenti!`;
     }
 }
-exports.MotherAccount = MotherAccount;
-let mariello = new MotherAccount("mariello", "uuuuu", 5);
-console.log(mariello.deposit(500), mariello.withdraw(200), mariello.stampaSaldoAttuale(), mariello.calcolaInteressi());

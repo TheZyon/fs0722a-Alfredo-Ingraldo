@@ -44,7 +44,3 @@ export class MotherAccount extends SonAccount {
     }
 
 }
-
-let mariello = new MotherAccount("mariello", "uuuuu", 5);
-
-console.log(mariello.deposit(500), mariello.withdraw(200), mariello.stampaSaldoAttuale(), mariello.calcolaInteressi());
