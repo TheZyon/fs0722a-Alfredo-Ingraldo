@@ -25,4 +25,13 @@ export class CalcoloBasic extends CalcoloAbs {
             return "errore";
         }
     }
+    message() { return "complimenti, sei una basic bitch!"; }
+}
+class CalcoloSexWorker extends CalcoloBasic {
+    Message() { return "Pomplimenti!"; }
+}
+class CalcoloCocoBlueSky extends CalcoloBasic {
+    message() {
+        return "complimenti, il mondo ha bisogno di te!";
+    }
 }

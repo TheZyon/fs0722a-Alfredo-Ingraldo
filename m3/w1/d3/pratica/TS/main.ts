@@ -8,15 +8,10 @@ import { IUser, lavoro, CalcoloAbs, CalcoloBasic } from "./calcolo";
 
 
 
-let carlino = <IUser>{};
-carlino.name = "carlino";
-carlino.codRedd = 123;
-carlino.redditoAnnuoLordo = 12345678;
-carlino.tasseInps = 123;
-carlino.tasseIrpef = 123;
 
 
-let calcolo = new CalcoloBasic(carlino);
+
+
 
 console.log(calcolo.getRedditoAnnualeNetto());
 console.log(calcolo.getTasseIrpef())

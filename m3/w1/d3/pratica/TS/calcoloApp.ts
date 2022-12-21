@@ -9,12 +9,9 @@ utente.tasseInps = eval(sessionStorage.getItem("3_fieldUtente"));
 utente.tasseIrpef = eval(sessionStorage.getItem("4_fieldUtente"));
 utente.lavoro = sessionStorage.getItem("lavoro");
 
-//mettere controlli....
+//mettere controlli sui tipi....
 
-console.log(utente.lavoro);
-console.log(utente.tasseInps)
-console.log(utente.tasseIrpef)
-console.log(utente.redditoAnnuoLordo)
+
 
 
 let calcolo = new CalcoloBasic(utente);
@@ -48,10 +45,3 @@ btnTasse?.addEventListener("mousedown", gestoreCTA.tasse);
 btnInps?.addEventListener("mousedown", gestoreCTA.tasseInps);
 btnIrpef?.addEventListener("mousedown", gestoreCTA.tasseIrpef);
 btnRedditoNetto?.addEventListener("mousedown", gestoreCTA.reddito);
-
-
-
-/* 
-lavoro
-: 
-"Avvocato" */

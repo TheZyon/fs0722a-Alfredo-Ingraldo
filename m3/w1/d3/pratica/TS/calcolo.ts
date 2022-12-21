@@ -1,5 +1,4 @@
-export type lavoro = "SexWorker" |"Guadagno con Onlyfans"| "Avvocato" | "Pusher di Rimoli" | "InsegnanteEpicode" | "PasseggiatoreCani" | "PasseggiatorePersone" | "Master";
-
+export type lavoro = "SexWorker" |"Guadagno con Onlyfans"| "Avvocato" | "Pusher di Rimoli" | "InsegnanteEpicode" | "PasseggiatoreCani" | "PasseggiatorePersone" | "Coco Blu Sky";
 
 export interface IUser { 
     name: string|null;
@@ -23,7 +22,6 @@ export abstract class CalcoloAbs {
     abstract getRedditoAnnualeNetto(): number| string;
 }
 
-
 export class CalcoloBasic extends CalcoloAbs { 
     getUtileTasse(): number|string {
         if (typeof (this.user.tasseInps) === 'number' && typeof (this.user.tasseIrpef) === 'number') {
@@ -38,5 +36,23 @@ export class CalcoloBasic extends CalcoloAbs {
             return this.user.redditoAnnuoLordo - e;
         }
         else { return "errore"; }
-    }   
+    }
+    message(): string { return "complimenti, sei una basic bitch!"; }
+}
+
+
+
+
+
+
+class CalcoloSexWorker extends CalcoloBasic { 
+    
+    Message(): string { return "Pomplimenti!"; }
+}
+
+class CalcoloCocoBlueSky extends CalcoloBasic { 
+    message(): string {
+        return "complimenti, il mondo ha bisogno di te!"
+    }
+    
 }

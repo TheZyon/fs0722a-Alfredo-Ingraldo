@@ -3,29 +3,31 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Titolo</title>
+    <title>calcolo</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="SCSS/style.css">
   </head>
   <body>
-    
-    <div class="container d-flex flex-column align-items-center">
+    <main>
+      <div class="container d-flex flex-column align-items-center m-3">
 
-        <p>Dimmi cosa ti serve</p>
+        <h1>Dimmi cosa ti serve...</h1>
 
-        <button class="m-3"id="utileTasse">calcolo tasse</button>
-        <button class="m-3"id="tasseInps">calcolo tasse inps</button>
-        <button class="m-3"id="tasseIrpef">calcolo tasse irpef</button>
-        <button class="m-3"id="redditoAnnualeNetto">calcolo reddito annuale netto</button>
+        <button class="m-3 bg-warning" id="utileTasse">calcolo tasse</button>
+        <button class="m-3 bg-warning" id="tasseInps">calcolo tasse inps</button>
+        <button class="m-3 bg-warning" id="tasseIrpef">calcolo tasse irpef</button>
+        <button class="m-3 bg-warning" id="redditoAnnualeNetto">calcolo reddito annuale netto</button>
 
     </div>
     
 <!-- div per l'output dei calcoli -->
-    <div class="container">
+    <div class="container risultato">
     <p id="out"></p>
     </div>
 
@@ -34,6 +36,8 @@
     <p id="lavoroSpeciale"></p>
     </div>
 
+    </main>
+    
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
