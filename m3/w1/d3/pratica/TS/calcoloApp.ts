@@ -2,15 +2,15 @@ import { IUser, lavoro, CalcoloAbs, CalcoloBasic } from "./calcolo";
 
 let utente = <IUser>{};
 
-utente.name = sessionStorage.getItem("1_fieldUtente");
-utente.codRedd = eval(sessionStorage.getItem("2_fieldUtente"));
-utente.redditoAnnuoLordo = eval(sessionStorage.getItem("3_fieldUtente"));
-utente.tasseInps = sessionStorage.getItem("4_fieldUtente");
-utente.tasseIrpef = eval(sessionStorage.getItem("5_fieldUtente"));
+utente.name = sessionStorage.getItem("0_fieldUtente");
+utente.codRedd = eval(sessionStorage.getItem("1_fieldUtente"));
+utente.redditoAnnuoLordo = eval(sessionStorage.getItem("2_fieldUtente"));
+utente.tasseInps = eval(sessionStorage.getItem("3_fieldUtente"));
+utente.tasseIrpef = eval(sessionStorage.getItem("4_fieldUtente"));
 utente.lavoro = sessionStorage.getItem("lavoro");
 
-
 //mettere controlli....
+
 console.log(utente.lavoro);
 console.log(utente.tasseInps)
 console.log(utente.tasseIrpef)
