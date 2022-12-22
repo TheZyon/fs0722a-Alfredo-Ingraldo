@@ -1,0 +1,87 @@
+/* navbar */
+nav {
+  background-image: url("../img/navbarImg.webp");
+  background-size: cover;
+  background-position: center;
+}
+nav.navbar .navbar-brand {
+  height: 140px;
+}
+nav.navbar .navbar-brand img {
+  height: 130px;
+  border-radius: 50%;
+}
+nav.navbar .navbar-brand p {
+  position: relative;
+  left: 15px;
+  bottom: 50px;
+  font-family: "Berkshire Swash", cursive;
+  font-size: 400;
+}
+nav ul li {
+  margin-right: 30px;
+}
+nav .nav-item {
+  transition: 1s;
+  font-family: "Rubik Mono One", sans-serif;
+}
+nav .nav-item:hover {
+  font-size: 30px;
+}
+
+.spazio {
+  height: 10000px;
+}
+
+.button {
+  transition: 1s;
+  font-family: "Rubik Mono One", sans-serif;
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+main p, main q {
+  color: black;
+}
+main q {
+  font-family: "Satisfy", cursive;
+}
+
+.imgCliente {
+  border-radius: 50%;
+}
+
+h2.text-center {
+  margin-top: 50px;
+}
+
+#carouselExampleCaptions img {
+  margin-top: 50px;
+  margin-bottom: 120px;
+}
+#carouselExampleCaptions .clientiAssidui {
+  margin-bottom: 200px;
+}
+
+#discount-div {
+  position: absolute;
+  width: 100px;
+  text-align: center;
+  top: 30px;
+  left: 180px;
+  transform: rotate(40deg);
+  font-family: "Rubik Mono One", sans-serif;
+}
+
+#articoliPrimoPiano {
+  margin-top: 50px;
+}
+#articoliPrimoPiano h2 {
+  margin-bottom: 25px;
+}
+
+#out {
+  font-family: "Dancing Script", cursive;
+}/*# sourceMappingURL=style.css.map */

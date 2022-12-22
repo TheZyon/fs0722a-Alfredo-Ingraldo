@@ -1,4 +1,4 @@
-import { IUser, lavoro, CalcoloAbs, CalcoloBasic } from "./calcolo";
+import {IUser, lavoro, CalcoloAbs, CalcoloBasic } from "./calcolo";
 
 let utente = <IUser>{};
 
@@ -8,14 +8,9 @@ utente.redditoAnnuoLordo = eval(sessionStorage.getItem("2_fieldUtente"));
 utente.tasseInps = eval(sessionStorage.getItem("3_fieldUtente"));
 utente.tasseIrpef = eval(sessionStorage.getItem("4_fieldUtente"));
 utente.lavoro = sessionStorage.getItem("lavoro");
-
+ 
 //mettere controlli sui tipi....
-
-
-
-
 let calcolo = new CalcoloBasic(utente);
-
 let btnTasse = document.getElementById("utileTasse");
 let btnInps = document.getElementById("tasseInps");
 let btnIrpef = document.getElementById("tasseIrpef");

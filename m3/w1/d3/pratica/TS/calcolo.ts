@@ -40,11 +40,6 @@ export class CalcoloBasic extends CalcoloAbs {
     message(): string { return "complimenti, sei una basic bitch!"; }
 }
 
-
-
-
-
-
 class CalcoloSexWorker extends CalcoloBasic { 
     
     Message(): string { return "Pomplimenti!"; }

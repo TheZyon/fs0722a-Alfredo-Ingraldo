@@ -3,8 +3,6 @@
 // li metto in session storage e reindirizzo nella pagina associata al tipo di utente
 // lì, creo variabile di tipo IUser usando l'interfaccia, e calcolo ciò che ci interessa usando 
 // classe CalcoloTopeggi
-console.log(calcolo.getRedditoAnnualeNetto());
-console.log(calcolo.getTasseIrpef());
 let button = document.getElementsByTagName("button")[0];
 button.addEventListener("mousedown", function () {
     //metto i valori degli input fields nel session storage e ridireziono l'utente nella pagina per fare i calcoli...

@@ -8,15 +8,6 @@ import { IUser, lavoro, CalcoloAbs, CalcoloBasic } from "./calcolo";
 
 
 
-
-
-
-
-
-console.log(calcolo.getRedditoAnnualeNetto());
-console.log(calcolo.getTasseIrpef())
-
-
 let button = document.getElementsByTagName("button")[0];
 
 button.addEventListener("mousedown", function () { 
