@@ -1,4 +1,4 @@
-import { CalcoloBasic } from "./calcolo";
+import { CalcoloBasic } from "./calcolo.js";
 let utente = {};
 utente.name = sessionStorage.getItem("0_fieldUtente");
 utente.codRedd = eval(sessionStorage.getItem("1_fieldUtente"));
