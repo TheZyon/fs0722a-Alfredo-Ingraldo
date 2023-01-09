@@ -6,6 +6,7 @@ import { PrimoComponentComponent } from './primo-component/primo-component.compo
 import { SecondComponentComponent } from './second-component/second-component.component';
 import { ThirdComponentComponent } from './third-component/third-component.component';
 import { CuboBelloComponent } from './cubo-bello/cubo-bello.component';
+import { PrimaComponent } from './cartellaComponenti18/prima/prima.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { CuboBelloComponent } from './cubo-bello/cubo-bello.component';
     PrimoComponentComponent,
     SecondComponentComponent,
     ThirdComponentComponent,
-    CuboBelloComponent
+    CuboBelloComponent,
+    PrimaComponent
   ],
   imports: [
     BrowserModule
