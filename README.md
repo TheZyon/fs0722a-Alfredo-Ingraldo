@@ -1,4 +1,4 @@
-#Come trovare i progetti
+# Come trovare i progetti
 
 Questa repo contiene i progetti sviluppati nel corso full-stack di Epicode.
 
