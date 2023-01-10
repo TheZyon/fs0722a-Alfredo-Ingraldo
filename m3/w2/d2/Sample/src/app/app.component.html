@@ -1,0 +1,23 @@
+<nav>
+<a class='m-3' routerLink="/" routerLinkActive="attivo" [routerLinkActiveOptions]="{exact:true}">Home</a> <!-- primo modo -> passo una stringa  -->
+<a class='m-3' routerLink={{attivo}} routerLinkActive="attivo">Attivi</a> <!-- secondo modo -> passo una proprietà della component class -->
+<a class='m-3' [routerLink]="['/','carlinoPassivo']" routerLinkActive="attivo">Inattivi</a> <!-- terzo metodo ->tramite concatenazione array -->
+</nav>
+
+<!--
+
+  impostazione completa per una navigaziuone:
+
+  1.routerLink -> si sostituisce all'href per dire a quale indirizzo reindirizzare
+  2.routerLinkActive = "Pippo" -> quandop siamo all'indirizzo (o ad un sottoindirizzo) relativo al routerLink, aggiungi LA classa Pippo al tag con questo attributo (una sola classe consentita)
+  3.ropterLinkAiveOptions="{exact:true}" -> fa in modo che la class attivata da routerLinkActive non si attivi nel caso ci si trovi in sottoindirizzi
+
+-->
+
+<div class="m-4">
+  <router-outlet><!-- zona in cui compare la component chiamata dal link  --></router-outlet>
+</div>
+
+
+
+
