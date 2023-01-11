@@ -17,8 +17,7 @@ export class NewUserComponent implements OnInit {
   constructor() { }
 
 
-  @Output() onManCreated = new EventEmitter<User>(); //
-
+  @Output() onManCreated = new EventEmitter<User>(); 
   @Output() onWomanCreated = new EventEmitter<User>();
 
   ngOnInit(): void {
