@@ -1,0 +1,16 @@
+<app-child #child></app-child> <!-- stampo l'html del child dichiarato nel @viewChild -->
+
+<h3>{{child.nome}}</h3> <!-- lo possiamo fare perchè child è stato importato ed è stato dichiarato con @viewChild -->
+<h3>ecco una misura {{child.lunghezzPene}}</h3> <!-- grazie alla direttiva possiamo  -->
+
+<div class="card w-100">
+  <div class="card-body">
+    <ng-content select=".card-title"></ng-content> <!-- cerca nel padre dove viene chiamata una cosa di classe card-title,
+                                                         questo è un tag che viene riempito DAL PADRE:nel padre (App) quando mettiamo il tag card-app
+                                                        scriviamo un tag con classe .card-title, e il contenuto di quel tag viene messo in questo ng-content
+                                                        quindi questo è un modo di modificare il figlio dal padre-->
+    <h5 class="card-subtitle mb-2 text-muted"> Sottitolo card</h5>
+    <ng-content select=".card-body"></ng-content>
+    <ng-content select=".carletto"></ng-content>
+  </div>
+</div>

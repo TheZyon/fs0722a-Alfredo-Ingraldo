@@ -1,0 +1,15 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-12">
+      <app-new-user (onManCreated)="onAddMan($event)" (onWomanCreated)="onAddWoman($event)" ></app-new-user>
+    <!-- onAddMan($event) è un modo di indicare che onAddMAn passa  -->
+    </div> <!-- app component chiama new user, riceve l'output on man created, attiva onAddMan e  sul risultato dell'evento, che è un oggetto di tipo User -->
+  </div>
+</div>
+<hr>
+
+<div class="container">
+  <div class="row">
+    <app-user-card [data]="user" *ngFor="let user of users" class="col-md-4"></app-user-card> <!-- abbiamo scritto [data] perchè in user-card abbiamo specificato @Input("data")-->
+  </div>
+</div>
