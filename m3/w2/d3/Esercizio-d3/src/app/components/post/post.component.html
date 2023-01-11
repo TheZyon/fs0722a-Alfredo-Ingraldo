@@ -1,4 +1,9 @@
-<div class="card" style="width: 18rem;">
+<div class="card" style="width: 18rem;" [ngClass]="
+{
+  'bg-success':type=='politics',
+  'bg-danger': type=='education',
+  'bg-warning':type=='news'
+}">
   <div class="card-body">
     <h5 class="card-title">{{id}}-{{title}}</h5>
     <p class="card-text">{{body}}</p>

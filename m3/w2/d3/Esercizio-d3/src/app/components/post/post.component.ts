@@ -10,7 +10,7 @@ export class PostComponent implements OnInit {
   @Input() id!: number;
   @Input() title!: string;
   @Input() body!: string;
-
+  @Input() type!: string;
 
 
   constructor() { }
