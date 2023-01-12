@@ -19,13 +19,14 @@ export class ActiveComponent implements OnInit {
   }
 
   popolaArrayPostAttivi() {//recupera la promise con l'array dei post dal service e mette i post attivi nel field arrayPostAttivi
-    this.postSrv.fetchaPosts()
-      .then((arrayPost: Post[]) => {
-        return arrayPost.filter(post => { return post.active == true; });
-      }
-      )
-      .then(e => { this.arrayPostAttivi = e });
-
+    this.arrayPostAttivi = this.postSrv.arrayPost.filter(post => { return post.active == true });
   }
+
+  aggiornaPost(id:number) {
+    console.log("aggiorno arraPost del service...");
+    this.postSrv.arrayPost.filter(post => { return post.id == id; })[0].active = false;// aggiorno arrayPost del service così la modifica resta letta per la sessione
+    this.arrayPostAttivi = this.arrayPostAttivi.filter(post => { return post.id != id }); //aggiorno arrayPostAttivi così quando si ricarica la componente, i post caricati sono diversi
+  }
+
 
 }

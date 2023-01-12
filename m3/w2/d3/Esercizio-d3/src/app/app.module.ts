@@ -7,7 +7,7 @@ import { ActiveComponent } from './components/active/active.component';
 import { InactiveComponent } from './components/inactive/inactive.component';
 import { HomeComponent } from './components/home/home.component';
 import { PostComponent } from './components/post/post.component';
-import { CustomComponent } from './components/custom/custom.component';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +16,7 @@ import { CustomComponent } from './components/custom/custom.component';
     InactiveComponent,
     HomeComponent,
     PostComponent,
-    CustomComponent
+
   ],
   imports: [
     BrowserModule,

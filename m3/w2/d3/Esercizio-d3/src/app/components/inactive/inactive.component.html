@@ -1,1 +1,5 @@
-<app-post [id]="post.id"[title]="post.title" [body]="post.body" *ngFor="let post of arrayPostInattivi" ></app-post>
+<app-post [id]="post.id"[title]="post.title" [body]="post.body" [type]="post.type" *ngFor="let post of arrayPostInattivi" >
+
+<button type="button" class="btn btn-primary" (click)="aggiornaPost(post.id)">attiva</button>
+
+</app-post>
