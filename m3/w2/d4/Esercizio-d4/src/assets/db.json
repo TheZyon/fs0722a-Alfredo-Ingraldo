@@ -1,0 +1,42 @@
+[
+    {
+        "id":1,
+        "body":"Sit minim deserunt enim enim nisi. Eiusmod incididunt dolore et ea anim. Non exercitation id voluptate et velit quis anim officia fugiat esse laborum nisi fugiat non.",
+        "title":"Dolor velit sint tempor culpa cupidatat ipsum do ad tempor eiusmod.",
+        "active":true,
+        "type":"education",
+        "author":"Cammelo Passalacqua"
+    },
+    {
+        "id":2,
+        "body":"Sit minim deserunt enim enim nisi. Eiusmod incididunt dolore et ea anim. Non exercitation id voluptate et velit quis anim officia fugiat esse laborum nisi fugiat non.",
+        "title":"Dolor velit sint tempor culpa cupidatat ipsum do ad tempor eiusmod.",
+        "active":true,
+        "type":"education",
+        "author": "Zyon Bocchiny"
+    },
+    {
+        "id":3,
+        "body":"Sit minim deserunt enim enim nisi. Eiusmod incididunt dolore et ea anim. Non exercitation id voluptate et velit quis anim officia fugiat esse laborum nisi fugiat non.",
+        "title":"Dolor velit sint tempor culpa cupidatat ipsum do ad tempor eiusmod.",
+        "active":true,
+        "type":"politics",
+        "author": "Mariello di Mariella"
+    },
+    {
+        "id":4,
+        "body":"Sit minim deserunt enim enim nisi. Eiusmod incididunt dolore et ea anim. Non exercitation id voluptate et velit quis anim officia fugiat esse laborum nisi fugiat non.",
+        "title":"Dolor velit sint tempor culpa cupidatat ipsum do ad tempor eiusmod.",
+        "active":false,
+        "type":"news",
+        "author": "Mio Billo"
+    },
+    {
+        "id":5,
+        "body":"Sicuramente Angular è un framework impegnativo da diegrire, ma certe volte si fa prima da sé che seguendo le lezioni di altri",
+        "title":"Come imparare Angular da soli",
+        "active":false,
+        "type":"news",
+        "author": "Esposito Napoli"
+    }
+]

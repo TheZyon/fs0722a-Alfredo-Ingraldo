@@ -1,0 +1,12 @@
+<div *ngFor="let user of users; index as i">
+  <div class="bg-primary m-4 p-2 text-white rounded" (click)="updateUserClicked(i)"  >{{user.name}}</div>
+</div>
+
+
+<div *ngFor="let user of users; index as i">
+  <div *ngIf="usersClicked[i]">
+    <p>{{user.name}}</p>
+    <p>{{user.email}}</p>
+  </div>
+</div>
+

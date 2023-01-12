@@ -1,0 +1,13 @@
+<!--
+<app-custom [post]="post" *ngFor="let post of arrayPostAttivi">
+
+<button type="button" class="attiva-disattiva btn btn-secondary" >disattiva</button>
+
+</app-custom> -->
+
+
+<app-post  [id]="post.id" [title]="post.title" [body]="post.body" [type]="post.type" [author]="post.author" *ngFor="let post of arrayPostAttivi">
+  <button class="btn btn-primary" (click)="aggiornaPost(post.id)">disattiva</button>
+
+
+</app-post>

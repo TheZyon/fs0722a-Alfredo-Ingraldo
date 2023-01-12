@@ -1,0 +1,22 @@
+<div class="card" style="width: 18rem;" [ngClass]="
+{
+  'bg-success':type=='politics',
+  'bg-danger': type=='education',
+  'bg-warning':type=='news'
+}">
+  <div class="card-body">
+    <div class="card-header"><span appEvidenzia>Post</span> </div>
+    <h5 class="card-title">{{ title | maiuscolo }}</h5>
+    <p class="card-text">{{body}}</p>
+
+
+    <ng-content ></ng-content>
+
+    <button class="btn btn-primary m-4">
+      <a routerLink="/post/{{id}}/{{body}}/{{title}}/{{type}}/{{author}}">
+        Dettagli
+      </a>
+    </button>
+
+  </div>
+</div>

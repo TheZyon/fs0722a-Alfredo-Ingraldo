@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Napoli: Tarallucci&Vino</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" routerLinkActive="attivo" [routerLinkActiveOptions]="{exact:true}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink={{attivo}} routerLinkActive="attivo">Attivi</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/carlinoPassivo" routerLinkActive="attivo">Inattivi</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/users" routerLinkActive="attivo">utenti</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+<!--
+
+  impostazione completa per una navigaziuone:
+
+  1.routerLink -> si sostituisce all'href per dire a quale indirizzo reindirizzare
+  2.routerLinkActive = "Pippo" -> quandop siamo all'indirizzo (o ad un sottoindirizzo) relativo al routerLink, aggiungi LA classa Pippo al tag con questo attributo (una sola classe consentita)
+  3.ropterLinkAiveOptions="{exact:true}" -> fa in modo che la class attivata da routerLinkActive non si attivi nel caso ci si trovi in sottoindirizzi
+
+-->
+
+<div class="m-4">
+  <router-outlet><!-- zona in cui compare la component chiamata dal link  --></router-outlet>
+</div>
+
+
+
+
+
+
+
+
