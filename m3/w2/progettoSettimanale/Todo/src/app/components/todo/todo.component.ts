@@ -73,7 +73,7 @@ export class TodoComponent implements OnInit {
   tagliaPapiro() {
     let audio = new Audio("/assets/axe.mp3");
     setTimeout(() => {
-      console.log("play"); audio.play(); this.papiri += 1; this.todoSrv.n_papiri += 1;
+     audio.play(); this.papiri += 1; this.todoSrv.n_papiri += 1;
     }, 2000);
   }
 
