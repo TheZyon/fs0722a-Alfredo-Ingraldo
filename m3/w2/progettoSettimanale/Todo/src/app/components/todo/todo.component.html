@@ -1,0 +1,20 @@
+<div *ngIf="!caricati">Recupero task...</div>
+<div *ngIf="caricati">
+  <!-- <div *ngIf=""></div> per far scomparire il messaggio di averli caricati -->
+  Ho caricato, c'era traffico...
+
+  <div *ngIf="arrayTodo.length==0"> <p class="omg">OMG, no tasks were found!</p> </div>
+
+
+  <div *ngIf="arrayTodo.length>0"> <!-- lista dei todos del todoArray -->
+   <app-task  [id]="todo.id" [title]="todo.title"  *ngFor="let todo of arrayTodo">
+    <input type="checkbox" (click)="taskCompleted(todo.id)">
+  </app-task>
+  </div>
+
+  <input type="text" [(ngModel)]="nuovoTodo.title" placeholder="inserisci todo">
+  <button type="button" (click)="pushaTodo()">Inselisce</button>
+</div>
+
+
+<!-- (completed)="taskCompleted($event)" -->

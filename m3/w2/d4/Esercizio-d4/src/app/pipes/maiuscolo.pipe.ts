@@ -11,3 +11,5 @@ export class MaiuscoloPipe implements PipeTransform {
   }
 
 }
+
+//{ciccio | maiuscolo }

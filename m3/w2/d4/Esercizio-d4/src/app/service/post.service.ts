@@ -12,11 +12,7 @@ export class PostService {
     this.fetchaPosts();
 
   }
-
-
-
-
-
+  
   fetchaPosts() { //aggiorna arrayPost con l'array fetchato
     console.log("fetcho")
     let arrayPromise = fetch("/assets/db.json").then(response => { return response.json(); })
