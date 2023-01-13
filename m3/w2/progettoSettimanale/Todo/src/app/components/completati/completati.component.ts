@@ -26,9 +26,13 @@ export class CompletatiComponent implements OnInit {
 
   /* aggiungere metodo per rimuovere definitivamente il todo */
 
-  removeTodo(id:number) {
-    this.todoSrv.deleteTodo(id);
-    this.arrayTodo = this.arrayTodo.filter(todo => { return todo.id != id; });
+  removeTodo(id: number) {
+    setTimeout(() => {
+      this.todoSrv.deleteTodo(id);
+      this.arrayTodo = this.arrayTodo.filter(todo => { return todo.id != id; });
+      let audio = new Audio("/assets/eating.mp3");
+      audio.play();
+    }, 2000);
   }
 }
 
