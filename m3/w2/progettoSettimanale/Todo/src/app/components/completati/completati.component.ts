@@ -30,7 +30,7 @@ export class CompletatiComponent implements OnInit {
     setTimeout(() => {
       this.todoSrv.deleteTodo(id);
       this.arrayTodo = this.arrayTodo.filter(todo => { return todo.id != id; });
-      let audio = new Audio("/assets/eating.mp3");
+      let audio = new Audio("/assets/slurp_v.mp3");
       audio.play();
     }, 2000);
   }
