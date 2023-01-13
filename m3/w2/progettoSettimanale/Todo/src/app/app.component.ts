@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Todo';
+
+  quack() {
+    let audio = new Audio("/assets/quack.mp3");
+    audio.play();
+  }
+
+
 }
+

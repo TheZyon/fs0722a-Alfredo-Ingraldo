@@ -1,14 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Todo } from '../interface/todo';
-import { TodoComponent } from '../components/todo/todo.component';
+
 @Injectable({
   providedIn: 'root'
 })
 export class TodoService {
 
   todosArray: Todo[] = [];
-
-
+  n_papiri: number = 0; //numero papiri risparmiati per scrivere i task
 
   constructor() { }
 

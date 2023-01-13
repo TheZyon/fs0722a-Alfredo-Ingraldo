@@ -13,8 +13,9 @@
   </div>
 
   <input type="text" [(ngModel)]="nuovoTodo.title" placeholder="inserisci todo">
-  <button type="button" (click)="pushaTodo()">Inselisce</button>
+  <button type="button" (click)="pushaTodo()" (click)="tagliaPapiro()">Inselisce</button>
 </div>
 
+<div *ngIf="papiri>0">Complimenti, non sono stati tagliati: {{papiri}}-papiri</div>
 
 <!-- (completed)="taskCompleted($event)" -->

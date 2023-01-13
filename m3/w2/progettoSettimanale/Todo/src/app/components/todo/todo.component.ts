@@ -14,14 +14,17 @@ export class TodoComponent implements OnInit {
 
   caricati: boolean = false;
 
+  papiri: number = 0;
+
   constructor(private todoSrv: TodoService) {
 
   }
 
   ngOnInit(): void { //carica arrayTodo da todoSrv e dopo 2s rende var caricati true
     this.arrayTodo = this.todoSrv.retrieveTodos().filter(todo => { return todo.completed == false; });
-    setTimeout(() => { this.caricati = true; }, 2000);
- /*    setTimeout(() => { console.log(this.caricati) }, 3000); */
+    setTimeout(() => { this.caricati = true; this.papiri = this.todoSrv.n_papiri; }, 2000);
+    /*    setTimeout(() => { console.log(this.caricati) }, 3000); */
+
   }
 
   pushaTodo() {//pusha il todo dell'ìnput tag in arrayTodo e nella base dati di todoSrv
@@ -47,10 +50,11 @@ export class TodoComponent implements OnInit {
       console.log("array del service: ", this.todoSrv.todosArray);
       this.arrayTodo = this.arrayTodo.filter(todo => { return todo.id != id });//tolgo il task dall'array del component
       console.log("array del component: ", this.arrayTodo);
+      let audio = new Audio("/assets/slurp_v.mp3");
+      audio.play();
     }, 2000);
 
   }
-
 
 //creazione id tutti diversi
 
@@ -66,6 +70,12 @@ export class TodoComponent implements OnInit {
 
   }
 
+  tagliaPapiro() {
+    let audio = new Audio("/assets/axe.mp3");
+    setTimeout(() => {
+      console.log("play"); audio.play(); this.papiri += 1; this.todoSrv.n_papiri += 1;
+    }, 2000);
+  }
 
 
 }

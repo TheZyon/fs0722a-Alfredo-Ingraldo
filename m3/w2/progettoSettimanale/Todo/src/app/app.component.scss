@@ -2,9 +2,22 @@
   color:red;
 }
 a{
+  color:white;
   margin:3rem;
+  font-size: 30px;
+  font-weight: 800;
+  &:hover{
+    font-size:40px;
+  }
 }
 div{
   margin:3rem;
+  text-align:center;
 }
 
+nav{
+  text-align:center;
+  background-image:url("/assets/papiro.webp");
+  background-position-y: bottom;
+  padding:3rem;
+}

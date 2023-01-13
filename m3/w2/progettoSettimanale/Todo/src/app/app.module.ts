@@ -8,13 +8,15 @@ import { TodoComponent } from './components/todo/todo.component';
 import { CompletatiComponent } from './components/completati/completati.component';
 import { TaskComponent } from './components/task/task.component';
 import { FormsModule } from '@angular/forms';
+import { EvidenziaDirective } from './directives/evidenzia.directive';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     TodoComponent,
     CompletatiComponent,
-    TaskComponent
+    TaskComponent,
+    EvidenziaDirective
   ],
   imports: [
     BrowserModule,
