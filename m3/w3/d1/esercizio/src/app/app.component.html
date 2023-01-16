@@ -1,0 +1,13 @@
+
+<div class="container">
+  <app-likes></app-likes>
+</div>
+
+
+
+<div class="container d-flex flex-wrap">
+<app-album [id]="album.id" [title]="album.title" [url]="album.url" *ngFor="let album of albumArray" class="m-4">
+  <button (click)="cancellaAlbum(album.id)"   class="btn btn-danger m-2">Elimina</button>
+  
+</app-album>
+</div>
