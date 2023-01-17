@@ -1,0 +1,24 @@
+<form #eroiForm="ngForm" (ngSubmit)="onSubmit(eroiForm)">
+  
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="name" name="nome" [(ngModel)]="newHero.name" required/>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="alterEgo" name="alterEgo" [(ngModel)]="newHero.alterEgo" required/>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="planet" name="planet" [(ngModel)]="newHero.planet" required minlength="5"/> <!--  -->
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="enemy" name="enemy" [(ngModel)]="newHero.enemy" maxlength="10"/>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="weakness" name="weakness" [(ngModel)]="newHero.weakness" >
+
+
+<mat-form-field appearance="fill">
+  <mat-label>Poteri</mat-label>
+  <mat-select name="power" [(ngModel)]="newHero.powers[0]">
+    <mat-option value="Spiegare Angular in Napoletano">Spiegare Angular in Napoletano</mat-option>
+    <mat-option value="Durare 2h a letto">Durare 2h a letto</mat-option>
+    <mat-option value="Intercalare 'Mi consenta'">Intercalare "Mi consenta"</mat-option>
+    <mat-option value="Donna, Madre, Cristiana">Donna, Madre, Cristiana</mat-option>
+    <mat-option value="Invocazione della Ruspa">Invocazione della Ruspa</mat-option>
+  </mat-select>
+</mat-form-field>
+
+
+
+  <button type="submit" [disabled]="!eroiForm.valid">Crea</button>
+</form>

@@ -1,0 +1,47 @@
+<form [formGroup]="eroiForm" (ngSubmit)="onSubmit()"><!-- il tag form va inserito sempre -->
+  <!-- [formGroup]="forma" fa in modo che i field del form vengano mappati nei FORM CONTROL del form group forma, che sta nel model -->
+  <!-- (ricordarsi di importare in app.module il formMoule e il reactiveFormModule) -->
+
+  <p class="rosso" *ngIf="!eroiForm.get('name')?.valid && eroiForm.get('name')?.touched">Inserisci nome</p>
+  <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput type="text" name="name" formControlName="name">
+    </mat-form-field>
+
+    <p class="rosso"  *ngIf="!eroiForm.get('alterEgo')?.valid && eroiForm.get('alterEgo')?.touched">Inserisci alterEgo</p>
+    <mat-form-field appearance="fill">
+      <mat-label>AlterEgo</mat-label>
+      <input matInput name="alterEgo" type="text" formControlName="alterEgo">
+    </mat-form-field>
+
+    <p class="rosso"  *ngIf="!eroiForm.get('planet')?.valid && eroiForm.get('planet')?.touched">Inserisci alterEgo</p>
+    <mat-form-field appearance="fill">
+      <mat-label>Planet</mat-label>
+      <input matInput name="planet" type="text" formControlName="planet">
+    </mat-form-field>
+
+    <p class="rosso"  *ngIf="!eroiForm.get('weakness')?.valid && eroiForm.get('weakness')?.touched">Inserisci alterEgo</p>
+    <mat-form-field appearance="fill">
+      <mat-label>weakness</mat-label>
+      <input matInput name="weakness" type="text" formControlName="weakness">
+    </mat-form-field>
+
+    <p class="rosso"  *ngIf="!eroiForm.get('enemy')?.valid && eroiForm.get('enemy')?.touched">Inserisci alterEgo</p>
+    <mat-form-field appearance="fill">
+      <mat-label>Enemy</mat-label>
+      <input matInput name="enemy" type="text" formControlName="enemy">
+    </mat-form-field>
+
+    <p  class="rosso" *ngIf="!eroiForm.get('powers')?.valid && eroiForm.get('powers')?.touched">Inserisci alterEgo</p>
+    <mat-form-field appearance="fill">
+      <mat-label>Poteri</mat-label>
+      <mat-select name="powers" formControlName="powers">
+        <mat-option value="one">Rosso</mat-option>
+        <mat-option value="two">Blu</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+
+
+    <button mat-button color="accent" type="submit" [disabled]="!eroiForm.valid">Invia</button> <!-- aggiunto da noi -->
+    </form>
