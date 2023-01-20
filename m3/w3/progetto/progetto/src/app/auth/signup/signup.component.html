@@ -1,0 +1,14 @@
+
+<form #f="ngForm" (ngSubmit)="register(f)" >
+
+  <label for="name">Name</label>
+  <input type="text" name="name"  id="name" required ngModel/>
+
+  <label for="email">Email</label>
+  <input type="email" name="email"  id="email" required ngModel/>
+
+  <label for="password">Password</label>
+  <input type="password" name="password" id="password" required ngModel/>
+
+  <button class="btn btn-primary" type="submit" [disabled]="!f.valid">signup</button>
+</form>

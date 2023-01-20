@@ -27,6 +27,7 @@ export class ReactiveFormComponent implements OnInit {
       powers: new FormControl(null, [Validators.required])
     })
     console.log("iniziale: ", this.eroiForm)
+
   }
 
 

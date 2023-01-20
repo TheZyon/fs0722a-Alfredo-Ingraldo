@@ -1,0 +1,31 @@
+<div class="movies container d-flex">
+<div class="row">
+
+
+
+
+
+
+
+
+
+<div class="d-flex flex-column movie col-4 align-items-center justify-content-center" *ngFor="let movie of movies">
+
+<!-- <p>{{movie.title}}</p>
+<img class="poster" src="{{'https://image.tmdb.org/t/p/w500' + movie.poster_path}}" alt="img of movie">
+<button class="btn btn-danger" *ngIf="isItLiked(movie.id)"   (click)="likeToggle(movie.id)" >Dislike</button>
+<button class="btn btn-success m-3" *ngIf="!isItLiked(movie.id)" (click)="likeToggle(movie.id)" >Like</button>
+ -->
+<div class="card d-flex m-4 flex-column align-items-center justify-content-center" style="width: 18rem;">
+  <img class="poster card-img-top" src="{{'https://image.tmdb.org/t/p/w500' + movie.poster_path}}" alt="img of movie" >
+  <div class="card-body d-flex flex-column align-items-center justify-content-center">
+    <h5 class="card-title">{{movie.title}}</h5>
+    <button class="btn btn-danger" *ngIf="isItLiked(movie.id)"   (click)="likeToggle(movie.id)" >Dislike</button>
+    <button class="btn btn-success" *ngIf="!isItLiked(movie.id)" (click)="likeToggle(movie.id)" >Like</button>
+  </div>
+</div>
+<!-- <img src={{urlPupular + movie.poster_path}}> -->
+</div>
+</div>
+
+</div>
