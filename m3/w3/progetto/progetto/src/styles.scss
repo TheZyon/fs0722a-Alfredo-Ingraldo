@@ -2,10 +2,15 @@
 
 /* You can add global styles to this file, and also import other style files */
 
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+
 form{
   display: flex;
   flex-direction: column;
-  
+
 }
 
 input{
