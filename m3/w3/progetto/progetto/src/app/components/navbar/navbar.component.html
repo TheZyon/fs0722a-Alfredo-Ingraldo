@@ -1,40 +1,47 @@
-<nav class="navbar navbar-expand mb-3 navbar-light bg-light">
-  <div class="container-fluid">
-      <div class="collapse navbar-collapse" id="navbarToggler">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+<header id="header" class="bg-secondary">
+  <nav class="container mx-auto flex justify-start items-center py-8 px-4">
+    <!-- App Name -->
+    <a class="text-3xl text-indigo-400 font-bold uppercase mr-4" href="index.html">Napoli Movies</a>
 
-            <!-- menù nella sidebar -->
-            <li class="nav-item">
-              <a href="" class="nav-link">
-                <app-sidebar></app-sidebar>
-              </a>
-            </li>
+    <div class="flex flex-grow items-center">
 
-            <!-- Home -->
-            <li class="nav-item">
-              <a class="nav-link" [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
-            </li>
 
-            <!-- se sei loggato  -->
-              <li class="nav-item" *ngIf="isLoggedIn">
-                  <a class="nav-link" [routerLink]="['/users']" routerLinkActive="active">Users</a>
-              </li>
-              <li class="nav-item" *ngIf="isLoggedIn">
-                  <a class="nav-link" [routerLink]="['/movies']" routerLinkActive="active">Movies</a>
-              </li>
-              <li class="nav-item" *ngIf="isLoggedIn">
-                <p class="nav-link">Buongiorno {{nomeUtente}}!</p>
-            </li>
-            <!-- se non sei loggato -->
-              <li class="nav-item" *ngIf="!isLoggedIn"><!--1. questa compare solo se non siamo loggati -->
-                  <a class="nav-link" [routerLink]="['/login']" routerLinkActive="active">Login</a>
-              </li>
-              <li class="nav-item" *ngIf="!isLoggedIn">
-                  <a class="nav-link" [routerLink]="['/signup']" routerLinkActive="active">Signup</a>
-              </li>
-          </ul>
-  <button type="button" class="btn btn-danger" (click)="onLogout()" *ngIf="isLoggedIn">Logout</button> <!--2.  questa compare solo se siamo loggati -->
-      </div>
-  </div>
-</nav>
+
+      <ul class="flex flex-row mt-1">
+        <li>
+          <a class="px-2" href="about.html">About</a>
+        </li>
+
+        <!-- menù nella sidebar -->
+        <li class="nav-item">
+          <a href="" class="nav-link">
+            <app-sidebar></app-sidebar>
+          </a>
+        </li>
+
+        <!-- Home -->
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+        </li>
+
+        <!-- se sei loggato  -->
+          <li class="nav-item" *ngIf="isLoggedIn">
+              <a class="nav-link" [routerLink]="['/users']" routerLinkActive="active">Users</a>
+          </li>
+          <li class="nav-item" *ngIf="isLoggedIn">
+              <a class="nav-link" [routerLink]="['/movies']" routerLinkActive="active">Movies</a>
+          </li>
+        <!-- se non sei loggato -->
+          <li class="nav-item" *ngIf="!isLoggedIn"><!--1. questa compare solo se non siamo loggati -->
+              <a class="nav-link" [routerLink]="['/login']" routerLinkActive="active">Login</a>
+          </li>
+          <li class="nav-item" *ngIf="!isLoggedIn">
+              <a class="nav-link" [routerLink]="['/signup']" routerLinkActive="active">Signup</a>
+          </li>
+      </ul>
+<button type="button" class="btn btn-danger" (click)="onLogout()" *ngIf="isLoggedIn">Logout</button> <!--2.  questa compare solo se siamo loggati -->
+
+</div>
+  </nav>
+</header>
 

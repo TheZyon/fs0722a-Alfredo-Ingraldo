@@ -2,6 +2,16 @@
 
 /* You can add global styles to this file, and also import other style files */
 
+form{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+input{
+  color:black !important;
+}
+
 body {
   background-color: #161d31;
 }
