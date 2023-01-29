@@ -1,0 +1,10 @@
+
+<h1 *ngIf="notificArray.length==0"> No notifications yet: nobody likes you</h1>
+
+
+<div class="container">
+    <div class="border border-secondary m-4" *ngFor="let not of notificArray; index as i">
+        {{not.text}}
+    </div>
+</div>
+<div class="space"></div>

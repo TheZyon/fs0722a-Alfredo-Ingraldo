@@ -1,0 +1,21 @@
+
+  <div class="card" style="width: 18rem;">
+    <ng-content select="[userImage]"></ng-content>
+
+    <div class="card-body">
+
+      <h5 class="card-title"><ng-content select="[userName]"> <!-- user Name --></ng-content></h5>
+      <p class="card-text"><ng-content select="[userBio]"><!-- user Bio --></ng-content></p>
+      <p><ng-content select="[userHobbies]"><!-- user Hobbies --></ng-content></p>
+      
+      <!-- icons for like, dislike, star-like -->
+      <div class="d-flex" id="icons">
+        
+        <i class="bi bi-backspace-fill" (click)="backToggle()" *ngIf="selected"></i>
+        <i class="bi bi-heart-fill" (click)="likeToggle()"></i>
+        <i class="bi bi-star-fill" (click)="superLikeToggle()"></i>
+        <i class="bi bi-x-lg" (click)="rejectToggle()"></i>
+      </div>
+
+    </div>
+  </div>

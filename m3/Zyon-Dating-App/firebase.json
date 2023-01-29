@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "/Users/martinapezzarossa/Desktop/alfredo/Mariello",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

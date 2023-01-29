@@ -1,0 +1,24 @@
+#body{
+  *{
+  display: flex;
+  justify-content: center;}
+  height:100%;
+  background-image: url("../assets/loveSfondo.jpg");
+  background-size: cover ;
+
+}
+
+.heart{
+  transform: scale(0.2);
+  position: absolute;
+  animation: heart 3s infinite;
+}
+
+
+
+@keyframes heart {
+
+  0%{transform: translateY(0), scale(0.2)}
+  50%{transform: translateY(-50px), scale(0.5) ; opacity: 0;}
+
+}

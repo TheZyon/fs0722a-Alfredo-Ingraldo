@@ -1,0 +1,29 @@
+<div id="post" class="rounded" class="my-4">
+
+<div *ngIf="status">
+<div class="d-flex">
+<img src="../../../../assets/images.jpeg" alt="img_utente">
+<ng-content select="[author]"></ng-content>
+</div>
+
+<h3><ng-content select="[title]"></ng-content></h3>
+<p><ng-content select="[body]"></ng-content></p>
+
+<div class="container" id="actions">
+<i  *ngIf="yours" (click)="toggle()"class="bi bi-pencil-fill"><!-- edit btn --></i>
+<i *ngIf="yours"(click)="deletePost()" class="bi bi-trash3-fill"><!-- delete btn --></i>
+<i class="bi bi-heart-fill" (click)="likeToggle()"><!-- like btn --></i>
+<span><ng-content select="[likeNumber]"><!-- number of likes of the post --></ng-content></span>
+<i class="bi bi-chat-left-dots-fill"(click)="commentToggle()"><!-- comments btn --></i>
+</div>
+
+<!-- mettere anche like btn e altre calls to action -->
+</div>
+
+<div *ngIf="!status">
+<app-post-form [titl]="title" [bod]="body" (onCreate)="updatePost($event)"></app-post-form>
+<button  (click)="toggle()">Annulla</button>
+</div>
+
+
+</div>

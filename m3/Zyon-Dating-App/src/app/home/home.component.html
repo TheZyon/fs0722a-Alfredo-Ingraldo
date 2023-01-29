@@ -1,0 +1,35 @@
+
+
+<div class="container d-flex flex-column align-items-center justify-content-center text-center">
+
+<h1>Embrace the thruth:</h1>
+<h1>Your prince charming is a dog</h1>
+
+  <h3>People you may know</h3>
+
+  <div class="row">
+
+    <div class="col col-12 col-md-4 col-lg-3 p-4" *ngFor="let user of iUsersArray; index as i">
+      <div *ngIf="i<8" class="d-flex flex-column align-items-center justify-content-center border border-danger rounded">
+        <a routerLink="/posts/{{user.id}}"><img src="../../assets/images.jpeg" alt="user-img" class="user-img"></a>
+        <p>{{user.name}}</p>
+        <button (click)="addFriend(user.id)" class="btn btn-danger">Add Friend</button>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="carosella">
+  <h1></h1>
+    <div class="container">
+		  <div id="carousel">
+        
+         <figure *ngFor="let user of iUsersArray; index as i">
+          <img src="../../assets/shyDog.jpeg" alt="user-img">
+          <h1 class="username">{{user.name}}</h1>
+        </figure> 
+        
+		    </div>
+	    </div>
+    </div>
+</div>
